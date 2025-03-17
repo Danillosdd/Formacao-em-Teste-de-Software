@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="LoginTest" time="24.64" tests="9" errors="9" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 05  - Selenium IDE/InternetProject142/target/test-classes:/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 05  - Selenium IDE/InternetProject142/target/classes:/home/danillo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.1/junit-jupiter-api-5.11.1.jar:/home/danillo/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/danillo/.m2/repository/org/junit/platform/junit-platform-commons/1.11.1/junit-platform-commons-1.11.1.jar:/home/danillo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/danillo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.1/junit-jupiter-engine-5.11.1.jar:/home/danillo/.m2/repository/org/junit/platform/junit-platform-engine/1.11.1/junit-platform-engine-1.11.1.jar:/home/danillo/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-java/4.25.0/selenium-java-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-api/4.25.0/selenium-api-4.25.0.jar:/home/danillo/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.25.0/selenium-chrome-driver-4.25.0.jar:/home/danillo/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.25.0/selenium-chromium-driver-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-json/4.25.0/selenium-json-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.25.0/selenium-manager-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.25.0/selenium-devtools-v127-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v128/4.25.0/selenium-devtools-v128-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v129/4.25.0/selenium-devtools-v129-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.25.0/selenium-devtools-v85-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.25.0/selenium-edge-driver-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.25.0/selenium-firefox-driver-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-http/4.25.0/selenium-http-4.25.0.jar:/home/danillo/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.25.0/selenium-ie-driver-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.25.0/selenium-remote-driver-4.25.0.jar:/home/danillo/.m2/repository/com/google/guava/guava/33.3.0-jre/guava-33.3.0-jre.jar:/home/danillo/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/danillo/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/danillo/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/danillo/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:/home/danillo/.m2/repository/com/google/errorprone/error_prone_annotations/2.28.0/error_prone_annotations-2.28.0.jar:/home/danillo/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/danillo/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-api/1.42.1/opentelemetry-api-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-context/1.42.1/opentelemetry-context-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.42.1/opentelemetry-exporter-logging-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.42.1/opentelemetry-sdk-common-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.42.1/opentelemetry-sdk-extension-autoconfigure-spi-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.42.1/opentelemetry-sdk-extension-autoconfigure-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.42.1-alpha/opentelemetry-api-incubator-1.42.1-alpha.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.42.1/opentelemetry-sdk-trace-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.42.1/opentelemetry-sdk-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.42.1/opentelemetry-sdk-metrics-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.42.1/opentelemetry-sdk-logs-1.42.1.jar:/home/danillo/.m2/repository/net/bytebuddy/byte-buddy/1.15.1/byte-buddy-1.15.1.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-os/4.25.0/selenium-os-4.25.0.jar:/home/danillo/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.25.0/selenium-safari-driver-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-support/4.25.0/selenium-support-4.25.0.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="/home/danillo/.sdkman/candidates/java/17.0.14-amzn/lib"/>
+    <property name="sun.java.command" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 05  - Selenium IDE/InternetProject142/target/surefire/surefirebooter8067856101631845615.jar /home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 05  - Selenium IDE/InternetProject142/target/surefire 2025-03-17T18-25-44_812-jvmRun1 surefire686564820977353482tmp surefire_010787859312265955809tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 05  - Selenium IDE/InternetProject142/target/test-classes:/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 05  - Selenium IDE/InternetProject142/target/classes:/home/danillo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.1/junit-jupiter-api-5.11.1.jar:/home/danillo/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/danillo/.m2/repository/org/junit/platform/junit-platform-commons/1.11.1/junit-platform-commons-1.11.1.jar:/home/danillo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/danillo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.1/junit-jupiter-engine-5.11.1.jar:/home/danillo/.m2/repository/org/junit/platform/junit-platform-engine/1.11.1/junit-platform-engine-1.11.1.jar:/home/danillo/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-java/4.25.0/selenium-java-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-api/4.25.0/selenium-api-4.25.0.jar:/home/danillo/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.25.0/selenium-chrome-driver-4.25.0.jar:/home/danillo/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.25.0/selenium-chromium-driver-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-json/4.25.0/selenium-json-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.25.0/selenium-manager-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.25.0/selenium-devtools-v127-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v128/4.25.0/selenium-devtools-v128-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v129/4.25.0/selenium-devtools-v129-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.25.0/selenium-devtools-v85-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.25.0/selenium-edge-driver-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.25.0/selenium-firefox-driver-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-http/4.25.0/selenium-http-4.25.0.jar:/home/danillo/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.25.0/selenium-ie-driver-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.25.0/selenium-remote-driver-4.25.0.jar:/home/danillo/.m2/repository/com/google/guava/guava/33.3.0-jre/guava-33.3.0-jre.jar:/home/danillo/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/danillo/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/danillo/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/danillo/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:/home/danillo/.m2/repository/com/google/errorprone/error_prone_annotations/2.28.0/error_prone_annotations-2.28.0.jar:/home/danillo/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/danillo/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-api/1.42.1/opentelemetry-api-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-context/1.42.1/opentelemetry-context-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.42.1/opentelemetry-exporter-logging-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.42.1/opentelemetry-sdk-common-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.42.1/opentelemetry-sdk-extension-autoconfigure-spi-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.42.1/opentelemetry-sdk-extension-autoconfigure-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.42.1-alpha/opentelemetry-api-incubator-1.42.1-alpha.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.42.1/opentelemetry-sdk-trace-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.42.1/opentelemetry-sdk-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.42.1/opentelemetry-sdk-metrics-1.42.1.jar:/home/danillo/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.42.1/opentelemetry-sdk-logs-1.42.1.jar:/home/danillo/.m2/repository/net/bytebuddy/byte-buddy/1.15.1/byte-buddy-1.15.1.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-os/4.25.0/selenium-os-4.25.0.jar:/home/danillo/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.25.0/selenium-safari-driver-4.25.0.jar:/home/danillo/.m2/repository/org/seleniumhq/selenium/selenium-support/4.25.0/selenium-support-4.25.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/danillo"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/home/danillo/.sdkman/candidates/java/17.0.14-amzn"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 05  - Selenium IDE/InternetProject142"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 05  - Selenium IDE/InternetProject142/target/surefire/surefirebooter8067856101631845615.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.14+7-LTS"/>
+    <property name="user.name" value="danillo"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-55-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-17.0.14.7.1"/>
+    <property name="localRepository" value="/home/danillo/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-17/issues/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.14"/>
+    <property name="user.dir" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 05  - Selenium IDE/InternetProject142"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="17.0.14+7-LTS"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="loginUsernameBrancoPasswordBranco" classname="LoginTest" time="3.473">
+    <error type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.159)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-55-generic', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d94bcd13ad6f0ea13ff73909f782e71e, findElement {using=css selector, value=button[type='submit']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.159, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46585}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:46585/devtoo..., se:cdpVersion: 132.0.6834.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d94bcd13ad6f0ea13ff73909f782e71e
+	at LoginTest.botaoLogin(LoginTest.java:55)
+	at LoginTest.loginUsernameBrancoPasswordBranco(LoginTest.java:119)
+]]></error>
+    <system-err><![CDATA[mar. 17, 2025 6:25:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find an exact match for CDP version 132, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 132
+]]></system-err>
+  </testcase>
+  <testcase name="loginUsernameFalhaPasswordFalha" classname="LoginTest" time="2.939">
+    <error type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.159)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-55-generic', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a5d281a700021fe8672fb71412fd9254, findElement {using=id, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.159, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40053}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:40053/devtoo..., se:cdpVersion: 132.0.6834.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a5d281a700021fe8672fb71412fd9254
+	at LoginTest.usernameFalha(LoginTest.java:39)
+	at LoginTest.loginUsernameFalhaPasswordFalha(LoginTest.java:90)
+]]></error>
+    <system-err><![CDATA[mar. 17, 2025 6:25:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find an exact match for CDP version 132, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 132
+]]></system-err>
+  </testcase>
+  <testcase name="loginPasswordFalha" classname="LoginTest" time="2.775">
+    <error type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.159)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-55-generic', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c4db6be46ed81730582dc95a21d9ac4c, findElement {using=id, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.159, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43081}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:43081/devtoo..., se:cdpVersion: 132.0.6834.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4db6be46ed81730582dc95a21d9ac4c
+	at LoginTest.usernameSucesso(LoginTest.java:34)
+	at LoginTest.loginPasswordFalha(LoginTest.java:71)
+]]></error>
+    <system-err><![CDATA[mar. 17, 2025 6:25:53 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find an exact match for CDP version 132, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 132
+]]></system-err>
+  </testcase>
+  <testcase name="loginUsernameFalhaPasswordBranco" classname="LoginTest" time="2.332">
+    <error type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.159)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-55-generic', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [62feaac9a9466b15e01f374e988904f9, findElement {using=id, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.159, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:34279}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:34279/devtoo..., se:cdpVersion: 132.0.6834.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 62feaac9a9466b15e01f374e988904f9
+	at LoginTest.usernameFalha(LoginTest.java:39)
+	at LoginTest.loginUsernameFalhaPasswordBranco(LoginTest.java:110)
+]]></error>
+    <system-err><![CDATA[mar. 17, 2025 6:25:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find an exact match for CDP version 132, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 132
+]]></system-err>
+  </testcase>
+  <testcase name="loginUsernameFalha" classname="LoginTest" time="2.218">
+    <error type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.159)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-55-generic', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [04b10c1bc84060258aba9a12e039e5fc, findElement {using=id, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.159, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37691}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:37691/devtoo..., se:cdpVersion: 132.0.6834.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 04b10c1bc84060258aba9a12e039e5fc
+	at LoginTest.usernameFalha(LoginTest.java:39)
+	at LoginTest.loginUsernameFalha(LoginTest.java:100)
+]]></error>
+    <system-err><![CDATA[mar. 17, 2025 6:25:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find an exact match for CDP version 132, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 132
+]]></system-err>
+  </testcase>
+  <testcase name="loginUsernameBrancoPasswordSucesso" classname="LoginTest" time="2.497">
+    <error type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.159)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-55-generic', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dc9c011ca2f4b103146425506145b3aa, findElement {using=id, value=password}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.159, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41697}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41697/devtoo..., se:cdpVersion: 132.0.6834.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dc9c011ca2f4b103146425506145b3aa
+	at LoginTest.passwordSucesso(LoginTest.java:44)
+	at LoginTest.loginUsernameBrancoPasswordSucesso(LoginTest.java:136)
+]]></error>
+    <system-err><![CDATA[mar. 17, 2025 6:26:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find an exact match for CDP version 132, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 132
+]]></system-err>
+  </testcase>
+  <testcase name="loginUsernameBrancoPasswordFalha" classname="LoginTest" time="2.612">
+    <error type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.159)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-55-generic', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b78a96ba9e9dbbf43dc6a4e8e706cb9e, findElement {using=id, value=password}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.159, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:36939/devtoo..., se:cdpVersion: 132.0.6834.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b78a96ba9e9dbbf43dc6a4e8e706cb9e
+	at LoginTest.passwordFalha(LoginTest.java:49)
+	at LoginTest.loginUsernameBrancoPasswordFalha(LoginTest.java:127)
+]]></error>
+    <system-err><![CDATA[mar. 17, 2025 6:26:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find an exact match for CDP version 132, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 132
+]]></system-err>
+  </testcase>
+  <testcase name="loginPasswordBranco" classname="LoginTest" time="2.447">
+    <error type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.159)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-55-generic', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64cdc39cc45544733a5506ea51d2ed35, findElement {using=id, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.159, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42685}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:42685/devtoo..., se:cdpVersion: 132.0.6834.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64cdc39cc45544733a5506ea51d2ed35
+	at LoginTest.usernameSucesso(LoginTest.java:34)
+	at LoginTest.loginPasswordBranco(LoginTest.java:81)
+]]></error>
+    <system-err><![CDATA[mar. 17, 2025 6:26:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find an exact match for CDP version 132, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 132
+]]></system-err>
+  </testcase>
+  <testcase name="loginSucesso" classname="LoginTest" time="3.293">
+    <error type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.159)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-55-generic', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fca38b2175d97fc16e18d76e91d6908d, findElement {using=id, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.159, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:34091}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:34091/devtoo..., se:cdpVersion: 132.0.6834.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fca38b2175d97fc16e18d76e91d6908d
+	at LoginTest.usernameSucesso(LoginTest.java:34)
+	at LoginTest.loginSucesso(LoginTest.java:61)
+]]></error>
+    <system-err><![CDATA[mar. 17, 2025 6:26:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTÊNCIA: Unable to find an exact match for CDP version 132, returning the closest version; found: 129; Please update to a Selenium version that supports CDP version 132
+]]></system-err>
+  </testcase>
+</testsuite>

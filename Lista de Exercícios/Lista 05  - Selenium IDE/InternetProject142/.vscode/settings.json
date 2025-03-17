@@ -1,0 +1,14 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "maven.terminal.favorites": [
+        {
+            "command": "mvn clean test",
+            "debug": false
+        },
+        {
+            "command": "mvn clean test",
+            "debug": false
+        }
+    ]
+}
