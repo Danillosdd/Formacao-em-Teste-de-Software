@@ -138,20 +138,6 @@ public class LoginTest {
         // Verifica se foi realizado o login com sucesso!
         String mensagem = driver.findElement(By.id("flash")).getText().trim();
         assertTrue(mensagem.contains("Your username is invalid!"));
-    }
-
-    /*----------------------------------------------------------
-    By.id(String id): Localiza um elemento pelo atributo id.
-    By.name(String name): Localiza um elemento pelo atributo name.
-    By.className(String className): Localiza um elemento pelo atributo class.
-    By.tagName(String tagName): Localiza um elemento pelo nome da tag HTML.
-    By.cssSelector(String cssSelector): Localiza um elemento usando um seletor CSS.
-    By.xpath(String xpathExpression): Localiza um elemento usando uma expressão XPath.
-    By.linkText(String linkText): Localiza um link (elemento <a>) pelo texto do link.
-    By.partialLinkText(String partialLinkText): Localiza um link (elemento <a>) pelo texto parcial do link.
-     */
-
-
-    
+    }  
     
 } // Final da Classe LoginTest
