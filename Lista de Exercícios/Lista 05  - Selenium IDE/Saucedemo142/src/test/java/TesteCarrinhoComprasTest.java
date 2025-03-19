@@ -37,7 +37,7 @@ public class TesteCarrinhoComprasTest {
     @Test
     public void testeCarrinhoCompras() {
         driver.get("https://www.saucedemo.com");
-        driver.manage().window().setSize(new Dimension(1872, 1048));
+        driver.manage().window().maximize(); // Maximizar a janela do navegador
         driver.findElement(By.cssSelector("*[data-test=\"login-credentials\"]")).click();
         {
             WebElement element = driver.findElement(By.cssSelector("*[data-test=\"login-credentials\"]"));

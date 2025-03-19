@@ -20,7 +20,7 @@ public class LoginTest {
     public void iniciar() {
         driver = new ChromeDriver(); // Instanciar o ChromeDriver (Instanciar o objeto do Selenium como ChromeDriver)
         driver.get("https://the-internet.herokuapp.com/login"); // Acessar o site
-        //driver.manage().window().maximize(); // Maximizar a janela do navegador
+        driver.manage().window().maximize(); // Maximizar a janela do navegador
     }
 
     // Depois de cada Teste
