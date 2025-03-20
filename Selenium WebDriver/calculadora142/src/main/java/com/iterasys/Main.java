@@ -9,6 +9,8 @@ public class Main {
     // 2.2 - Métodos e Funções
     public static void main(String[] args) {
         System.out.println("Olá Mundo!");
+        float resultado = somar(5, 7);
+        System.out.println("A soma de 5 + 7 = " + resultado);
     }
 
     public static float somar(float num1, float num2) {
@@ -24,15 +26,28 @@ public class Main {
     }
 
     public static float multiplicar(float num1, float num2) {
-        float resultado = num1 * num2;
-        System.out.println("Multiplicação de " + num1 + " * " + num2 + " = " + resultado);
-        return resultado;
+        //float resultado = num1 * num2;
+        //System.out.println("Multiplicação de " + num1 + " * " + num2 + " = " + resultado);
+        //return resultado;
+        return num1 * num2;
     }
 
-    public static float dividir(float num1, float num2) {
-        float resultado = num1 / num2;
-        System.out.println("Divisão de " + num1 + " / " + num2 + " = " + resultado);
-        return resultado;
+    public static float dividirIf(float num1, float num2) {
+        if (num2 != 0) {
+            return num1 / num2;
+        } else {
+            System.out.println("Não é possível dividir por zero");
+            return 0;
+        }
+
+    }
+
+    public static String dividirTry(float num1, float num2) {
+        try {
+            return String.valueOf(num1 / num2);
+        } catch (Exception e) {
+            return "Não é possível dividir por zero";
+        }
     }
 
 }
