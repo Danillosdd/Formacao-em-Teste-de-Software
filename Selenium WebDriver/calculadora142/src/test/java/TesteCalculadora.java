@@ -31,4 +31,25 @@ public class TesteCalculadora {
 
     }
 
+    @Test
+    public void testesubtrair() {
+        // AAA - Arrange, Act, Assert
+        // CEV - Configura, Executa, Valida
+
+        //Configura
+        // Dados de Entrada
+        float num1 = 25;
+        float num2 = 14;
+
+        // Dados de Saída / Resultado Esperado
+        float resultadoEsperado = 11;
+
+        // Executa
+        float resultadoAtual = Main.subtrair(num1, num2);
+
+        // Valida
+        assertEquals(resultadoEsperado, resultadoAtual);
+
+    }
+
 }
