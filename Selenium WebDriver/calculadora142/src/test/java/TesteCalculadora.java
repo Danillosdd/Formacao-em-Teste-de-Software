@@ -80,11 +80,32 @@ public class TesteCalculadora {
 
         //Configura
         // Dados de Entrada
-        float num1 = 27;
-        float num2 = 3;
+        int num1 = 27;
+        int num2 = 3;
 
         // Dados de Saída / Resultado Esperado
-        String resultadoEsperado = "9.0";
+        String resultadoEsperado = "9";
+
+        // Executa
+        String resultadoAtual = Main.dividirTry(num1, num2);
+
+        // Valida
+        assertEquals(resultadoEsperado, resultadoAtual);
+
+    }
+
+    @Test
+    public void testeDividirPorZero() {
+        // AAA - Arrange, Act, Assert
+        // CEV - Configura, Executa, Valida
+
+        //Configura
+        // Dados de Entrada
+        int num1 = 7;
+        int num2 = 0;
+
+        // Dados de Saída / Resultado Esperado
+        String resultadoEsperado = "Não é possível dividir por zero";
 
         // Executa
         String resultadoAtual = Main.dividirTry(num1, num2);

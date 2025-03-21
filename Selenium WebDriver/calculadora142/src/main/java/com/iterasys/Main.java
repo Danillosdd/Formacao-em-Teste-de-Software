@@ -32,7 +32,7 @@ public class Main {
         return num1 * num2;
     }
 
-    public static float dividirIf(float num1, float num2) {
+    public static float dividirIf(int num1, int num2) {
         if (num2 != 0) {
             return num1 / num2;
         } else {
@@ -42,7 +42,7 @@ public class Main {
 
     }
 
-    public static String dividirTry(float num1, float num2) {
+    public static String dividirTry(int num1, int num2) {
         try {
             return String.valueOf(num1 / num2);
         } catch (Exception e) {
