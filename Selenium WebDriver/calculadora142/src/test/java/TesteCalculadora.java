@@ -52,4 +52,45 @@ public class TesteCalculadora {
 
     }
 
+    @Test
+    public void testeMultiplicar() {
+        // AAA - Arrange, Act, Assert
+        // CEV - Configura, Executa, Valida
+
+        //Configura
+        // Dados de Entrada
+        float num1 = 8;
+        float num2 = 7;
+
+        // Dados de Saída / Resultado Esperado
+        float resultadoEsperado = 56;
+
+        // Executa
+        float resultadoAtual = Main.multiplicar(num1, num2);
+
+        // Valida
+        assertEquals(resultadoEsperado, resultadoAtual);
+
+    }
+
+    @Test
+    public void testeDividir() {
+        // AAA - Arrange, Act, Assert
+        // CEV - Configura, Executa, Valida
+
+        //Configura
+        // Dados de Entrada
+        float num1 = 27;
+        float num2 = 3;
+
+        // Dados de Saída / Resultado Esperado
+        String resultadoEsperado = "9.0";
+
+        // Executa
+        String resultadoAtual = Main.dividirTry(num1, num2);
+
+        // Valida
+        assertEquals(resultadoEsperado, resultadoAtual);
+
+    }
 }
