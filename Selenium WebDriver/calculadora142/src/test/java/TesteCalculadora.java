@@ -2,6 +2,8 @@
 // bibliotecas
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import com.iterasys.Main;
 
@@ -114,4 +116,30 @@ public class TesteCalculadora {
         assertEquals(resultadoEsperado, resultadoAtual);
 
     }
+
+    // DDT: Data Driver Testing --> Teste Direcionado à Dados
+    // Popular: Teste com massa
+    @ParameterizedTest
+    @CsvSource(value = {
+        "15, 25, 40.0",
+        "0, 12, 12.0",
+        "-5, 9, 4.0",
+        "-7, -8, -15.0",
+        "0.5, 3.7, 4.2"
+    }, delimiter = ',')
+    public void testeSomarDDT(float num1, float num2, float resultadoEsperado) {
+        // AAA - Arrange, Act, Assert
+        // CEV - Configura, Executa, Valida
+
+        //Configura
+        // Os Dados de entrada e o resultado esperado são lidos da massa de teste acima  
+
+        // Executa
+        float resultadoAtual = Main.somar(num1, num2);
+
+        // Valida
+        assertEquals(resultadoEsperado, resultadoAtual);
+
+    }
+
 }
