@@ -3,6 +3,7 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import com.iterasys.Main;
@@ -119,15 +120,15 @@ public class TesteAreas {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "csv/somar.csv", numLinesToSkip = 1, delimiter = ',')
-    public void testeSomarCSV(float num1, float num2, float resultadoEsperado) {
+    @CsvFileSource(resources = "csv/triangulo.csv", numLinesToSkip = 1, delimiter = ',')
+    public void testeTrianguloCSV(float base, float altura, float resultadoEsperado) {
         // AAA - Arrange, Act, Assert
         // CEV - Configura, Executa, Valida
 
         //Configura
         // Os Dados de entrada e o resultado esperado são lidos da massa de teste acima  
         // Executa
-        float resultadoAtual = Main.somar(num1, num2);
+        float resultadoAtual = Main.triangulo(base, altura);
 
         // Valida
         assertEquals(resultadoEsperado, resultadoAtual);
