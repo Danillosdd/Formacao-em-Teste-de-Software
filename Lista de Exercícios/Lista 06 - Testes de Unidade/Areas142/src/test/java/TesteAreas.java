@@ -1,9 +1,8 @@
-
 // bibliotecas
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import com.iterasys.Main;
@@ -14,20 +13,19 @@ public class TesteAreas {
 
     //funções e metodos
     @Test
-    public void testeSomar() {
+    public void testeQuadrado() {
         // AAA - Arrange, Act, Assert
         // CEV - Configura, Executa, Valida
 
         //Configura
         // Dados de Entrada
-        float num1 = 10;
-        float num2 = 8;
+        float lado = 7;
 
         // Dados de Saída / Resultado Esperado
-        float resultadoEsperado = 18;
+        float resultadoEsperado = 49;
 
         // Executa
-        float resultadoAtual = Main.somar(num1, num2);
+        float resultadoAtual = Main.quadrado(lado);
 
         // Valida
         assertEquals(resultadoEsperado, resultadoAtual);
@@ -35,20 +33,20 @@ public class TesteAreas {
     }
 
     @Test
-    public void testesubtrair() {
+    public void testeRetangulo() {
         // AAA - Arrange, Act, Assert
         // CEV - Configura, Executa, Valida
 
         //Configura
         // Dados de Entrada
-        float num1 = 25;
-        float num2 = 14;
+        float base = 35;
+        float altura = 2.5f;
 
         // Dados de Saída / Resultado Esperado
-        float resultadoEsperado = 11;
+        float resultadoEsperado = 87.5f;
 
         // Executa
-        float resultadoAtual = Main.subtrair(num1, num2);
+        float resultadoAtual = Main.retangulo(base, altura);
 
         // Valida
         assertEquals(resultadoEsperado, resultadoAtual);
@@ -56,20 +54,19 @@ public class TesteAreas {
     }
 
     @Test
-    public void testeMultipliclearr() {
+    public void testeCirculo() {
         // AAA - Arrange, Act, Assert
         // CEV - Configura, Executa, Valida
 
         //Configura
         // Dados de Entrada
-        float num1 = 8;
-        float num2 = 7;
+        float raio = 3;
 
         // Dados de Saída / Resultado Esperado
-        float resultadoEsperado = 56;
+        float resultadoEsperado = 28.274334f; // Área de um círculo: PI * raio^2
 
         // Executa
-        float resultadoAtual = Main.multiplicar(num1, num2);
+        float resultadoAtual = Main.circulo(raio);
 
         // Valida
         assertEquals(resultadoEsperado, resultadoAtual);
@@ -77,65 +74,44 @@ public class TesteAreas {
     }
 
     @Test
-    public void testeDividir() {
+    public void testeTriangulo() {
         // AAA - Arrange, Act, Assert
         // CEV - Configura, Executa, Valida
 
-        //Configura
+        // Configura
         // Dados de Entrada
-        int num1 = 27;
-        int num2 = 3;
+        float base = 5; // Alterado para float para consistência
+        float altura = 7;
 
         // Dados de Saída / Resultado Esperado
-        String resultadoEsperado = "9";
+        float resultadoEsperado = 17.5f; // Área de um triângulo: (base * altura) / 2
 
         // Executa
-        String resultadoAtual = Main.dividirTry(num1, num2);
+        float resultadoAtual = Main.triangulo(base, altura); // Supondo que o método retorne float
 
         // Valida
         assertEquals(resultadoEsperado, resultadoAtual);
-
     }
 
-    @Test
-    public void testeDividirPorZero() {
-        // AAA - Arrange, Act, Assert
-        // CEV - Configura, Executa, Valida
-
-        //Configura
-        // Dados de Entrada
-        int num1 = 7;
-        int num2 = 0;
-
-        // Dados de Saída / Resultado Esperado
-        String resultadoEsperado = "Não é possível dividir por zero";
-
-        // Executa
-        String resultadoAtual = Main.dividirTry(num1, num2);
-
-        // Valida
-        assertEquals(resultadoEsperado, resultadoAtual);
-
-    }
-
+    
     // DDT: Data Driver Testing --> Teste Direcionado à Dados
     // Popular: Teste com massa
     @ParameterizedTest
     @CsvSource(value = {
-        "15, 25, 40.0",
-        "0, 12, 12.0",
-        "-5, 9, 4.0",
-        "-7, -8, -15.0",
-        "0.5, 3.7, 4.2"
+        "5, 7, 35.0",
+        "3, 2, 6.0",
+        "10, 10, 100.0",
+        "10, 5, 50.0",
+        "7, 7, 49.0"
     }, delimiter = ',')
-    public void testeSomarDDT(float num1, float num2, float resultadoEsperado) {
+    public void testeRetanguloDDT(float base, float altura, float resultadoEsperado) {
         // AAA - Arrange, Act, Assert
         // CEV - Configura, Executa, Valida
 
         //Configura
         // Os Dados de entrada e o resultado esperado são lidos da massa de teste acima  
         // Executa
-        float resultadoAtual = Main.somar(num1, num2);
+        float resultadoAtual = Main.retangulo(base, altura);
 
         // Valida
         assertEquals(resultadoEsperado, resultadoAtual);
@@ -157,5 +133,5 @@ public class TesteAreas {
         assertEquals(resultadoEsperado, resultadoAtual);
 
     }
-
+ 
 }
