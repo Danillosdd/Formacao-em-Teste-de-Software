@@ -102,7 +102,7 @@ public class TesteAreas {
         "5, 7, 35.0",
         "3, 2, 6.0",
         "10, 10, 100.0",
-        "10, 5, 50.0",
+        "-3, -3, 9.0",
         "7, 7, 49.0"
     }, delimiter = ',')
     public void testeRetanguloDDT(float base, float altura, float resultadoEsperado) {
