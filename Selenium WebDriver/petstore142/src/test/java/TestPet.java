@@ -1,14 +1,14 @@
 // 0 - nome do pacote
 
 // 1 - bibliotecas
-// 2 - classe
 import org.junit.jupiter.api.Test;
 
-public class TesteUser {
+// 2 - classe
+public class TestPet {
 
     // 2.1 - atributos
     static String ct = "application/json"; // Content-Type
-    static String uriUser = "https://petstore.swagger.io/v2/user"; // Base URL + endpoint
+    static String uriPet = "https://petstore.swagger.io/v2/pet"; // Base URL + endpoint
 
     // 2.2 - funções e métodos
     // 2.2.1 - funções e métodos comuns / uteis
@@ -25,7 +25,7 @@ public class TesteUser {
     @Test
     public void testPostPet() {
         // carregar os dados do arquivo JSON do pet         ￼￼￼
-        
+
         // ToDo: "Criar o método Post
         //String jsonBody = 
     }
