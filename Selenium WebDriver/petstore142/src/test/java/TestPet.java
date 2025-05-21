@@ -25,6 +25,6 @@ public class TestPet {
     public void testPostPet() throws IOException {
         // carregar os dados do arquivo JSON do pet ￼￼￼
 
-        String jsonBody = lerArquivoJson("");
+        String jsonBody = lerArquivoJson("src/test/resources/pet1.json");
     }
 }
