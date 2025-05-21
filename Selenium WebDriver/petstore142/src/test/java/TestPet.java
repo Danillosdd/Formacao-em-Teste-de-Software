@@ -32,7 +32,7 @@ public class TestPet {
         // carregar os dados do arquivo JSON do pet ￼￼￼
         String jsonBody = lerArquivoJson("src/test/resources/json/pet1.json");
 
-        String petId = "95"; // Código esperado do pet
+        int petId = 95; // Código esperado do pet
 
         // Começa o teste via Rest-Assured
         given() // Dado que
