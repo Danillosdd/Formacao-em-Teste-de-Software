@@ -2,6 +2,9 @@
 
 // 1 - bibliotecas
 import org.junit.jupiter.api.Test;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.io.IOException;
 
 // 2 - classe
 public class TestPet {
@@ -13,20 +16,15 @@ public class TestPet {
     // 2.2 - funções e métodos
     // 2.2.1 - funções e métodos comuns / uteis
     // Função de leitura do arquivo JSON
-    public static String lerArquivoJson(String arquivoJson) {
-
-        // ToDo: "Completar a leitura do arquivo JSON"
-        //return new String(Files)
-        return null;
-
+    public static String lerArquivoJson(String arquivoJson) throws IOException {
+        return new String(Files.readAllBytes(Paths.get(arquivoJson)));
     }
 
     // 2.2.2 - métodos de teste
     @Test
-    public void testPostPet() {
-        // carregar os dados do arquivo JSON do pet         ￼￼￼
+    public void testPostPet() throws IOException {
+        // carregar os dados do arquivo JSON do pet ￼￼￼
 
-        // ToDo: "Criar o método Post
-        //String jsonBody = 
+        String jsonBody = lerArquivoJson("");
     }
 }
