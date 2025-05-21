@@ -5,9 +5,10 @@ import org.junit.jupiter.api.Test;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.IOException;
-import io.restassured.response.Response;
+import io.restassured.response.Response; // Classe Resposta do REST-Assured
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.given; // função given
+import static org.hamcrest.Matchers.*; // Classe de verificadores do Hamcrest
 
 // 2 - classe
 public class TestPet {
@@ -26,15 +27,30 @@ public class TestPet {
     // 2.2.2 - métodos de teste
     @Test
     public void testPostPet() throws IOException {
+        // Configura
+
         // carregar os dados do arquivo JSON do pet ￼￼￼
         String jsonBody = lerArquivoJson("src/test/resources/json/pet1.json");
 
         String petId = "95"; // Código esperado do pet
-        
+
         // Começa o teste via Rest-Assured
-        given()
-            .contentType(ct)
-            .body(jsonBody)
+        given() // Dado que
+                .contentType(ct) // O tipo do conteudo é
+                .log().all() // Mostre tudo na ida
+                .body(jsonBody) // Envie o corpo da requisição
+                // Executa
+                .when() // Quando
+                .post(uriPet) // Chamamos o endpoint faznedo um POST
+                // Valida
+                .then() // Então
+                .log().all() // Mostre tudo na volta
+                .statusCode(200) // O código de resposta é 200
+                .body("name", is("Snoopy")) // Verifica se o nome é Snoopy
+                .body("id", is(petId)) // Verifica o código do pet
+                .body("category.name", is("cachorro")) // Verifica se é cachorro
+                .body("tags[0].name", is("vacinado")) // Verifica se está vacinado
+        ; // Fim do given
 
     }
 }
