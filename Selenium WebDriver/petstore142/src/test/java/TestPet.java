@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.IOException;
+import io.restassured.response.Response;
 
 // 2 - classe
 public class TestPet {
@@ -24,7 +25,14 @@ public class TestPet {
     @Test
     public void testPostPet() throws IOException {
         // carregar os dados do arquivo JSON do pet ￼￼￼
-
         String jsonBody = lerArquivoJson("src/test/resources/json/pet1.json");
+
+        String petId = "95"; // Código esperado do pet
+        
+        // Começa o teste via Rest-Assured
+        given()
+            .contentType(ct)
+            .body(jsonBody)
+
     }
 }
