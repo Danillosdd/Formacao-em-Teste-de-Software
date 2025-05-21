@@ -7,6 +7,8 @@ import java.nio.file.Paths;
 import java.io.IOException;
 import io.restassured.response.Response;
 
+import static io.restassured.RestAssured.given;
+
 // 2 - classe
 public class TestPet {
 
