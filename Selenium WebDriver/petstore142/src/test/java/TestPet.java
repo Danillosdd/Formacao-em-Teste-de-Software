@@ -16,6 +16,7 @@ public class TestPet {
     // 2.1 - atributos
     static String ct = "application/json"; // Content-Type
     static String uriPet = "https://petstore.swagger.io/v2/pet"; // Base URL + endpoint
+    static int petId = 95; // Código esperado do pet
 
     // 2.2 - funções e métodos
     // 2.2.1 - funções e métodos comuns / uteis
@@ -32,7 +33,7 @@ public class TestPet {
         // carregar os dados do arquivo JSON do pet ￼￼￼
         String jsonBody = lerArquivoJson("src/test/resources/json/pet1.json");
 
-        int petId = 95; // Código esperado do pet
+        // Entrada - petId que está definido no nível da classe
 
         // Começa o teste via Rest-Assured
         given() // Dado que
@@ -50,6 +51,31 @@ public class TestPet {
                 .body("id", is(petId)) // Verifica o código do pet
                 .body("category.name", is("cachorro")) // Verifica se é cachorro
                 .body("tags[0].name", is("vacinado")) // Verifica se está vacinado
+        ; // Fim do given
+
+    }
+
+    public void testGetPet() {
+        // Configura
+
+        // Entrada - petId que está definido no nível da classe
+
+        // Saídas / Resultados esperados
+
+        String petName = "Snoopy"; // Nome do pet esperado
+        String categoryName = "cachorro"; // Categoria do pet esperado
+        String tagName = "vacinado"; // Tag do pet esperado
+
+        given()
+                .contentType(ct) // O tipo do conteudo é
+                .log().all() // Mostre tudo na ida
+                // Quando é get ou delete não tem body
+                // Executa
+                .when() // Quando
+                .get(uriPet + "/" + petId) // Montar o endpoint da URI/<petId>
+                // Valida
+                .then() // Então
+
         ; // Fim do given
 
     }
