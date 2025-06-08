@@ -133,7 +133,7 @@ public class TestPet {
     public void testDeletePet() {
         // Configura --> Dados de entrada e saída no começo da Classe
 
-        given()a
+        given()
                 .contentType(ct) // O tipo do conteudo é
                 .log().all() // Mostre tudo na ida
                 // Executa
