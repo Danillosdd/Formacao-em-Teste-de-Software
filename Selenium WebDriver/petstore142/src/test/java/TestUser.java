@@ -25,6 +25,7 @@ public class TestUser {
 
         String username = "danillo"; // Nome de usuário esperado
         String password = "honeypot"; // Senha esperada
+        String token; // Variável para armazenar o token extraído
 
         String resultadoEsperado = "logged in user session:"; // Sem espaço após os dois pontos
 
@@ -49,7 +50,7 @@ public class TestUser {
         ; // Fim do given
 
         // extração
-        String token = resposta.jsonPath().getString("message").substring(23); // Extrai o token da resposta
+        token = resposta.jsonPath().getString("message").substring(23); // Extrai o token da resposta
         System.out.println("Conteúdo do Token: " + token); // Imprime o token no console
     }
 }
