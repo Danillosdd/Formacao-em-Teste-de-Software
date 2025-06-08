@@ -55,6 +55,7 @@ public class TestPet {
 
     }
 
+    @Test
     public void testGetPet() {
         // Configura
 
@@ -75,6 +76,12 @@ public class TestPet {
                 .get(uriPet + "/" + petId) // Montar o endpoint da URI/<petId>
                 // Valida
                 .then() // Então
+                .log().all() // Mostre tudo na volta
+                .statusCode(200) // O código de resposta é 200
+                .body("name", is("Snoopy")) // Verifica se o nome é Snoopy
+                .body("id", is(petId)) // Verifica o código do pet
+                .body("category.name", is("cachorro")) // Verifica se é cachorro
+                .body("tags[0].name", is("vacinado")) // Verifica se está vacinado
 
         ; // Fim do given
 
