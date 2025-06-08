@@ -5,15 +5,14 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import static org.hamcrest.Matchers.is;
-
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test; // Classe Resposta do REST-Assured
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 import static io.restassured.RestAssured.config;
-import static io.restassured.RestAssured.given; // função given
+import static io.restassured.RestAssured.given; 
+import static org.hamcrest.Matchers.is;
 
 // 2 - classe
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class) // Ordena os testes
@@ -150,4 +149,5 @@ public class TestPet {
         ; // Fim do given
 
     }
+
 }
