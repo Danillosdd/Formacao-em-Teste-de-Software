@@ -129,7 +129,7 @@ public class TestPet {
     }
 
     @Test
-    @Order(4) // Ordem de execução do teste
+    @Order(4) // Ordem de execução do test
     public void testDeletePet() {
         // Configura --> Dados de entrada e saída no começo da Classe
 
