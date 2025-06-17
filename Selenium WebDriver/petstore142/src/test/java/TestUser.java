@@ -1,14 +1,13 @@
 // 0 - nome do pacote
 
 // 1 - bibliotecas
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-
-import io.restassured.response.Response;
-import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasLength;
 import static org.hamcrest.Matchers.is;
+import org.junit.jupiter.api.Test;
+
+import static io.restassured.RestAssured.given;
+import io.restassured.response.Response;
 
 // 2 - classe
 public class TestUser {
@@ -16,16 +15,16 @@ public class TestUser {
     // 2.1 - atributos
     static String ct = "application/json"; // Content-Type
     static String uriUser = "https://petstore.swagger.io/v2/user"; // Base URL + endpoint
+    static String token; // Variável para armazenar o token extraído
 
     // 2.2 - funções e métodos
     // 2.2.1 - métodos de teste
     @Test
-    public void testLogin() {
+    public static String testLogin() {
         // Configura --> Dados de entrada e saída no começo da Classe
 
         String username = "danillo"; // Nome de usuário esperado
         String password = "honeypot"; // Senha esperada
-        String token; // Variável para armazenar o token extraído
 
         String resultadoEsperado = "logged in user session:"; // Sem espaço após os dois pontos
 
@@ -52,5 +51,7 @@ public class TestUser {
         // extração
         token = resposta.jsonPath().getString("message").substring(23); // Extrai o token da resposta
         System.out.println("Conteúdo do Token: " + token); // Imprime o token no console
+
+        return token; // Retorna o token extraído
     }
 }

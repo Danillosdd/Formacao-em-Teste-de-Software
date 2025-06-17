@@ -5,14 +5,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import static org.hamcrest.Matchers.is;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
-import static io.restassured.RestAssured.config;
-import static io.restassured.RestAssured.given; 
-import static org.hamcrest.Matchers.is;
+import static io.restassured.RestAssured.given;
 
 // 2 - classe
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class) // Ordena os testes
@@ -39,20 +38,21 @@ public class TestPet {
     @Order(1) // Ordem de execução do teste
     public void testPostPet() throws IOException {
         // Configura --> Dados de entrada e saída no começo da Classe
+        // Entradas e Saídas definidas no começo da Classe
 
         // carregar os dados do arquivo JSON do pet ￼￼￼
         String jsonBody = lerArquivoJson("src/test/resources/json/pet1.json");
-
-        // Entrada - petId que está definido no nível da classe
 
         // Começa o teste via Rest-Assured
         given() // Dado que
                 .contentType(ct) // O tipo do conteudo é
                 .log().all() // Mostre tudo na ida
                 .body(jsonBody) // Envie o corpo da requisição
+
                 // Executa
                 .when() // Quando
                 .post(uriPet) // Chamamos o endpoint faznedo um POST
+
                 // Valida
                 .then() // Então
                 .log().all() // Mostre tudo na volta
@@ -61,6 +61,7 @@ public class TestPet {
                 .body("id", is(petId)) // Verifica o código do pet
                 .body("category.name", is(categoryName)) // Verifica se é cachorro
                 .body("tags[0].name", is(tagName)) // Verifica se está vacinado
+
         ; // Fim do given
 
     }
@@ -69,22 +70,20 @@ public class TestPet {
     @Order(2) // Ordem de execução do teste
     public void testGetPet() {
         // Configura --> Dados de entrada e saída no começo da Classe
+        // Entradas e Saídas definidas no começo da Classe
 
-        // Entrada - petId que está definido no nível da classe
-
-        // Saídas / Resultados esperados
-
-        String petName = "Snoopy"; // Nome do pet esperado
-        String categoryName = "cachorro"; // Categoria do pet esperado
-        String tagName = "vacinado"; // Tag do pet esperado
-
+        // Começa o teste via Rest-Assured
         given()
                 .contentType(ct) // O tipo do conteudo é
                 .log().all() // Mostre tudo na ida
+                .header("", "api_key: " + TestUser.testLogin()) // Adiciona o header com o token de autenticação
+
                 // Quando é get ou delete não tem body
+
                 // Executa
                 .when() // Quando
                 .get(uriPet + "/" + petId) // Montar o endpoint da URI/<petId>
+
                 // Valida
                 .then() // Então
                 .log().all() // Mostre tudo na volta
