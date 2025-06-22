@@ -5,15 +5,13 @@ import java.io.IOException; // Para tratar exceções de entrada/saída (IO)
 import java.nio.file.Files; // Para ler arquivos do sistema de arquivos
 import java.nio.file.Paths; // Para manipular caminhos de arquivos
 
-import org.junit.jupiter.api.Test; // Anotação para marcar métodos de teste (JUnit 5)
+import static org.hamcrest.Matchers.is; // Anotação para marcar métodos de teste (JUnit 5)
 import org.junit.jupiter.api.Order; // Define a ordem de execução dos testes
-import org.junit.jupiter.api.TestMethodOrder; // Controla a ordem dos métodos de teste na classe
-import org.junit.jupiter.api.MethodOrderer; // Estratégias para ordenar métodos de teste
-import org.junit.jupiter.params.ParameterizedTest; // Permite testes parametrizados (com diferentes entradas)
-import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.api.Test; // Controla a ordem dos métodos de teste na classe
+import org.junit.jupiter.params.ParameterizedTest; // Estratégias para ordenar métodos de teste
+import org.junit.jupiter.params.provider.CsvFileSource; // Permite testes parametrizados (com diferentes entradas)
 
-import static io.restassured.RestAssured.given; // Facilita a escrita de requisições REST com Rest-Assured
-import static org.hamcrest.Matchers.is; // Facilita asserções de igualdade em
+import static io.restassured.RestAssured.given;
 
 // 2 - classe
 public class TestPet {
@@ -95,18 +93,21 @@ public class TestPet {
     // Data Driven Testing(DDT) - Teste Direcionado por Dados / Teste com Massa
     // Teste com Json parametrizado
 
-@ParameterizedTest @Order(5)
-    @CsvFileSource(resources = "/csv/petMassa.csv", numLinesToSkip = 1, delimiter = ',') // Lê o arquivo CSV, ignorando a primeira linha, e o separador é vírgula
+    @ParameterizedTest
+    @Order(5)
+    @CsvFileSource(resources = "/csv/petMassa.csv", numLinesToSkip = 1, delimiter = ',') // Lê o arquivo CSV, ignorando
+                                                                                         // a primeira linha, e o
+                                                                                         // separador é vírgula
     public void testPostPetDDT(
-        String petId, // Parâmetro do ID do pet
-        String petName, // Parâmetro do nome do pet
-        String carId, // Parâmetro do ID da categoria
-        String catName, // Parâmetro do nome da categoria
-        String status1, // Parâmetro do status do pet
-        String status2 // Parâmetro do status do pet
+            String petId, // Parâmetro do ID do pet
+            String petName, // Parâmetro do nome do pet
+            String carId, // Parâmetro do ID da categoria
+            String catName, // Parâmetro do nome da categoria
+            String status1, // Parâmetro do status do pet
+            String status2 // Parâmetro do status do pet
     ) // Fim dos Parâmetros
     { // Início do códigos do método testPostPetDDT
-        
+
         // Criar a classe pet para receber os dados do csv
         Pet pet = new Pet(); // Cria uma nova instância da classe Pet
 
@@ -117,3 +118,5 @@ public class TestPet {
         pet.status1 = status1; // Atribui o status do pet do csv ao atributo status1 do objeto pet
         pet.status2 = status2; // Atribui o status do pet do csv ao atributo status2 do objeto pet
     }
+
+}
