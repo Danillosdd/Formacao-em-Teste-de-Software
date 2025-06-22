@@ -101,9 +101,9 @@ public class TestPet {
                                                                                          // a primeira linha, e o
                                                                                          // separador é vírgula
     public void testPostPetDDT(
-            String petId, // Parâmetro do ID do pet
+            int petId, // Parâmetro do ID do pet
             String petName, // Parâmetro do nome do pet
-            String catId, // Parâmetro do ID da categoria
+            int catId, // Parâmetro do ID da categoria
             String catName, // Parâmetro do nome da categoria
             String status1, // Parâmetro do status do pet
             String status2 // Parâmetro do status do pet
