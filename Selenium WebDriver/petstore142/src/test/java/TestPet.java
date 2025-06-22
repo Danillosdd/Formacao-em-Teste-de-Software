@@ -108,7 +108,7 @@ public class TestPet {
     { // Início do códigos do método testPostPetDDT
         
         // Criar a classe pet para receber os dados do csv
-        User user = new User(); // Cria uma nova instância da classe User
+        Pet user = new Pet(); // Cria uma nova instância da classe User
 
         user.petId = petId; // Atribui o ID do pet do csv ao atributo petId do objeto user
         
