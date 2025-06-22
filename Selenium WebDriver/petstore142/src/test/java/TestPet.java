@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Order; // Define a ordem de execução dos testes
 import org.junit.jupiter.api.TestMethodOrder; // Controla a ordem dos métodos de teste na classe
 import org.junit.jupiter.api.MethodOrderer; // Estratégias para ordenar métodos de teste
 import org.junit.jupiter.params.ParameterizedTest; // Permite testes parametrizados (com diferentes entradas)
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static io.restassured.RestAssured.given; // Facilita a escrita de requisições REST com Rest-Assured
 import static org.hamcrest.Matchers.is; // Facilita asserções de igualdade em
@@ -94,6 +95,17 @@ public class TestPet {
     // Data Driven Testing(DDT) - Teste Direcionado por Dados / Teste com Massa
     // Teste com Json parametrizado
 
-    @Test
-    
-}
+@ParameterizedTest @Order(5)
+    @CsvFileSource(resources = "/csv/petMassa.csv", numLinesToSkip = 1, delimiter = ",") // Lê o arquivo CSV, ignorando a primeira linha, e o separador é vírgula
+    public void testPostPetDDT(
+        String peIdtId, // Parâmetro do ID do pet
+        String petName, // Parâmetro do nome do pet
+        String carId, // Parâmetro do ID da categoria
+        String catName, // Parâmetro do nome da categoria
+        String status1, // Parâmetro do status do pet
+        String status2 // Parâmetro do status do pet
+    ) // Fim dos Parâmetros
+    { // Início do códigos do método testPostPetDDT
+        
+        
+    }
