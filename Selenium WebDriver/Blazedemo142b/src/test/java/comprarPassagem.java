@@ -24,41 +24,45 @@ import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-// 2 - Classe
+// 2 - Classe principal do teste
 public class comprarPassagem {
   // 2.1 - Atributos / Variáveis / Parâmetros  / Características
-  private WebDriver driver;
-  private Map<String, Object> vars;
-  JavascriptExecutor js;
+  private WebDriver driver; // Driver do navegador
+  private Map<String, Object> vars; // Variáveis auxiliares
+  JavascriptExecutor js; // Executor de JavaScript
 
   // 2.2 - Funções e Métodos
-  // Início
+  // Início - Executado antes de cada teste
   @Before
   public void setUp() {
-    driver = new ChromeDriver();
-    js = (JavascriptExecutor) driver;
-    vars = new HashMap<String, Object>();
+    driver = new ChromeDriver(); // Inicializa o ChromeDriver
+    js = (JavascriptExecutor) driver; // Permite executar JS no navegador
+    vars = new HashMap<String, Object>(); // Inicializa o mapa de variáveis
   }
 
-  // Fim
+  // Fim - Executado após cada teste
   @After
   public void tearDown() {
-    driver.quit();
+    driver.quit(); // Fecha o navegador e encerra o driver
   }
 
-  // Meio
+  // Meio - O teste principal de compra de passagem
   @Test
   public void comprarPassagem() {
-    driver.get("https://www.blazedemo.com/index.php");
-    driver.manage().window().setSize(new Dimension(1872, 1048));
+    driver.get("https://www.blazedemo.com/index.php"); // Abre o site
+    driver.manage().window().setSize(new Dimension(1872, 1048)); // Ajusta o tamanho da janela
+
+    // Seleciona a cidade de origem
     {
       WebElement dropdown = driver.findElement(By.name("fromPort"));
       dropdown.findElement(By.xpath("//option[. = 'São Paolo']")).click();
     }
+    // Seleciona a cidade de destino
     {
       WebElement dropdown = driver.findElement(By.name("toPort"));
       dropdown.findElement(By.xpath("//option[. = 'New York']")).click();
     }
+    // Realiza algumas ações com o mouse (pode ser desnecessário)
     {
       WebElement element = driver.findElement(By.name("toPort"));
       Actions builder = new Actions(driver);
@@ -74,11 +78,14 @@ public class comprarPassagem {
       Actions builder = new Actions(driver);
       builder.moveToElement(element).release().perform();
     }
+    // Clica em elementos da página para avançar no processo
     driver.findElement(By.cssSelector(".container:nth-child(3)")).click();
     driver.findElement(By.cssSelector(".container:nth-child(6)")).click();
     driver.findElement(By.cssSelector(".btn-primary")).click();
     driver.findElement(By.cssSelector("body")).click();
     driver.findElement(By.cssSelector("tr:nth-child(1) .btn")).click();
+
+    // Preenche o formulário de compra
     driver.findElement(By.id("inputName")).click();
     driver.findElement(By.id("inputName")).sendKeys("Danillo Araújo");
     driver.findElement(By.id("address")).click();
@@ -88,7 +95,11 @@ public class comprarPassagem {
     driver.findElement(By.id("state")).sendKeys("Goiás");
     driver.findElement(By.id("zipCode")).sendKeys("74465445");
     driver.findElement(By.id("rememberMe")).click();
+
+    // Finaliza a compra
     driver.findElement(By.cssSelector(".btn-primary")).click();
+
+    // Valida se a compra foi realizada com sucesso
     assertThat(driver.findElement(By.cssSelector("h1")).getText(), is("Thank you for your purchase today!"));
   }
 }
