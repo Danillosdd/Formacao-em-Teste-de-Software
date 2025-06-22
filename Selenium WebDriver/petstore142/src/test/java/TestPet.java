@@ -11,7 +11,9 @@ import org.junit.jupiter.api.Test; // Controla a ordem dos métodos de teste na 
 import org.junit.jupiter.params.ParameterizedTest; // Estratégias para ordenar métodos de teste
 import org.junit.jupiter.params.provider.CsvFileSource; // Permite testes parametrizados (com diferentes entradas)
 
-import static io.restassured.RestAssured.given;
+import com.google.gson.Gson; // Biblioteca para converter objetos Java em JSON e vice-versa
+
+import static io.restassured.RestAssured.given; // Facilita a criação de requisições HTTP com Rest-Assured
 
 // 2 - classe
 public class TestPet {
@@ -118,5 +120,8 @@ public class TestPet {
         pet.status1 = status1; // Atribui o status do pet do csv ao atributo status1 do objeto pet
         pet.status2 = status2; // Atribui o status do pet do csv ao atributo status2 do objeto pet
     }
+
+    // Criar um Json para o Body a ser enviado a partir da classe Pet e do CSV
+    Gson gson = new Gson(); // Cria uma instância do Gson para converter objetos Java em JSON
 
 }
