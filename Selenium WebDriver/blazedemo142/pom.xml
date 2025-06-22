@@ -16,7 +16,10 @@
 
 
     <dependencies>
-
+        <!--
+            Dependência para JUnit Jupiter (JUnit 5) - Usada para escrever e executar testes unitários modernos.
+            Escopo de teste: só é usada durante a execução dos testes.
+        -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -24,6 +27,10 @@
             <scope>test</scope>
         </dependency>
 
+        <!--
+            Dependência para Hamcrest - Biblioteca de matchers para facilitar asserções em testes.
+            Escopo de teste: só é usada durante a execução dos testes.
+        -->
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest</artifactId>
@@ -31,11 +38,19 @@
             <scope>test</scope>
         </dependency>
 
+        <!--
+            Dependência para Selenium Java - Biblioteca principal para automação de testes web com Selenium WebDriver.
+        -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.25.0</version>
         </dependency>
+
+        <!--
+            Dependência para JUnit 4 - Versão anterior do framework de testes.
+            Atenção: pode causar conflitos se usado junto com JUnit 5.
+        -->
         <dependency>
             <artifactId>junit</artifactId>
             <groupId>junit</groupId>
