@@ -139,5 +139,7 @@ public class TestPet {
                 .body("category.id", is(catId)) // Verifica se o id da categoria é igual ao do CSV
                 .body("category.name", is(catName)) // Verifica se o name da categoria é igual ao do CSV
                 .body("status", is(status1)) // Verifica se o status é igual ao do CSV
+
+                ; // Fim do given
     }
 }
