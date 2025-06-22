@@ -103,7 +103,7 @@ public class TestPet {
     public void testPostPetDDT(
             String petId, // Parâmetro do ID do pet
             String petName, // Parâmetro do nome do pet
-            String carId, // Parâmetro do ID da categoria
+            String catId, // Parâmetro do ID da categoria
             String catName, // Parâmetro do nome da categoria
             String status1, // Parâmetro do status do pet
             String status2 // Parâmetro do status do pet
@@ -115,7 +115,7 @@ public class TestPet {
 
         pet.petId = petId; // Atribui o ID do pet do csv ao atributo petId do objeto pet
         pet.petName = petName; // Atribui o nome do pet do csv ao atributo petName do objeto pet
-        pet.carId = carId; // Atribui o ID da categoria do csv ao atributo carId do objeto pet
+        pet.catId = catId; // Atribui o ID da categoria do csv ao atributo carId do objeto pet
         pet.catName = catName; // Atribui o nome da categoria do csv ao atributo catName do objeto pet
         pet.status = status1; // Atribui o status do pet do csv ao atributo status1 do objeto pet. Status inicial usado no Post = "available"
 
@@ -136,7 +136,8 @@ public class TestPet {
                 .statusCode(200) // O código de resposta é 200
                 .body("id", is(petId)) // Verifica o código do pet convertido para inteiro
                 .body("name", is(petName)) // Verifica se o nome é igual ao do CSV
-                .body("category.name", is(catName)) // Verifica se a categoria é igual ao do CSV
+                .body("category.id", is(catId)) // Verifica se o id da categoria é igual ao do CSV
+                .body("category.name", is(catName)) // Verifica se o name da categoria é igual ao do CSV
                 .body("status", is(status1)) // Verifica se o status é igual ao do CSV
     }
 }
