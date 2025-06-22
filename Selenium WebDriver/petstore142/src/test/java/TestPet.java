@@ -96,9 +96,9 @@ public class TestPet {
     // Teste com Json parametrizado
 
 @ParameterizedTest @Order(5)
-    @CsvFileSource(resources = "/csv/petMassa.csv", numLinesToSkip = 1, delimiter = ",") // Lê o arquivo CSV, ignorando a primeira linha, e o separador é vírgula
+    @CsvFileSource(resources = "/csv/petMassa.csv", numLinesToSkip = 1, delimiter = ',') // Lê o arquivo CSV, ignorando a primeira linha, e o separador é vírgula
     public void testPostPetDDT(
-        String peIdtId, // Parâmetro do ID do pet
+        String petId, // Parâmetro do ID do pet
         String petName, // Parâmetro do nome do pet
         String carId, // Parâmetro do ID da categoria
         String catName, // Parâmetro do nome da categoria
@@ -107,5 +107,9 @@ public class TestPet {
     ) // Fim dos Parâmetros
     { // Início do códigos do método testPostPetDDT
         
+        // Criar a classe pet para receber os dados do csv
+        User user = new User(); // Cria uma nova instância da classe User
+
+        user.petId = petId; // Atribui o ID do pet do csv ao atributo petId do objeto user
         
     }
