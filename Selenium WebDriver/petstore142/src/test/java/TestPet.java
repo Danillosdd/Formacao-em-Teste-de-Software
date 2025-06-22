@@ -117,11 +117,26 @@ public class TestPet {
         pet.petName = petName; // Atribui o nome do pet do csv ao atributo petName do objeto pet
         pet.carId = carId; // Atribui o ID da categoria do csv ao atributo carId do objeto pet
         pet.catName = catName; // Atribui o nome da categoria do csv ao atributo catName do objeto pet
-        pet.status1 = status1; // Atribui o status do pet do csv ao atributo status1 do objeto pet
-        pet.status2 = status2; // Atribui o status do pet do csv ao atributo status2 do objeto pet
+        pet.status = status1; // Atribui o status do pet do csv ao atributo status1 do objeto pet. Status inicial usado no Post = "available"
+
+        // Criar um Json para o Body a ser enviado a partir da classe Pet e do CSV
+        Gson gson = new Gson(); // Cria uma instância do Gson para converter objetos Java em JSON
+        String jsonBody = gson.toJson(pet); // Converte o objeto pet em uma string JSON(Convertendo o CSV em JSON)
+        
+        given()
+                .contentType(ct) // O tipo do conteudo é
+                .log().all() // Mostre tudo na ida
+                .body(jsonBody) // Envie o corpo da requisição com o JSON gerado
+                // Executa
+                .when() // Quando
+                .post(uriPet) // Chamamos o endpoint faznedo um POST
+                // Valida
+                .then() // Então
+                .log().all() // Mostre tudo na volta
+                .statusCode(200) // O código de resposta é 200
+                .body("id", is(Integer.parseInt(petId))) // Verifica o código do pet convertido para inteiro
+                .body("name", is(petName)) // Verifica se o nome é igual ao do CSV
+                .body("category.name", is(catName)) // Verifica se a categoria é igual ao do CSV
+                .body("status", is(status)) // Verifica se o status é igual ao do CSV
     }
-
-    // Criar um Json para o Body a ser enviado a partir da classe Pet e do CSV
-    Gson gson = new Gson(); // Cria uma instância do Gson para converter objetos Java em JSON
-
 }
