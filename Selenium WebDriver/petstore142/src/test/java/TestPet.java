@@ -1,14 +1,18 @@
 // 0 - nome do pacote
 
 // 1 - bibliotecas
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.IOException; // Para tratar exceções de entrada/saída (IO)
+import java.nio.file.Files; // Para ler arquivos do sistema de arquivos
+import java.nio.file.Paths; // Para manipular caminhos de arquivos
 
-import static org.hamcrest.Matchers.is;
-import org.junit.jupiter.api.Test; // Classe Resposta do REST-Assured
+import org.junit.jupiter.api.Test; // Anotação para marcar métodos de teste (JUnit 5)
+import org.junit.jupiter.api.Order; // Define a ordem de execução dos testes
+import org.junit.jupiter.api.TestMethodOrder; // Controla a ordem dos métodos de teste na classe
+import org.junit.jupiter.api.MethodOrderer; // Estratégias para ordenar métodos de teste
+import org.junit.jupiter.params.ParameterizedTest; // Permite testes parametrizados (com diferentes entradas)
 
-import static io.restassured.RestAssured.given; // função given
+import static io.restassured.RestAssured.given; // Facilita a escrita de requisições REST com Rest-Assured
+import static org.hamcrest.Matchers.is; // Facilita asserções de igualdade em
 
 // 2 - classe
 public class TestPet {
@@ -91,5 +95,5 @@ public class TestPet {
     // Teste com Json parametrizado
 
     @Test
-    a
+    
 }
