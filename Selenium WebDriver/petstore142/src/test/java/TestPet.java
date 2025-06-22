@@ -134,9 +134,9 @@ public class TestPet {
                 .then() // Então
                 .log().all() // Mostre tudo na volta
                 .statusCode(200) // O código de resposta é 200
-                .body("id", is(Integer.parseInt(petId))) // Verifica o código do pet convertido para inteiro
+                .body("id", is(petId)) // Verifica o código do pet convertido para inteiro
                 .body("name", is(petName)) // Verifica se o nome é igual ao do CSV
                 .body("category.name", is(catName)) // Verifica se a categoria é igual ao do CSV
-                .body("status", is(status)) // Verifica se o status é igual ao do CSV
+                .body("status", is(status1)) // Verifica se o status é igual ao do CSV
     }
 }
