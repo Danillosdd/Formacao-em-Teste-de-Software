@@ -5,17 +5,20 @@ import java.io.IOException; // Para tratar exceções de entrada/saída (IO)
 import java.nio.file.Files; // Para ler arquivos do sistema de arquivos
 import java.nio.file.Paths; // Para manipular caminhos de arquivos
 
-import static org.hamcrest.Matchers.is; // Anotação para marcar métodos de teste (JUnit 5)
+import static org.hamcrest.Matchers.is;
+import org.junit.jupiter.api.MethodOrderer; // Anotação para marcar métodos de teste (JUnit 5)
 import org.junit.jupiter.api.Order; // Define a ordem de execução dos testes
 import org.junit.jupiter.api.Test; // Controla a ordem dos métodos de teste na classe
-import org.junit.jupiter.params.ParameterizedTest; // Estratégias para ordenar métodos de teste
-import org.junit.jupiter.params.provider.CsvFileSource; // Permite testes parametrizados (com diferentes entradas)
+import org.junit.jupiter.api.TestMethodOrder; // Estratégias para ordenar métodos de teste
+import org.junit.jupiter.params.ParameterizedTest; // Permite testes parametrizados (com diferentes entradas)
+import org.junit.jupiter.params.provider.CsvFileSource; // Biblioteca para converter objetos Java em JSON e vice-versa
 
-import com.google.gson.Gson; // Biblioteca para converter objetos Java em JSON e vice-versa
+import com.google.gson.Gson;
 
-import static io.restassured.RestAssured.given; // Facilita a criação de requisições HTTP com Rest-Assured
+import static io.restassured.RestAssured.given;
 
 // 2 - classe
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestPet {
 
     // 2.1 - atributos
@@ -113,12 +116,18 @@ public class TestPet {
 
         // Criar a classe pet para receber os dados do csv
         Pet pet = new Pet(); // Cria uma nova instância da classe Pet
+        Pet.Category category = pet.new Category(); // Cria uma nova instância da sub classe Category dentro de Pet
+        Pet.Tag[] tags = new Pet.Tag[2]; // Cria uma nova instância da sub classe Tags dentro de Pet
+        tags[0] = pet.new Tag(); // Cria uma nova instância da sub classe Tag dentro de Pet
+        tags[1] = pet.new Tag(); // Cria uma nova instância da sub classe Tag dentro de Pet
 
         pet.id = petId; // Atribui o ID do pet do csv ao atributo petId do objeto pet
+        pet.category = category; // Atribui a categoria do csv ao atributo category do objeto pet
         pet.category.id = catId; // Atribui o ID da categoria do csv ao atributo catId do objeto pet
         pet.category.name = catName; // Atribui o nome da categoria do csv ao
         pet.name = petName; // Atribui o nome do pet do csv ao atributo name do objeto pet
         // pet.photoUrls não precisa ser incluído, pois será vazio
+        pet.tags = tags; // Atribui as tags do csv ao atributo tags do objeto pet
         pet.tags[0].id = 9; // Atribui o ID da tag do csv ao atributo id do objeto pet
         pet.tags[0].name = "vacinado"; // Atribui o nome da tag do csv ao atributo name do objeto pet
         pet.status = status1; // Atribui o status do pet do csv ao atributo status1 do objeto pet. Status
