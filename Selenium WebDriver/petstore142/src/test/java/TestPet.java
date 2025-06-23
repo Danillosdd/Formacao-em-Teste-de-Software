@@ -99,6 +99,7 @@ public class TestPet {
     @Order(5)
     @CsvFileSource(resources = "/csv/petMassa.csv", numLinesToSkip = 1, delimiter = ',') // Lê o arquivo CSV, ignorando
                                                                                          // a primeira linha, e o
+    6
                                                                                          // separador é vírgula
     public void testPostPetDDT(
             int petId, // Parâmetro do ID do pet
