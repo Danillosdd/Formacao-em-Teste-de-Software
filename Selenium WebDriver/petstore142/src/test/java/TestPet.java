@@ -99,8 +99,8 @@ public class TestPet {
     @Order(5)
     @CsvFileSource(resources = "/csv/petMassa.csv", numLinesToSkip = 1, delimiter = ',') // Lê o arquivo CSV, ignorando
                                                                                          // a primeira linha, e o
-    6
-                                                                                         // separador é vírgula
+
+    // separador é vírgula
     public void testPostPetDDT(
             int petId, // Parâmetro do ID do pet
             String petName, // Parâmetro do nome do pet
@@ -114,16 +114,20 @@ public class TestPet {
         // Criar a classe pet para receber os dados do csv
         Pet pet = new Pet(); // Cria uma nova instância da classe Pet
 
-        pet.petId = petId; // Atribui o ID do pet do csv ao atributo petId do objeto pet
-        pet.petName = petName; // Atribui o nome do pet do csv ao atributo petName do objeto pet
-        pet.catId = catId; // Atribui o ID da categoria do csv ao atributo carId do objeto pet
-        pet.catName = catName; // Atribui o nome da categoria do csv ao atributo catName do objeto pet
-        pet.status = status1; // Atribui o status do pet do csv ao atributo status1 do objeto pet. Status inicial usado no Post = "available"
+        pet.id = petId; // Atribui o ID do pet do csv ao atributo petId do objeto pet
+        pet.category.id = catId; // Atribui o ID da categoria do csv ao atributo catId do objeto pet
+        pet.category.name = catName; // Atribui o nome da categoria do csv ao
+        pet.name = petName; // Atribui o nome do pet do csv ao atributo name do objeto pet
+        // pet.photoUrls não precisa ser incluído, pois será vazio
+        pet.tags[0].id = 9; // Atribui o ID da tag do csv ao atributo id do objeto pet
+        pet.tags[0].name = "vacinado"; // Atribui o nome da tag do csv ao atributo name do objeto pet
+        pet.status = status1; // Atribui o status do pet do csv ao atributo status1 do objeto pet. Status
+                              // inicial usado no Post = "available"
 
         // Criar um Json para o Body a ser enviado a partir da classe Pet e do CSV
         Gson gson = new Gson(); // Cria uma instância do Gson para converter objetos Java em JSON
         String jsonBody = gson.toJson(pet); // Converte o objeto pet em uma string JSON(Convertendo o CSV em JSON)
-        
+
         given()
                 .contentType(ct) // O tipo do conteudo é
                 .log().all() // Mostre tudo na ida
@@ -141,6 +145,6 @@ public class TestPet {
                 .body("category.name", is(catName)) // Verifica se o name da categoria é igual ao do CSV
                 .body("status", is(status1)) // Verifica se o status é igual ao do CSV
 
-                ; // Fim do given
+        ; // Fim do given
     }
 }
