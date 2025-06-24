@@ -4,10 +4,19 @@ Nós já aprendemos a usar Selenium em algumas abordagens:
 - Adaptar a gravação com o Selenium WebDriver
 - Criar nossos próprios scripts simples por programação
 
+Em um projeto simples, cada teste é um arquivo
 
 Agora vamos aprender abordagens úteis em projetos com vida útil maior:
 
 Projeto utilizando a abordagem BDD (Behavior Driven Development)
 - Desenvolvimento Direcionado por Comportamento
 --> foco do BDD é melhorar a comunicação do time(Não tem nada relaciondo com teste e automação)
+--> Usar um plugin / framework chamado Cucumber (Kiocâmber/Pepino)
+--> Seguir a sintaxe Gherkin (picles de pepino)
+
+
+Um teste será composto por 2 arquivos
+- Um arquivo de negócio, escrito em Gherkin(.feature)
+- Um sergundo arquivo que é de automação, que faz referêcia ao .feature(.java)
+
 
