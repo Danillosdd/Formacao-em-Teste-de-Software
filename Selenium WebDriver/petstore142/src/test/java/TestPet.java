@@ -18,7 +18,7 @@ import com.google.gson.Gson;
 import static io.restassured.RestAssured.given;
 
 // 2 - classe
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class) // Ativa a ordenação dos testes
 public class TestPet {
 
     // 2.1 - atributos
