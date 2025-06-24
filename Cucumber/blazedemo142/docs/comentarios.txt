@@ -9,3 +9,5 @@ Agora vamos aprender abordagens úteis em projetos com vida útil maior:
 
 Projeto utilizando a abordagem BDD (Behavior Driven Development)
 - Desenvolvimento Direcionado por Comportamento
+--> foco do BDD é melhorar a comunicação do time(Não tem nada relaciondo com teste e automação)
+
