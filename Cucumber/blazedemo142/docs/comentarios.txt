@@ -1,0 +1,11 @@
+Nós já aprendemos a usar Selenium em algumas abordagens:
+
+- Gravação e execução com o Selenium IDE
+- Adaptar a gravação com o Selenium WebDriver
+- Criar nossos próprios scripts simples por programação
+
+
+Agora vamos aprender abordagens úteis em projetos com vida útil maior:
+
+Projeto utilizando a abordagem BDD (Behavior Driven Development)
+- Desenvolvimento Direcionado por Comportamento
