@@ -17,7 +17,8 @@
 
     <dependencies>
         <!--
-            Dependência para JUnit Jupiter (JUnit 5) - Usada para escrever e executar testes unitários modernos.
+            Dependência para JUnit Jupiter (JUnit 5) - Usada para escrever e executar testes unitários
+        modernos.
             Escopo de teste: só é usada durante a execução dos testes.
         -->
         <dependency>
@@ -39,7 +40,8 @@
         </dependency>
 
         <!--
-            Dependência para Selenium Java - Biblioteca principal para automação de testes web com Selenium WebDriver.
+            Dependência para Selenium Java - Biblioteca principal para automação de testes web com Selenium
+        WebDriver.
         -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -55,6 +57,28 @@
             <artifactId>junit</artifactId>
             <groupId>junit</groupId>
             <version>4.11</version>
+        </dependency>
+
+        <!--
+            Dependência para Cucumber Java - Biblioteca principal do Cucumber para escrever definições de 
+            passos (steps) em Java para testes BDD (Behavior Driven Development).
+        -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.26.0</version>
+        </dependency>
+
+        <!--
+            Dependência para Cucumber JUnit Platform Engine - Integração do Cucumber com a plataforma JUnit 5,
+            permitindo executar testes Cucumber através do JUnit Platform.
+            Escopo de teste: só é usada durante a execução dos testes.
+        -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit-platform-engine</artifactId>
+            <version>7.26.0</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
