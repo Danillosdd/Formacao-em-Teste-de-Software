@@ -1,7 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: io.cucumber.junit.platform.engine.CucumberTestEngine
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.167 s <<< FAILURE! - in io.cucumber.junit.platform.engine.CucumberTestEngine
-Comprar Passagem.Comprar com Sucesso  Time elapsed: 4.117 s  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<...m São Paolo to Cairo[]> but was:<...m São Paolo to Cairo[:]>
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.28 s - in io.cucumber.junit.platform.engine.CucumberTestEngine

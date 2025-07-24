@@ -63,7 +63,7 @@ public class ComprarPassagemBDD {
 
     @Entao("visualiza a lista de voos")
     public void visualiza_a_lista_de_voos() {
-        assertEquals("Flights from " + origem + " to " + destino,
+        assertEquals("Flights from " + origem + " to " + destino + ":",
                 driver.findElement(By.cssSelector("h3")).getText());
     }
 
