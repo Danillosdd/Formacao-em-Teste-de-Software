@@ -65,6 +65,7 @@ public class ComprarPassagemBDD {
     public void visualiza_a_lista_de_voos() {
         assertEquals("Flights from " + origem + " to " + destino + ":",
                 driver.findElement(By.cssSelector("h3")).getText());
+                System.out.println("executou o teste");
     }
 
 }

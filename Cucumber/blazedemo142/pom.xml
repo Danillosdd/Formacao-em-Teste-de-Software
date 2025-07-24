@@ -84,17 +84,6 @@
         </dependency>
 
         <!--
-            Dependência para Cucumber PicoContainer - Container de injeção de dependência leve
-            usado pelo Cucumber para gerenciar o compartilhamento de objetos entre steps.
-            Permite que diferentes step definitions compartilhem o mesmo WebDriver, por exemplo.
-        -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-picocontainer</artifactId>
-            <version>7.20.1</version>
-        </dependency>
-
-        <!--
             Dependência para WebDriverManager - Biblioteca que gerencia automaticamente os drivers
             dos navegadores (chromedriver, geckodriver, etc.), baixando e configurando as versões
             corretas automaticamente, eliminando a necessidade de configuração manual.
