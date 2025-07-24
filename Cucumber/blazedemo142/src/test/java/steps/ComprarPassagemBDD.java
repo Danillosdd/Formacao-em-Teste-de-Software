@@ -22,6 +22,7 @@ public class ComprarPassagemBDD {
         WebDriverManager.chromedriver().setup(); // configura o WebDriver para o Chrome
         driver = new ChromeDriver(); // instancia como ChromeDriver
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000)); // espera implícita de 3 segundos
+        
     }
 
     @After
