@@ -40,7 +40,7 @@ public class ComprarPassagemBDD {
         driver.get(url);
     }
 
-    @Quando("seleciono a origem {string} e o destino {string}")
+    @Quando("seleciono a origem {string} e destino {string}")
     public void seleciono_a_origem_e_destino(String origem, String destino) {
         {
             this.origem = origem;
