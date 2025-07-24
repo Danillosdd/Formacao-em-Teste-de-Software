@@ -41,6 +41,7 @@ public class ComprarPassagemBDD {
     }
 
     @Quando("seleciono a origem {string} e destino {string}")
+    @Quando("seleciono a {string} e {string}")
     public void seleciono_a_origem_e_destino(String origem, String destino) {
         {
             this.origem = origem;
@@ -65,7 +66,7 @@ public class ComprarPassagemBDD {
     public void visualiza_a_lista_de_voos() {
         assertEquals("Flights from " + origem + " to " + destino + ":",
                 driver.findElement(By.cssSelector("h3")).getText());
-                System.out.println("executou o teste");
+        System.out.println("executou o teste");
     }
 
 }
