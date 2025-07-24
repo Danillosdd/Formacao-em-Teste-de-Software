@@ -2,6 +2,7 @@ package steps;
 
 import java.time.Duration;
 
+import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class ComprarPassagemBDD {
 
     WebDriver driver; // objeto do Selenium WebDriver
+    String origem;
+    String destino;
 
     @Before
     public void iniciar() {
@@ -40,11 +43,13 @@ public class ComprarPassagemBDD {
     @Quando("seleciono a origem {string} e o destino {string}")
     public void seleciono_a_origem_e_destino(String origem, String destino) {
         {
+            this.origem = origem;
             WebElement combo = driver.findElement(By.name("fromPort"));
             combo.click();
             combo.findElement(By.xpath("//option[. = '" + origem + "']")).click();
         }
         {
+            this.destino = destino;
             WebElement combo = driver.findElement(By.name("toPort"));
             combo.click();
             combo.findElement(By.xpath("//option[. = '" + destino + "']")).click();
@@ -58,6 +63,8 @@ public class ComprarPassagemBDD {
 
     @Entao("visualiza a lista de voos")
     public void visualiza_a_lista_de_voos() {
+        assertEquals("Flights from " + origem + " to " + destino,
+                driver.findElement(By.cssSelector("h3")).getText());
     }
 
 }
