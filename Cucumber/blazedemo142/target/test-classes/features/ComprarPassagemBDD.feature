@@ -1,3 +1,6 @@
+#Executar no Terminal:
+#mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
+
 # language: pt
 Funcionalidade: Comprar Passagem
     Escolher e comprar passagens aereas

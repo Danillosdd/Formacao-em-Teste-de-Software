@@ -20,3 +20,5 @@ Um teste será composto por 2 arquivos
 - Um sergundo arquivo que é de automação, que faz referêcia ao .feature(.java)
 
 
+Executar no Terminal:
+mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
