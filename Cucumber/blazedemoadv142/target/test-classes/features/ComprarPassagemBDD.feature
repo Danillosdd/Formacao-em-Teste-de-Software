@@ -44,11 +44,19 @@ Funcionalidade: Comprar Passagem
 # #Testes Negativos#
 #  Esquema de Cenario: Login Positivo
 #    Dado que acesso a pagina de Login
-#    Quando preencho o email e a senha corretos
+#    Quando preencho o <email> e a <senha>
 #    E clico no botao Login
 #    Entao exibe a mensagem de Login com Sucesso
+# Exemplos:
+#      | email                   | senha     |
+#      | cliente@iterasys.com.br | Laranja25 | #1 VV 
 #  Esquema de Cenario: Login Negativo
 #    Dado que acesso a pagina de Login
-#    Quando preencho o email e a senha incorretos
+#    Quando preencho o <email> e a <senha>
 #    E clico no botao Login
 #    Entao exibe a mensagem de email ou senha incorretos
+# Exemplos:
+#      | email                   | senha     |
+#      | cliente@iterasys.com.br | Laranja24 | #2 VF
+#      | aluno@iterasys.com.br   | Laranja25 | #3 FV
+#      | aluno@iterasys.com.br   | Laranja24 | #4 FF
