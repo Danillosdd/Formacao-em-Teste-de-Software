@@ -58,8 +58,8 @@ public class ComprarPassagemBDD {
     }
 
     @E("clico no botão Find Flights")
-    public void clico_no_botao_Find_Flights() {
-        driver.findElement(By.cssSelector(".btn.btn-primary")).click(); // clica no botão "Find Flights"
+    public void clico_no_botao_find_flights() {
+        driver.findElement(By.cssSelector(".btn-primary")).click(); // clica no botão "Find Flights"
     }
 
     @Entao("visualiza a lista de voos")
