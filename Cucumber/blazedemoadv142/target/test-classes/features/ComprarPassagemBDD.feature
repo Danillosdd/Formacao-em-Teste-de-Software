@@ -42,8 +42,13 @@ Funcionalidade: Comprar Passagem
 #    Quando clico em Salvar
 #    Entao exibe a mensagem de Cadastrado com Sucesso!
 # #Testes Negativos#
-#  Esquema de Cenario: Login
+#  Esquema de Cenario: Login Positivo
 #    Dado que acesso a pagina de Login
-#    Quando preencho o email e a senha
+#    Quando preencho o email e a senha corretos
 #    E clico no botao Login
 #    Entao exibe a mensagem de Login com Sucesso
+#  Esquema de Cenario: Login Negativo
+#    Dado que acesso a pagina de Login
+#    Quando preencho o email e a senha incorretos
+#    E clico no botao Login
+#    Entao exibe a mensagem de email ou senha incorretos
