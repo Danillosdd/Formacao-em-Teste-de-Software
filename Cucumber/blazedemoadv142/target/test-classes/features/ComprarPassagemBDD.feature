@@ -20,6 +20,7 @@ Funcionalidade: Comprar Passagem
       | origem      | destino  |
       | "São Paolo" | "Cairo"  |
       | "Boston"    | "London" |
+# #Quando houver um OU é mehor separar em 2 ou mais cenarios#
 #  Cenario: Cadastro Cliente
 #    Dado que acesso a pagina de cadastro de cliente
 #    Entao escolho entre PF ou PJ
@@ -40,3 +41,9 @@ Funcionalidade: Comprar Passagem
 #    E preencho o telefone e o email
 #    Quando clico em Salvar
 #    Entao exibe a mensagem de Cadastrado com Sucesso!
+# #Teste Negativos#
+#  Esquema de Cenario: Login
+#    Dado que acesso a pagina de Login
+#    Quando preencho o email e a senha
+#    E clico no botao Login
+#    Entao exibe a mensagem de Login com Sucesso
