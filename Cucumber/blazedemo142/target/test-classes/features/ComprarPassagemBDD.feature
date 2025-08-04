@@ -19,4 +19,4 @@ Funcionalidade: Comprar Passagem
     Exemplos:
       | origem      | destino |
       | "São Paolo" | "Cairo" |
-      | "Boston"    | "Lodon" |
+      | "Boston"    | "London" |
