@@ -86,10 +86,6 @@
                             cucumber.junit-platform.naming-strategy=long
                         </configurationParameters>
                     </properties>
-                    <systemPropertyVariables>
-                        <cucumber.features>src/test/resources/features</cucumber.features>
-                        <cucumber.glue>steps</cucumber.glue>
-                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
