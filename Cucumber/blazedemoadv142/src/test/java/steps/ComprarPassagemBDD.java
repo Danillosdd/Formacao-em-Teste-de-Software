@@ -1,5 +1,7 @@
 package steps;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
