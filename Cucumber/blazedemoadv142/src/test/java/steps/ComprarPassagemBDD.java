@@ -1,6 +1,6 @@
 package steps;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.Duration;
 
@@ -15,7 +15,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
-import io.github.bonigarcia.wdm.WebDriverManager;
+// import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ComprarPassagemBDD {
 
@@ -25,18 +25,20 @@ public class ComprarPassagemBDD {
 
     @Before
     public void iniciar() {
-        WebDriverManager.chromedriver().setup(); // configura o WebDriver para o Chrome
+        // garantir o driver correto para o Chrome
+        // WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(); // instancia como ChromeDriver
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000)); // espera implícita de 3 segundos
-        driver.manage().window().maximize(); // maximiza a janela do navegador
+        // definir o tempo de espera implicita de 3 segundos
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
+        driver.manage().window().maximize(); // exibir a janela maximizado
     }
 
     @After
     public void finalizar() {
-        driver.quit(); // destruir o objeto do WebDriver
+        driver.quit(); // destruir o objeto do Selenium WebDriver
     }
 
-    @Dado("que acesso o site: {string}")
+    @Dado("que acesso o site {string}")
     public void que_acesso_o_site(String url) {
         driver.get(url);
     }
@@ -56,11 +58,12 @@ public class ComprarPassagemBDD {
             combo.click();
             combo.findElement(By.xpath("//option[. = '" + destino + "']")).click();
         }
+
     }
 
-    @E("clico no botão Find Flights")
+    @E("clico no botao Find Flights")
     public void clico_no_botao_find_flights() {
-        driver.findElement(By.cssSelector(".btn-primary")).click(); // clica no botão "Find Flights"
+        driver.findElement(By.cssSelector(".btn-primary")).click();
     }
 
     @Entao("visualiza a lista de voos")
