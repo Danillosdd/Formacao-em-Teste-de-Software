@@ -1,37 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.blazemeter</groupId>
-    <artifactId>blazedemoadv142</artifactId>
+    <artifactId>blazedemo142</artifactId>
     <version>1.0-SNAPSHOT</version>
-
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
-
     <dependencies>
-        <!--
-            Dependência para JUnit Jupiter (JUnit 5) - Usada para escrever e executar testes unitários
-        modernos.
-            Escopo de teste: só é usada durante a execução dos testes.
-        -->
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.11.1</version>
             <scope>test</scope>
         </dependency>
-
-        <!--
-            Dependência para Hamcrest - Biblioteca de matchers para facilitar asserções em testes.
-            Escopo de teste: só é usada durante a execução dos testes.
-        -->
+     
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest</artifactId>
@@ -39,61 +29,37 @@
             <scope>test</scope>
         </dependency>
 
-        <!--
-            Dependência para Selenium Java - Biblioteca principal para automação de testes web com Selenium
-        WebDriver.
-        -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.25.0</version>
         </dependency>
-
-        <!--
-            Dependência para Cucumber Java - Biblioteca principal do Cucumber para escrever definições de 
-            passos (steps) em Java para testes BDD (Behavior Driven Development).
-        -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.20.1</version>
         </dependency>
-
-        <!--
-            Dependência para Cucumber JUnit Platform Engine - Integração do Cucumber com a plataforma JUnit 5,
-            permitindo executar testes Cucumber através do JUnit Platform.
-            Escopo de teste: só é usada durante a execução dos testes.
-        -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit-platform-engine</artifactId>
             <version>7.20.1</version>
             <scope>test</scope>
         </dependency>
-
-        <!--
-            Dependência para Cucumber JUnit - Integração do Cucumber com JUnit 4 (versão clássica).
-            Permite executar testes Cucumber usando anotações do JUnit tradicional.
-            Escopo de teste: só é usada durante a execução dos testes.
-        -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>7.20.1</version>
             <scope>test</scope>
-        </dependency>
-
-        <!--
-            Dependência para WebDriverManager - Biblioteca que gerencia automaticamente os drivers
-            dos navegadores (chromedriver, geckodriver, etc.), baixando e configurando as versões
-            corretas automaticamente, eliminando a necessidade de configuração manual.
-        -->
+        </dependency> 
+        
         <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.9.2</version>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>7.20.1</version>
         </dependency>
         
+        
     </dependencies>
+    
 
 </project>
