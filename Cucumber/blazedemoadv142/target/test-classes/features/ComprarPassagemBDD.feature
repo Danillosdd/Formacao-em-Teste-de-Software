@@ -41,7 +41,7 @@ Funcionalidade: Comprar Passagem
 #    E preencho o telefone e o email
 #    Quando clico em Salvar
 #    Entao exibe a mensagem de Cadastrado com Sucesso!
-# #Teste Negativos#
+# #Testes Negativos#
 #  Esquema de Cenario: Login
 #    Dado que acesso a pagina de Login
 #    Quando preencho o email e a senha
