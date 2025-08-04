@@ -12,7 +12,7 @@ Funcionalidade: Comprar Passagem
 
   Esquema do Cenario: Comprar com Sucesso DDT
     Dado que acesso o site: "https://www.blazedemo.com/"
-    Quando seleciono a <origem> e destino <destino>
+    Quando seleciono a <origem> e <destino>
     E clico no botão Find Flights
     Entao visualiza a lista de voos
 
