@@ -17,6 +17,6 @@ Funcionalidade: Comprar Passagem
     Entao visualiza a lista de voos
 
     Exemplos:
-      | origem      | destino |
-      | "São Paolo" | "Cairo" |
+      | origem      | destino  |
+      | "São Paolo" | "Cairo"  |
       | "Boston"    | "London" |
