@@ -21,4 +21,6 @@ Um teste será composto por 2 arquivos
 
 
 Executar no Terminal:
+mvn clean test
+mvn clean test -Dcucumber.features="src/test/resources/features"
 mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
