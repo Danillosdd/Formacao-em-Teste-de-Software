@@ -38,4 +38,7 @@ mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src
 Um teste vão ser vários arquivos...
 - Um arquivo  de mapeamento para cada página ou região da página (*Page.java)
 - Pode ter um arquivo de negócio, escrito em Gherkin (.feature)
-- Um arquivo de automação, que faz referência ao .feature (.java) 
+- Um arquivo de automação, que faz referência ao .feature (.java) e ao mapeamento por projeto:
+    - Um arquivo de hooks (Before e After centralizados)
+    - Um arquivo runner (Executar o teste / Maestro)
+
