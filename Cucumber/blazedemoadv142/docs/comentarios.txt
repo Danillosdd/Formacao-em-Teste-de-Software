@@ -31,3 +31,11 @@ mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src
 ----------
 
 * Projeto utilizando a abordagem Page Objects / Page Factory
+ - Pode usar ou não BDD
+--> Foco na Manutenção e reaproveitamento de longo prazo
+--> Útil para projetos com Clico de Vida de Desenvolvimento de Software (CVDS/SDLC)
+
+Um teste vão ser vários arquivos...
+- Um arquivo  de mapeamento para cada página ou região da página (*Page.java)
+- Pode ter um arquivo de negócio, escrito em Gherkin (.feature)
+- Um arquivo de automação, que faz referência ao .feature (.java) 
