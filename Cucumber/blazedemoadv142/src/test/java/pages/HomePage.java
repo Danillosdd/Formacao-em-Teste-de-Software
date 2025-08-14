@@ -27,8 +27,6 @@ public class HomePage extends CommonPage {
     @FindBy(css = "input[value]")
     WebElement btnFindFlights;
 
-    @FindBy(css = "select[name='toPort']")
-    WebElement comboDestino;
 
     // Ações com Elementos Mapeados
 }
