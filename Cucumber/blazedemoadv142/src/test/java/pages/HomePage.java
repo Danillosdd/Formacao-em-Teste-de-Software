@@ -11,4 +11,7 @@ public class HomePage extends CommonPage {
         PageFactory.initElements(driver, this);
     }
 
+    // Elementos Mapeados
+
+    // Ações com Elementos Mapeados
 }
