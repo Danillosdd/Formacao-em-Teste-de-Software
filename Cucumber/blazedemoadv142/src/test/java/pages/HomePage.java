@@ -22,6 +22,8 @@ public class HomePage extends CommonPage {
                                                                   // execução: option[value="Rome"]
     }
 
+    // @FindBy(css = "input.btn.btn-primary")
+    // @FindBy(css = ".btn-primary")
     @FindBy(css = "input[value]")
     WebElement btnFindFlights;
 
