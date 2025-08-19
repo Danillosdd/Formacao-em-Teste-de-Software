@@ -37,7 +37,7 @@ public class HomePage extends CommonPage {
         btnFindFlights.click();
     }
 
-    public void acessarHomePage() {
-        driver.get("https://www.blazedemo.com");
+    public void acessarHomePage(String url) {
+        driver.get(url); // Acessa a Home Page
     }
 }
