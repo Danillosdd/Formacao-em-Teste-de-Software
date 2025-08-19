@@ -6,9 +6,9 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
+import pages.Base;
 import pages.HomePage;
 import pages.ReservePage;
-import steps.ComprarPassagemBDD;
 
 public class ComprarPassagemPO {
 
@@ -18,12 +18,13 @@ public class ComprarPassagemPO {
     private ReservePage reservePage; // Só eu posso usar a Reserve
 
     public ComprarPassagemPO(Base base) {
-
+        this.driver = base.driver;
     }
 
     // As anotações Before e After ficam no Hooks.java
     @Dado("que acesso o site {string} PO")
-    public void que_acesso_o_site_po(String string) {
+    public void que_acesso_o_site_po(String url) {
+        homePage.acessarHomePage(url);
 
     }
 

@@ -16,17 +16,28 @@ public class HomePage extends CommonPage {
 
     // Elementos Mapeados
     // Mapeamento para os combos Origem e Destino
-    public By bylocal(String local) {
+    public By byLocal(String local) {
         return By.cssSelector("option[value=\"" + local + "\"]"); // Toda vez que tem um \" a " vai ser ignorada na 1º
-                                                                  // vez, mas a " vai ser usada na 2º vez, fica assim na
-                                                                  // execução: option[value="Rome"]
+        // vez, mas a " vai ser usada na 2º vez, fica assim na
+        // execução: option[value="Rome"]
     }
 
-    // @FindBy(css = "input.btn.btn-primary")
-    // @FindBy(css = ".btn-primary")
-    @FindBy(css = "input[value]")
+    //@FindBy(css = "input.btn.btn-primary")
+    //@FindBy(css = "input[value]")
+    @FindBy(css = ".btn-primary")
     WebElement btnFindFlights;
 
-
     // Ações com Elementos Mapeados
+    public void selecionarOrigemDesino(String byOrigem, String byDestino) {
+        driver.findElement(byLocal(byOrigem)).click(); // Seleciona a Origem
+        driver.findElement(byLocal(byDestino)).click(); // Seleciona o Destino
+    }
+
+    public void clicarBotaoFindFlights() {
+        btnFindFlights.click();
+    }
+
+    public void acessarHomePage() {
+        driver.get("https://www.blazedemo.com");
+    }
 }
