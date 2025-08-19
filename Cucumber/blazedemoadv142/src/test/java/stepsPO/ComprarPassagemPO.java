@@ -37,10 +37,15 @@ public class ComprarPassagemPO {
     @Quando("seleciono a {string} e {string} PO")
     public void seleciono_a_e_po(String origem, String destino) {
         homePage.selecionarOrigemDesino(origem, destino);
+
+        // ToDo: Na preparação de aula há um ajuste de sincronismo
     }
 
     @E("clico no botao Find Flights PO")
     public void clico_no_botao_find_flights_po() {
+        homePage.clicarBotaoFindFlights();
+        // Chama a Página seguinte --> Reserve
+        reservePage = new ReservePage(driver); // Instanciar ReservePage
 
     }
 
