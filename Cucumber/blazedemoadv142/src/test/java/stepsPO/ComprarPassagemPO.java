@@ -52,8 +52,8 @@ public class ComprarPassagemPO {
 
     @Entao("visualiza a lista de voos PO")
     public void visualiza_a_lista_de_voos_po() {
-        assertEquals("BlazeDemo - reserve", reservePage;
+        assertEquals("BlazeDemo - reserve", reservePage.lerNomeDaGuia());
     }
 
-}
+
 }
