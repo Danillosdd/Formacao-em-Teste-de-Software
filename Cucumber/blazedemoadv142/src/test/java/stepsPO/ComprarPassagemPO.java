@@ -35,8 +35,8 @@ public class ComprarPassagemPO {
     }
 
     @Quando("seleciono a {string} e {string} PO")
-    public void seleciono_a_e_po(String string, String string2) {
-
+    public void seleciono_a_e_po(String origem, String destino) {
+        homePage.selecionarOrigemDesino(origem, destino);
     }
 
     @E("clico no botao Find Flights PO")
