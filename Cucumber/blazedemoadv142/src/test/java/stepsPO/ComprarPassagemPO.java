@@ -1,7 +1,6 @@
 package stepsPO;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.pt.Dado;
@@ -25,13 +24,13 @@ public class ComprarPassagemPO {
     }
 
     // As anotações Before e After ficam no Hooks.java
-    @Dado("que acesso o site {string} PO")  
+    @Dado("que acesso o site {string} PO")
     public void que_acesso_o_site_po(String url) {
         homePage = new HomePage(driver); // 2 - Instanciar
         homePage.acessarHomePage(url); // 3 - Usar 
 
         // Validar se abriu a página correta através do nome da guia    
-        assertEquals("Blazedemo", lerNomeDaGuia());
+        assertEquals("Blazedemo", homePage.lerNomeDaGuia());
     }
 
     @Quando("seleciono a {string} e {string} PO")
