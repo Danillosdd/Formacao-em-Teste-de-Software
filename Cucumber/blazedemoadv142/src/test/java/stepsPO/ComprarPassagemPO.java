@@ -24,6 +24,7 @@ public class ComprarPassagemPO {
     // As anotações Before e After ficam no Hooks.java
     @Dado("que acesso o site {string} PO")
     public void que_acesso_o_site_po(String url) {
+        homePage = new HomePage(driver);
         homePage.acessarHomePage(url);
 
     }
