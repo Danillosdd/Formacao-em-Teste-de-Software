@@ -13,11 +13,13 @@ public class ReservePage extends CommonPage {
         PageFactory.initElements(driver, this);
     }
 
+    // Mapeamento de elementos
     @FindBy(css = "h3")
-    private WebElement flightsHeader;
+    private WebElement flightsHeader; // Cabeçalho dos vôos
 
     // ações
     public String lerCabeçalhoVoos() {
         return flightsHeader.getText();
     }
+
 }

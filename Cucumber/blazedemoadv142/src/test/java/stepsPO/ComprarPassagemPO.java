@@ -39,6 +39,7 @@ public class ComprarPassagemPO {
         homePage.selecionarOrigemDesino(origem, destino);
 
         // ToDo: Na preparação de aula há um ajuste de sincronismo
+        // é para conseguirmos visualizar o robô
     }
 
     @E("clico no botao Find Flights PO")
@@ -51,6 +52,8 @@ public class ComprarPassagemPO {
 
     @Entao("visualiza a lista de voos PO")
     public void visualiza_a_lista_de_voos_po() {
-
+        assertEquals("BlazeDemo - reserve", reservePage;
     }
+
+}
 }
