@@ -30,7 +30,8 @@ public class ComprarPassagemPO {
         homePage.acessarHomePage(url); // 3 - Usar 
 
         // Validar se abriu a página correta através do nome da guia    
-        assertEquals("Blazedemo", homePage.lerNomeDaGuia());
+        assertEquals("BlazeDemo", homePage.lerNomeDaGuia());
+
     }
 
     @Quando("seleciono a {string} e {string} PO")
