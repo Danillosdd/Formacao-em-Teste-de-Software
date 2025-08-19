@@ -40,4 +40,8 @@ public class HomePage extends CommonPage {
     public void acessarHomePage(String url) {
         driver.get(url); // Acessa a Home Page
     }
+
+    public String lerNomeDaGuia() {
+        return driver.getTitle(); // Lê título da guia / página
+    }
 }
