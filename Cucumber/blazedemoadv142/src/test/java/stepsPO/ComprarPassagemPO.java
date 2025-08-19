@@ -1,15 +1,30 @@
 package stepsPO;
 
+import org.openqa.selenium.WebDriver;
+
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
+import pages.HomePage;
+import pages.ReservePage;
+import steps.ComprarPassagemBDD;
 
 public class ComprarPassagemPO {
 
+    //Atributos - Ponto Final / Estação Final / Terminal
+    final WebDriver driver; // Selenium só pode usar e devolver
+    private HomePage homePage; // Só eu posso usar a Home
+    private ReservePage reservePage; // Só eu posso usar a Reserve
+
+    public ComprarPassagemPO(Base base) {
+
+    }
+
+    // As anotações Before e After ficam no Hooks.java
     @Dado("que acesso o site {string} PO")
     public void que_acesso_o_site_po(String string) {
-       
+
     }
 
     @Quando("seleciono a {string} e {string} PO")
