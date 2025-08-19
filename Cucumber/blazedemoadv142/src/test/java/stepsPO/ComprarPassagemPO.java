@@ -55,5 +55,4 @@ public class ComprarPassagemPO {
         assertEquals("BlazeDemo - reserve", reservePage.lerNomeDaGuia());
     }
 
-
 }
