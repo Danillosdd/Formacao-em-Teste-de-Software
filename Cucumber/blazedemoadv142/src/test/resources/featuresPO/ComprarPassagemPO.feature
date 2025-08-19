@@ -1,5 +1,5 @@
 #Executar no Terminal:
-#mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
+#mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/featuresPO"
 # language: pt
 Funcionalidade: Comprar Passagem PO
     Escolher e comprar passagens aereas
