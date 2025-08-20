@@ -12,6 +12,7 @@ import io.cucumber.junit.CucumberOptions;
         dryRun = false, // Configuração do Log
         monochrome = true // Detalhes do Log
 )
+
 public class Runner {
 
 }
