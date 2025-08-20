@@ -18,7 +18,7 @@ public class ReservePage extends CommonPage {
     private WebElement flightsHeader; // Cabeçalho dos vôos
 
     // ações
-    public String lerCabeçalhoVoos() {
+    public String lerCabecalhoVoos() {
         return flightsHeader.getText();
     }
 

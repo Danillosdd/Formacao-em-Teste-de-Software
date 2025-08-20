@@ -40,6 +40,8 @@ public class ComprarPassagemPO {
 
     @Quando("seleciono a {string} e {string} PO")
     public void seleciono_a_e_po(String origem, String destino) {
+        this.origem = origem;
+        this.destino = destino;
         homePage.selecionarOrigemDesino(origem, destino);
 
         // ToDo: Na preparação de aula há um ajuste de sincronismo
@@ -57,7 +59,7 @@ public class ComprarPassagemPO {
     @Entao("visualiza a lista de voos PO")
     public void visualiza_a_lista_de_voos_po() {
         assertEquals("BlazeDemo - reserve", reservePage.lerNomeDaGuia());
-        // ToDo: Comparar a frase de origem e destino
+        assertEquals("Flights from " + this.origem + " to " + this.destino + ":", reservePage.lerCabecalhoVoos());
     }
 
 }
