@@ -19,6 +19,10 @@ public class ComprarPassagemPO {
     private HomePage homePage; // Só eu posso usar a Home
     private ReservePage reservePage; // Só eu posso usar a Reserve
 
+    public String origem;
+    public String destino;
+
+    // Construtor
     public ComprarPassagemPO(Base base) {
         this.driver = base.driver;
     }
