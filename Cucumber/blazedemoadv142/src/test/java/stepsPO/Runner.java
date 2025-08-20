@@ -6,7 +6,9 @@ import io.cucumber.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"src/test/resources/featuresPO"}, // Caminho para suas features
-        glue = {"stepsPO"}
+        glue = {"stepsPO"}, // Caminho para automação
+        dryRun = false, // Configuração do Log
+        monochrome = true // Detalhes do Log
 )
 public class Runner {
 
