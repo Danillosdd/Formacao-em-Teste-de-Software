@@ -55,5 +55,5 @@ As principais:
 - Baixar o driver manualmente para uma pasta comum o computador
     - Atualiza o driver em uma pasta, atualizou para todos os projetos
     - Precisa ter uma pasta no computador e apontar apra as variáveis de ambiente
-    (Depende da configuração da mmáquina para executar)
-    
+    (Depende da configuração da máquina para executar)
+
