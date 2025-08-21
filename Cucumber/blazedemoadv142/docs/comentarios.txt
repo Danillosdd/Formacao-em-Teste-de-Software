@@ -44,3 +44,10 @@ Um teste vão ser vários arquivos...
     - Um arquivo de hooks (Before e After centralizados)
     - Um arquivo runner (Executar o teste / Maestro)
 
+* Sobre Drives de Navegador
+- Um driver é um controlador que fica entre o Selenium e o Browser
+- Existem pelo menos 9 formas diferentes de organizar e configurar o driver
+As principais:
+- Usar a biblioteca WebDriverManger(Atualização Automática)
+- Baixar o Driver manualmente para dentro do projeto-
+- Baixar o driver manualmente para uma pasta comum o computador
