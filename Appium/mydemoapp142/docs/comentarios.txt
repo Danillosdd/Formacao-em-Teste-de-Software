@@ -7,4 +7,9 @@ Vamos usar o framework Appium
 - Trabalha tanto Android como IOS
 - É uma vertente do Selenium WebDriver voltado para teste de app
 - Múltiplos Sistemas Operacionais
-- Múltiplas Linguagens de Programação
+- Múltiplas Linguagens de Programação: C#, Java, JavaScript, Python
+
+Tipos de aplicativos
+- WebApp (Site disfarçados de aplicativos)
+- Nativo - um projeto separado para Android e outro para IOS
+- Híbrido - um projeto gera apps para Android e IOS
