@@ -1,0 +1,10 @@
+Teste Mobile
+
+--> Testes de aplicativos para celulares e tablets
+--> Também de app para relógio, central de mídia, smartv
+
+Vamos usar o framework Appium
+- Trabalha tanto Android como IOS
+- É uma vertente do Selenium WebDriver voltado para teste de app
+- Múltiplos Sistemas Operacionais
+- Múltiplas Linguagens de Programação
