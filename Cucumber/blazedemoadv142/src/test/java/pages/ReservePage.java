@@ -42,4 +42,8 @@ public class ReservePage extends CommonPage {
         return flightsHeader.getText();
     }
 
+    public void clicarNoVoo(int ordem_do_voo) {
+        driver.findElement(byOrder(ordem_do_voo)).click();
+    }
+
 }

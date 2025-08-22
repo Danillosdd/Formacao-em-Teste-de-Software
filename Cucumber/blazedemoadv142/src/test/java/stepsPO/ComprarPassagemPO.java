@@ -85,6 +85,15 @@ public class ComprarPassagemPO {
 
     @Quando("clico no {int} PO")
     public void clico_no(Integer ordem_do_voo) {
+        reservePage.clicarNoVoo(ordem_do_voo);
+
+        synchronized (driver) {
+            try {
+                driver.wait(1000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
     }
 
