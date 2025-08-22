@@ -20,3 +20,9 @@ Requisitos de Hardware
 - Memória RAM: 8 Gb --> 16 Gb (quanto mais melhor: 32 Gb)
 - Placa de Vídeo Offboard
 - Disco Rígido: SSD (Pelo menos o boot)
+
+
+Ambiente de Teste em Nuvem = Device Farms
+- SauceLabs
+- BrowserStack
+- Perfecto
