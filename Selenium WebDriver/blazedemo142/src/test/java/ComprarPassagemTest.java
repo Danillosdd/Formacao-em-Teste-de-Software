@@ -1,3 +1,18 @@
+/*
+ No Selenium, você pode encontrar elementos usando vários tipos de localizadores. Os principais são:
+
+By.id: Localiza pelo atributo id.
+By.name: Localiza pelo atributo name.
+By.className: Localiza pela classe CSS.
+By.tagName: Localiza pela tag HTML (ex: input, div).
+By.linkText: Localiza pelo texto exato de um link (<a>).
+By.partialLinkText: Localiza por parte do texto de um link.
+By.cssSelector: Localiza usando seletores CSS.
+By.xpath: Localiza usando expressões XPath.
+Exemplo:
+
+Esses são os principais métodos para localizar elementos no Selenium!
+ */
 // Teste automatizado gerado pelo Selenium IDE para o site BlazeDemo
 // Simula a compra de uma passagem aérea, preenchendo todos os campos obrigatórios e validando a mensagem final
 
@@ -28,7 +43,6 @@ public class ComprarPassagemTest {
     JavascriptExecutor js; // Executor de JavaScript
 
     // 2.2 - Funções e Métodos
-
     // Executa antes de cada teste: inicializa o navegador e variáveis
     @BeforeEach
     public void setUp() {

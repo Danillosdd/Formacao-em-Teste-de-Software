@@ -83,4 +83,9 @@ public class ComprarPassagemPO {
         }
     }
 
+    @Quando("clico no {int} PO")
+    public void clico_no(Integer ordem_do_voo) {
+
+    }
+
 }
