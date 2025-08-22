@@ -23,6 +23,6 @@ Requisitos de Hardware
 
 
 Ambiente de Teste em Nuvem = Device Farms
-- SauceLabs
+- Saucelabs
 - BrowserStack
 - Perfecto
