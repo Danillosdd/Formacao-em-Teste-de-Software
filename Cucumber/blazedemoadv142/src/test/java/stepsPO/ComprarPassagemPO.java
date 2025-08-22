@@ -50,8 +50,8 @@ public class ComprarPassagemPO {
         // O indicado é deixar o robô executar o mais rápido possível
         synchronized (driver) {
             try {
-                driver.wait(1000);
-            } catch (InterruptedException e) {
+                driver.wait(5000);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -69,6 +69,14 @@ public class ComprarPassagemPO {
     public void visualiza_a_lista_de_voos_po() {
         assertEquals("BlazeDemo - reserve", reservePage.lerNomeDaGuia());
         assertEquals("Flights from " + this.origem + " to " + this.destino + ":", reservePage.lerCabecalhoVoos());
+
+        synchronized (driver) {
+            try {
+                driver.wait(5000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }
