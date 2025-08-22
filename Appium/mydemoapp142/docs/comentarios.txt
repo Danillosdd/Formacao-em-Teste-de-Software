@@ -26,3 +26,14 @@ Ambiente de Teste em Nuvem = Device Farms
 - Saucelabs
 - BrowserStack
 - Perfecto
+
+
+Roteiro de Inspeção
+
+- Instalar na plataforma saucelabs,  o app alvo(Que neste caso será o My Demo App - Da SauceLabs - Baixar no Github)
+- E o Apk Info(Baixar no Apkpure)
+- Usar o Apk Info para descobrir:
+    - appPackage: com.saucelabs.mydemoapp.android
+    - appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity
+    ou com.saucelabs.mydemoapp.android.view.activities.MainActivity
+
