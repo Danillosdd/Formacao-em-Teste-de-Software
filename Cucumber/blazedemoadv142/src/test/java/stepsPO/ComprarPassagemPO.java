@@ -44,8 +44,17 @@ public class ComprarPassagemPO {
         this.destino = destino;
         homePage.selecionarOrigemDesino(origem, destino);
 
-        // ToDo: Na preparação de aula há um ajuste de sincronismo
-        // é para conseguirmos visualizar o robô
+        // Ativar a sincronização para o robô executar devagar
+        // E podermos visualizar o funcionamento
+        // Importante: É sí como curiosidade ou em caso de problemas
+        // O indicado é deixar o robô executar o mais rápido possível
+        synchronized (driver) {
+            try {
+                driver.wait(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @E("clico no botao Find Flights PO")
