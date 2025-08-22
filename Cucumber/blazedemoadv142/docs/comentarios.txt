@@ -71,3 +71,6 @@ As principais:
     - Precisa ter uma pasta no computador e apontar apra as variáveis de ambiente
     (Depende da configuração da máquina para executar)
 
+* Sobre DDT via exemplos ou lendo csv:
+- Melhor usar a tabela de exempos em Page Objects e BDD
+- Ler CSV por ser uma opção em scripts mais simples
