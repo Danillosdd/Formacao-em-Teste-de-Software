@@ -46,6 +46,8 @@ public class TestUser {
         .then()
             .log().all()
             .statusCode(200)
+            .body("code", is(200))
+            .body("type", is("unknown"))
             .body("message", containsString("10"));
     }
 
@@ -61,7 +63,14 @@ public class TestUser {
         .then()
             .log().all()
             .statusCode(200)
-            .body("username", is("danillo"));
+            .body("id", is(10))
+            .body("username", is("danillo"))
+            .body("firstName", is("Danillo"))
+            .body("lastName", is("Silva"))
+            .body("email", is("danillo@email.com"))
+            .body("password", is("honeypot"))
+            .body("phone", is("987654321"))
+            .body("userStatus", is(1));
     }
 
     @Test
@@ -90,6 +99,8 @@ public class TestUser {
         .then()
             .log().all()
             .statusCode(200)
+            .body("code", is(200))
+            .body("type", is("unknown"))
             .body("message", containsString("10"));
     }
 
@@ -105,6 +116,8 @@ public class TestUser {
         .then()
             .log().all()
             .statusCode(200)
+            .body("code", is(200))
+            .body("type", is("unknown"))
             .body("message", containsString("danillo"));
     }
 
@@ -137,6 +150,26 @@ public class TestUser {
         .then()
             .log().all()
             .statusCode(200)
+            .body("code", is(200))
+            .body("type", is("unknown"))
             .body("message", containsString(String.valueOf(id)));
+
+        // Validar os campos do usuário criado
+        given()
+            .contentType(ct)
+            .log().all()
+        .when()
+            .get(uriUser + "/" + username)
+        .then()
+            .log().all()
+            .statusCode(200)
+            .body("id", is(id))
+            .body("username", is(username))
+            .body("firstName", is(firstName))
+            .body("lastName", is(lastName))
+            .body("email", is(email))
+            .body("password", is(password))
+            .body("phone", is(phone))
+            .body("userStatus", is(userStatus));
     }
 }

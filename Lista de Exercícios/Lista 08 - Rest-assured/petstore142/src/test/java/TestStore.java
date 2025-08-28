@@ -47,7 +47,11 @@ public class TestStore {
             .log().all()
             .statusCode(200)
             .body("id", is(1))
-            .body("status", is("placed"));
+            .body("petId", is(95))
+            .body("quantity", is(1))
+            .body("shipDate", is("2025-08-28T00:00:00.000Z"))
+            .body("status", is("placed"))
+            .body("complete", is(true));
     }
 
     @Test
@@ -62,7 +66,12 @@ public class TestStore {
         .then()
             .log().all()
             .statusCode(200)
-            .body("id", is(1));
+            .body("id", is(1))
+            .body("petId", is(95))
+            .body("quantity", is(1))
+            .body("shipDate", is("2025-08-28T00:00:00.000Z"))
+            .body("status", is("placed"))
+            .body("complete", is(true));
     }
 
     @Test
@@ -77,6 +86,8 @@ public class TestStore {
         .then()
             .log().all()
             .statusCode(200)
+            .body("code", is(200))
+            .body("type", is("unknown"))
             .body("message", containsString("1"));
     }
 
@@ -108,6 +119,10 @@ public class TestStore {
             .log().all()
             .statusCode(200)
             .body("id", is(id))
-            .body("status", is(status));
+            .body("petId", is(petId))
+            .body("quantity", is(quantity))
+            .body("shipDate", is(shipDate))
+            .body("status", is(status))
+            .body("complete", is(complete));
     }
 }
