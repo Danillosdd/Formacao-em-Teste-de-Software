@@ -1,14 +1,18 @@
 // 0 - nome do pacote
 
 // 1 - bibliotecas
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.is;
-import org.junit.jupiter.api.MethodOrderer; // Anotação para marcar métodos de teste (JUnit 5)
-import org.junit.jupiter.api.Order; // Define a ordem de execução dos testes
-import org.junit.jupiter.api.Test; // Controla a ordem dos métodos de teste na classe
-import org.junit.jupiter.api.TestMethodOrder; // Estratégias para ordenar métodos de teste
-import org.junit.jupiter.params.ParameterizedTest; // Permite testes parametrizados (com diferentes entradas)
-import org.junit.jupiter.params.provider.CsvFileSource; // Biblioteca para converter objetos Java em JSON e vice-versa
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths; // Anotação para marcar métodos de teste (JUnit 5)
+
+import static org.hamcrest.Matchers.containsString; // Define a ordem de execução dos testes
+import static org.hamcrest.Matchers.is; // Controla a ordem dos métodos de teste na classe
+import org.junit.jupiter.api.MethodOrderer; // Estratégias para ordenar métodos de teste
+import org.junit.jupiter.api.Order; // Permite testes parametrizados (com diferentes entradas)
+import org.junit.jupiter.api.Test; // Biblioteca para converter objetos Java em JSON e vice-versa
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static io.restassured.RestAssured.given;
 
@@ -21,11 +25,16 @@ public class TestUser {
     static String uriUser = "https://petstore.swagger.io/v2/user"; // Base URL + endpoint
 
     // 2.2 - métodos de teste
+    // Função de leitura do arquivo JSON
+    public static String lerArquivoJson(String arquivoJson) throws IOException {
+        return new String(Files.readAllBytes(Paths.get(arquivoJson)));
+    }
+
     @Test
     @Order(1)
-    public void testPostUser() {
+    public void testPostUser() throws IOException {
         // Configura
-        String jsonBody = "{\"id\": 10, \"username\": \"danillo\", \"firstName\": \"Danillo\", \"lastName\": \"Silva\", \"email\": \"danillo@email.com\", \"password\": \"honeypot\", \"phone\": \"123456789\", \"userStatus\": 1}";
+        String jsonBody = lerArquivoJson("src/test/resources/json/user1.json");
         given()
             .contentType(ct)
             .log().all()
