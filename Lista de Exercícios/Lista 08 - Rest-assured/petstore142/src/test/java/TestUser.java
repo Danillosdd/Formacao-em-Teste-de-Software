@@ -1,22 +1,30 @@
+// 0 - nome do pacote
+
+// 1 - bibliotecas
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.api.MethodOrderer; // Anotação para marcar métodos de teste (JUnit 5)
+import org.junit.jupiter.api.Order; // Define a ordem de execução dos testes
+import org.junit.jupiter.api.Test; // Controla a ordem dos métodos de teste na classe
+import org.junit.jupiter.api.TestMethodOrder; // Estratégias para ordenar métodos de teste
+import org.junit.jupiter.params.ParameterizedTest; // Permite testes parametrizados (com diferentes entradas)
+import org.junit.jupiter.params.provider.CsvFileSource; // Biblioteca para converter objetos Java em JSON e vice-versa
 
 import static io.restassured.RestAssured.given;
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+// 2 - classe
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class) // Ativa a ordenação dos testes
 public class TestUser {
-    static String ct = "application/json";
-    static String uriUser = "https://petstore.swagger.io/v2/user";
 
+    // 2.1 - atributos
+    static String ct = "application/json"; // Content-Type
+    static String uriUser = "https://petstore.swagger.io/v2/user"; // Base URL + endpoint
+
+    // 2.2 - métodos de teste
     @Test
     @Order(1)
     public void testPostUser() {
+        // Configura
         String jsonBody = "{\"id\": 10, \"username\": \"danillo\", \"firstName\": \"Danillo\", \"lastName\": \"Silva\", \"email\": \"danillo@email.com\", \"password\": \"honeypot\", \"phone\": \"123456789\", \"userStatus\": 1}";
         given()
             .contentType(ct)
@@ -33,6 +41,7 @@ public class TestUser {
     @Test
     @Order(2)
     public void testGetUser() {
+        // Configura
         given()
             .contentType(ct)
             .log().all()
@@ -47,6 +56,7 @@ public class TestUser {
     @Test
     @Order(3)
     public void testPutUser() {
+        // Configura
         String jsonBody = "{\"id\": 10, \"username\": \"danillo\", \"firstName\": \"Danillo\", \"lastName\": \"Silva\", \"email\": \"danillo@email.com\", \"password\": \"honeypot\", \"phone\": \"987654321\", \"userStatus\": 1}";
         given()
             .contentType(ct)
@@ -63,6 +73,7 @@ public class TestUser {
     @Test
     @Order(4)
     public void testDeleteUser() {
+        // Configura
         given()
             .contentType(ct)
             .log().all()
@@ -74,10 +85,12 @@ public class TestUser {
             .body("message", containsString("danillo"));
     }
 
+    // Data Driven Testing(DDT) - Teste Direcionado por Dados / Teste com Massa
     @ParameterizedTest
     @Order(5)
     @CsvFileSource(resources = "/csv/userMassa.csv", numLinesToSkip = 1)
     public void testPostUserDataDriven(int id, String username, String firstName, String lastName, String email, String password, String phone, int userStatus) {
+        // Configura
         String jsonBody = String.format("{\"id\": %d, \"username\": \"%s\", \"firstName\": \"%s\", \"lastName\": \"%s\", \"email\": \"%s\", \"password\": \"%s\", \"phone\": \"%s\", \"userStatus\": %d}", id, username, firstName, lastName, email, password, phone, userStatus);
         given()
             .contentType(ct)

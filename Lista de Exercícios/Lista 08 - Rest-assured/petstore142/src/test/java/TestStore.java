@@ -1,22 +1,30 @@
+// 0 - nome do pacote
+
+// 1 - bibliotecas
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.api.MethodOrderer; // Anotação para marcar métodos de teste (JUnit 5)
+import org.junit.jupiter.api.Order; // Define a ordem de execução dos testes
+import org.junit.jupiter.api.Test; // Controla a ordem dos métodos de teste na classe
+import org.junit.jupiter.api.TestMethodOrder; // Estratégias para ordenar métodos de teste
+import org.junit.jupiter.params.ParameterizedTest; // Permite testes parametrizados (com diferentes entradas)
+import org.junit.jupiter.params.provider.CsvFileSource; // Biblioteca para converter objetos Java em JSON e vice-versa
 
 import static io.restassured.RestAssured.given;
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+// 2 - classe
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class) // Ativa a ordenação dos testes
 public class TestStore {
-    static String ct = "application/json";
-    static String uriStore = "https://petstore.swagger.io/v2/store/order";
 
+    // 2.1 - atributos
+    static String ct = "application/json"; // Content-Type
+    static String uriStore = "https://petstore.swagger.io/v2/store/order"; // Base URL + endpoint
+
+    // 2.2 - métodos de teste
     @Test
     @Order(1)
     public void testPostStore() {
+        // Configura
         String jsonBody = "{\"id\": 1, \"petId\": 95, \"quantity\": 1, \"shipDate\": \"2025-08-28T00:00:00.000Z\", \"status\": \"placed\", \"complete\": true}";
         given()
             .contentType(ct)
@@ -34,6 +42,7 @@ public class TestStore {
     @Test
     @Order(2)
     public void testGetStore() {
+        // Configura
         given()
             .contentType(ct)
             .log().all()
@@ -48,6 +57,7 @@ public class TestStore {
     @Test
     @Order(3)
     public void testDeleteStore() {
+        // Configura
         given()
             .contentType(ct)
             .log().all()
@@ -59,10 +69,12 @@ public class TestStore {
             .body("message", containsString("1"));
     }
 
+    // Data Driven Testing(DDT) - Teste Direcionado por Dados / Teste com Massa
     @ParameterizedTest
     @Order(4)
     @CsvFileSource(resources = "/csv/storeMassa.csv", numLinesToSkip = 1)
     public void testPostStoreDataDriven(int id, int petId, int quantity, String shipDate, String status, boolean complete) {
+        // Configura
         String jsonBody = String.format("{\"id\": %d, \"petId\": %d, \"quantity\": %d, \"shipDate\": \"%s\", \"status\": \"%s\", \"complete\": %b}", id, petId, quantity, shipDate, status, complete);
         given()
             .contentType(ct)
