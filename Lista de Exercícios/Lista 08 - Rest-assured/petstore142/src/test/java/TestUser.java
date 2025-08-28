@@ -1,16 +1,21 @@
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static io.restassured.RestAssured.given;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestUser {
     static String ct = "application/json";
     static String uriUser = "https://petstore.swagger.io/v2/user";
 
     @Test
+    @Order(1)
     public void testPostUser() {
         String jsonBody = "{\"id\": 10, \"username\": \"danillo\", \"firstName\": \"Danillo\", \"lastName\": \"Silva\", \"email\": \"danillo@email.com\", \"password\": \"honeypot\", \"phone\": \"123456789\", \"userStatus\": 1}";
         given()
@@ -26,6 +31,7 @@ public class TestUser {
     }
 
     @Test
+    @Order(2)
     public void testGetUser() {
         given()
             .contentType(ct)
@@ -39,6 +45,7 @@ public class TestUser {
     }
 
     @Test
+    @Order(3)
     public void testPutUser() {
         String jsonBody = "{\"id\": 10, \"username\": \"danillo\", \"firstName\": \"Danillo\", \"lastName\": \"Silva\", \"email\": \"danillo@email.com\", \"password\": \"honeypot\", \"phone\": \"987654321\", \"userStatus\": 1}";
         given()
@@ -54,6 +61,7 @@ public class TestUser {
     }
 
     @Test
+    @Order(4)
     public void testDeleteUser() {
         given()
             .contentType(ct)
@@ -67,6 +75,7 @@ public class TestUser {
     }
 
     @ParameterizedTest
+    @Order(5)
     @CsvFileSource(resources = "/csv/userMassa.csv", numLinesToSkip = 1)
     public void testPostUserDataDriven(int id, String username, String firstName, String lastName, String email, String password, String phone, int userStatus) {
         String jsonBody = String.format("{\"id\": %d, \"username\": \"%s\", \"firstName\": \"%s\", \"lastName\": \"%s\", \"email\": \"%s\", \"password\": \"%s\", \"phone\": \"%s\", \"userStatus\": %d}", id, username, firstName, lastName, email, password, phone, userStatus);

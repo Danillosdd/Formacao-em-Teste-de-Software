@@ -1,16 +1,21 @@
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static io.restassured.RestAssured.given;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestStore {
     static String ct = "application/json";
     static String uriStore = "https://petstore.swagger.io/v2/store/order";
 
     @Test
+    @Order(1)
     public void testPostStore() {
         String jsonBody = "{\"id\": 1, \"petId\": 95, \"quantity\": 1, \"shipDate\": \"2025-08-28T00:00:00.000Z\", \"status\": \"placed\", \"complete\": true}";
         given()
@@ -27,6 +32,7 @@ public class TestStore {
     }
 
     @Test
+    @Order(2)
     public void testGetStore() {
         given()
             .contentType(ct)
@@ -40,6 +46,7 @@ public class TestStore {
     }
 
     @Test
+    @Order(3)
     public void testDeleteStore() {
         given()
             .contentType(ct)
@@ -53,6 +60,7 @@ public class TestStore {
     }
 
     @ParameterizedTest
+    @Order(4)
     @CsvFileSource(resources = "/csv/storeMassa.csv", numLinesToSkip = 1)
     public void testPostStoreDataDriven(int id, int petId, int quantity, String shipDate, String status, boolean complete) {
         String jsonBody = String.format("{\"id\": %d, \"petId\": %d, \"quantity\": %d, \"shipDate\": \"%s\", \"status\": \"%s\", \"complete\": %b}", id, petId, quantity, shipDate, status, complete);
