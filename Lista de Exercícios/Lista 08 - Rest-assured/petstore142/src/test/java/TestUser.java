@@ -1,57 +1,84 @@
-// 0 - nome do pacote
-
-// 1 - bibliotecas
 import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.hasLength;
 import static org.hamcrest.Matchers.is;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static io.restassured.RestAssured.given;
-import io.restassured.response.Response;
 
-// 2 - classe
 public class TestUser {
+    static String ct = "application/json";
+    static String uriUser = "https://petstore.swagger.io/v2/user";
 
-    // 2.1 - atributos
-    static String ct = "application/json"; // Content-Type
-    static String uriUser = "https://petstore.swagger.io/v2/user"; // Base URL + endpoint
-    static String token; // Variável para armazenar o token extraído
-
-    // 2.2 - funções e métodos
-    // 2.2.1 - métodos de teste
     @Test
-    public static String testLogin() {
-        // Configura --> Dados de entrada e saída no começo da Classe
+    public void testPostUser() {
+        String jsonBody = "{\"id\": 10, \"username\": \"danillo\", \"firstName\": \"Danillo\", \"lastName\": \"Silva\", \"email\": \"danillo@email.com\", \"password\": \"honeypot\", \"phone\": \"123456789\", \"userStatus\": 1}";
+        given()
+            .contentType(ct)
+            .log().all()
+            .body(jsonBody)
+        .when()
+            .post(uriUser)
+        .then()
+            .log().all()
+            .statusCode(200)
+            .body("message", containsString("10"));
+    }
 
-        String username = "danillo"; // Nome de usuário esperado
-        String password = "honeypot"; // Senha esperada
+    @Test
+    public void testGetUser() {
+        given()
+            .contentType(ct)
+            .log().all()
+        .when()
+            .get(uriUser + "/danillo")
+        .then()
+            .log().all()
+            .statusCode(200)
+            .body("username", is("danillo"));
+    }
 
-        String resultadoEsperado = "logged in user session:"; // Sem espaço após os dois pontos
+    @Test
+    public void testPutUser() {
+        String jsonBody = "{\"id\": 10, \"username\": \"danillo\", \"firstName\": \"Danillo\", \"lastName\": \"Silva\", \"email\": \"danillo@email.com\", \"password\": \"honeypot\", \"phone\": \"987654321\", \"userStatus\": 1}";
+        given()
+            .contentType(ct)
+            .log().all()
+            .body(jsonBody)
+        .when()
+            .put(uriUser + "/danillo")
+        .then()
+            .log().all()
+            .statusCode(200)
+            .body("message", containsString("10"));
+    }
 
-        Response resposta = (Response) given()
-                .contentType(ct) // O tipo do conteudo é
-                .log().all() // Mostre tudo na ida
+    @Test
+    public void testDeleteUser() {
+        given()
+            .contentType(ct)
+            .log().all()
+        .when()
+            .delete(uriUser + "/danillo")
+        .then()
+            .log().all()
+            .statusCode(200)
+            .body("message", containsString("danillo"));
+    }
 
-                // Executa
-                .when() // Quando
-                .get(uriUser + "/login?username=" + username + "&password=" + password) // Montar o endpoint de login
-
-                // Valida
-                .then() // Então
-                .log().all() // Mostre tudo na volta
-                .statusCode(200) // O código de resposta é 200
-                .body("code", is(200)) // Verifica o código de resposta
-                .body("type", is("unknown")) // Verifica o tipo de resposta
-                .body("message", containsString(resultadoEsperado)) // Verifica se contém o resultado esperado
-                .body("message", hasLength(36)) // Verifica se a mensagem tem o tamanho esperado
-                .extract()
-
-        ; // Fim do given
-
-        // extração
-        token = resposta.jsonPath().getString("message").substring(23); // Extrai o token da resposta
-        System.out.println("Conteúdo do Token: " + token); // Imprime o token no console
-
-        return token; // Retorna o token extraído
+    @ParameterizedTest
+    @CsvFileSource(resources = "/csv/userMassa.csv", numLinesToSkip = 1)
+    public void testPostUserDataDriven(int id, String username, String firstName, String lastName, String email, String password, String phone, int userStatus) {
+        String jsonBody = String.format("{\"id\": %d, \"username\": \"%s\", \"firstName\": \"%s\", \"lastName\": \"%s\", \"email\": \"%s\", \"password\": \"%s\", \"phone\": \"%s\", \"userStatus\": %d}", id, username, firstName, lastName, email, password, phone, userStatus);
+        given()
+            .contentType(ct)
+            .log().all()
+            .body(jsonBody)
+        .when()
+            .post(uriUser)
+        .then()
+            .log().all()
+            .statusCode(200)
+            .body("message", containsString(String.valueOf(id)));
     }
 }
