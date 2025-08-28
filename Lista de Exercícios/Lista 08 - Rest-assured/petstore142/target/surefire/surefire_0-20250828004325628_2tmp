@@ -1,6 +1,0 @@
-#surefire_0
-#Thu Aug 28 00:43:25 BRT 2025
-basedir=/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exerc\u00EDcios/Lista 08 - Rest-assured/petstore142
-test=TestUser
-maven.ext.class.path=/home/danillo/.vscode/extensions/oracle.oracle-java-24.0.0/nbcode/java/maven-nblib/netbeans-eventspy.jar
-localRepository=/home/danillo/.m2/repository
