@@ -14,6 +14,8 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
+import com.google.gson.Gson;
+
 import static io.restassured.RestAssured.given;
 
 // 2 - classe
@@ -99,8 +101,21 @@ public class TestUser {
     @Order(5)
     @CsvFileSource(resources = "/csv/userMassa.csv", numLinesToSkip = 1)
     public void testPostUserDataDriven(int id, String username, String firstName, String lastName, String email, String password, String phone, int userStatus) {
-        // Configura
-        String jsonBody = String.format("{\"id\": %d, \"username\": \"%s\", \"firstName\": \"%s\", \"lastName\": \"%s\", \"email\": \"%s\", \"password\": \"%s\", \"phone\": \"%s\", \"userStatus\": %d}", id, username, firstName, lastName, email, password, phone, userStatus);
+        // Criar o objeto User com os dados do CSV
+        User user = new User();
+        user.id = id;
+        user.username = username;
+        user.firstName = firstName;
+        user.lastName = lastName;
+        user.email = email;
+        user.password = password;
+        user.phone = phone;
+        user.userStatus = userStatus;
+
+        // Converter para JSON
+        Gson gson = new Gson();
+        String jsonBody = gson.toJson(user);
+
         given()
             .contentType(ct)
             .log().all()

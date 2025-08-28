@@ -14,6 +14,8 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
+import com.google.gson.Gson;
+
 import static io.restassured.RestAssured.given;
 
 // 2 - classe
@@ -83,8 +85,19 @@ public class TestStore {
     @Order(4)
     @CsvFileSource(resources = "/csv/storeMassa.csv", numLinesToSkip = 1)
     public void testPostStoreDataDriven(int id, int petId, int quantity, String shipDate, String status, boolean complete) {
-        // Configura
-        String jsonBody = String.format("{\"id\": %d, \"petId\": %d, \"quantity\": %d, \"shipDate\": \"%s\", \"status\": \"%s\", \"complete\": %b}", id, petId, quantity, shipDate, status, complete);
+        // Criar o objeto Store com os dados do CSV
+        Store store = new Store();
+        store.id = id;
+        store.petId = petId;
+        store.quantity = quantity;
+        store.shipDate = shipDate;
+        store.status = status;
+        store.complete = complete;
+
+        // Converter para JSON
+        Gson gson = new Gson();
+        String jsonBody = gson.toJson(store);
+
         given()
             .contentType(ct)
             .log().all()
