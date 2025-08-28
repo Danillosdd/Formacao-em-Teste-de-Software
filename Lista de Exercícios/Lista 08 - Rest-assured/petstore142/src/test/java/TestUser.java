@@ -68,7 +68,19 @@ public class TestUser {
     @Order(3)
     public void testPutUser() {
         // Configura
-        String jsonBody = "{\"id\": 10, \"username\": \"danillo\", \"firstName\": \"Danillo\", \"lastName\": \"Silva\", \"email\": \"danillo@email.com\", \"password\": \"honeypot\", \"phone\": \"987654321\", \"userStatus\": 1}";
+        User user = new User();
+        user.id = 10;
+        user.username = "danillo";
+        user.firstName = "Danillo";
+        user.lastName = "Silva";
+        user.email = "danillo@email.com";
+        user.password = "honeypot";
+        user.phone = "987654321"; // valor alterado para PUT
+        user.userStatus = 1;
+
+        Gson gson = new Gson();
+        String jsonBody = gson.toJson(user);
+
         given()
             .contentType(ct)
             .log().all()
