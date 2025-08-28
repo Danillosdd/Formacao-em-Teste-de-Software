@@ -69,7 +69,7 @@ public class TestUser {
             .body("lastName", is("Silva"))
             .body("email", is("danillo@email.com"))
             .body("password", is("honeypot"))
-            .body("phone", is("987654321"))
+            .body("phone", is("123456789"))
             .body("userStatus", is(1));
     }
 

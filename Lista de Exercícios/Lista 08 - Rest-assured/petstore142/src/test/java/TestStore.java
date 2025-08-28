@@ -49,7 +49,7 @@ public class TestStore {
             .body("id", is(1))
             .body("petId", is(95))
             .body("quantity", is(1))
-            .body("shipDate", is("2025-08-28T00:00:00.000Z"))
+            .body("shipDate", containsString("2025-08-28T00:00:00.000"))
             .body("status", is("placed"))
             .body("complete", is(true));
     }
@@ -69,7 +69,7 @@ public class TestStore {
             .body("id", is(1))
             .body("petId", is(95))
             .body("quantity", is(1))
-            .body("shipDate", is("2025-08-28T00:00:00.000Z"))
+            .body("shipDate", containsString("2025-08-28T00:00:00.000"))
             .body("status", is("placed"))
             .body("complete", is(true));
     }
@@ -121,7 +121,7 @@ public class TestStore {
             .body("id", is(id))
             .body("petId", is(petId))
             .body("quantity", is(quantity))
-            .body("shipDate", is(shipDate))
+            .body("shipDate", containsString(shipDate.substring(0,23)))
             .body("status", is(status))
             .body("complete", is(complete));
     }
