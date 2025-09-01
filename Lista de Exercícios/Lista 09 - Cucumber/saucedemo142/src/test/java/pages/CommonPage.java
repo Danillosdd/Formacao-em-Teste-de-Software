@@ -2,17 +2,19 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class CommonPage {
+public class CommonPage extends Base {
 
-    public WebDriver driver; // bola quando ele recebe o passe
+    protected WebDriver driver;
 
-    // Método construtor - Conecta o exterior com o interior da classe
-    public CommonPage(WebDriver driver) {
-        this.driver = driver;
+    public CommonPage() {
+        this.driver = Base.getDriver();
     }
 
-    // ToDo: Vamos colocar funções em comum nas páginas aqui
-    public String lerNomeDaGuia() {
-        return driver.getTitle(); // Lê título da guia / página
+    public String getUrlAtual() {
+        return driver.getCurrentUrl();
+    }
+
+    public String getTituloPagina() {
+        return driver.getTitle();
     }
 }
