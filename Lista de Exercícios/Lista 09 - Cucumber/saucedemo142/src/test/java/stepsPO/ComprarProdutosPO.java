@@ -2,11 +2,11 @@ package stepsPO;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import pages.Base;
 import pages.CartPage;
 import pages.CheckoutPage;
 import pages.ConfirmationPage;
@@ -24,7 +24,7 @@ public class ComprarProdutosPO {
 
     @Dado("que estou na página de login do SauceDemo")
     public void que_estou_na_pagina_de_login_do_SauceDemo() {
-        driver = new ChromeDriver();
+        driver = Base.getDriver();
         driver.get("https://www.saucedemo.com/");
         homePage = new HomePage(driver);
     }
@@ -73,6 +73,6 @@ public class ComprarProdutosPO {
     @Então("devo ver a mensagem de confirmação {string}")
     public void devo_ver_a_mensagem_de_confirmacao(String mensagem) {
         Assert.assertEquals(mensagem, confirmationPage.getConfirmationMessage());
-        driver.quit();
+        // Remova o driver.quit(); aqui!
     }
 }
