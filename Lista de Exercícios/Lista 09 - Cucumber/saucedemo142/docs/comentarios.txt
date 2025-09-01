@@ -1,0 +1,76 @@
+
+No Selenium, você pode encontrar elementos usando vários tipos de localizadores. Os principais são:
+
+By.id: Localiza pelo atributo id.
+By.name: Localiza pelo atributo name.
+By.className: Localiza pela classe CSS.
+By.tagName: Localiza pela tag HTML (ex: input, div).
+By.linkText: Localiza pelo texto exato de um link (<a>).
+By.partialLinkText: Localiza por parte do texto de um link.
+By.cssSelector: Localiza usando seletores CSS.
+By.xpath: Localiza usando expressões XPath.
+Exemplo:
+
+Esses são os principais métodos para localizar elementos no Selenium!
+
+Nós já aprendemos a usar Selenium em algumas abordagens:
+
+- Gravação e execução com o Selenium IDE
+- Adaptar a gravação com o Selenium WebDriver
+- Criar nossos próprios scripts simples por programação
+
+Em um projeto simples, cada teste é um arquivo
+
+Agora vamos aprender abordagens úteis em projetos com vida útil maior:
+
+----------
+
+* Projeto utilizando a abordagem BDD (Behavior Driven Development)
+- Desenvolvimento Direcionado por Comportamento
+--> foco do BDD é melhorar a comunicação do time(Não tem nada relaciondo com teste e automação)
+--> Usar um plugin / framework chamado Cucumber (Kiocâmber/Pepino)
+--> Seguir a sintaxe Gherkin (picles de pepino)
+
+
+Um teste será composto por 2 arquivos
+- Um arquivo de negócio, escrito em Gherkin(.feature)
+- Um sergundo arquivo que é de automação, que faz referêcia ao .feature(.java)
+
+
+Executar no Terminal:
+mvn clean test
+mvn clean test -Dcucumber.features="src/test/resources/features"
+mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
+
+----------
+
+* Projeto utilizando a abordagem Page Objects / Page Factory
+ - Pode usar ou não BDD
+--> Foco na Manutenção e reaproveitamento de longo prazo
+--> Útil para projetos com Clico de Vida de Desenvolvimento de Software (CVDS/SDLC)
+
+Um teste vão ser vários arquivos...
+- Um arquivo  de mapeamento para cada página ou região da página (*Page.java)
+- Um arquivo de CommonPage para tudo que há em comum nos mapeamentos
+- Um arquivo chamadado base para definir o Selenium que vai ser compartilhado(bola)
+- Pode ter um arquivo de negócio, escrito em Gherkin (.feature)
+- Um arquivo de automação, que faz referência ao .feature (.java) e ao mapeamento por projeto:
+    - Um arquivo de hooks (Before e After centralizados)
+    - Um arquivo runner (Executar o teste / Maestro)
+
+* Sobre Drives de Navegador
+- Um driver é um controlador que fica entre o Selenium e o Browser
+- Existem pelo menos 9 formas diferentes de organizar e configurar o driver
+As principais:
+- Usar a biblioteca WebDriverManger(Atualização Automática)
+- Baixar o Driver manualmente para dentro do projeto
+    - Fácil de levar para outro computador(Levar para viagem)
+    - Ruim porque quando tem Atualização precisa adicionar em todos os projetos
+- Baixar o driver manualmente para uma pasta comum o computador
+    - Atualiza o driver em uma pasta, atualizou para todos os projetos
+    - Precisa ter uma pasta no computador e apontar apra as variáveis de ambiente
+    (Depende da configuração da máquina para executar)
+
+* Sobre DDT via exemplos ou lendo csv:
+- Melhor usar a tabela de exempos em Page Objects e BDD
+- Ler CSV por ser uma opção em scripts mais simples

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestPet" time="11.653" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestPet" time="11.242" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -10,12 +10,11 @@
     <property name="user.timezone" value="America/Bahia"/>
     <property name="os.name" value="Linux"/>
     <property name="java.vm.specification.version" value="17"/>
-    <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="/home/danillo/.sdkman/candidates/java/17.0.9-tem/lib"/>
-    <property name="sun.java.command" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 08 - Rest-assured/petstore142/target/surefire/surefirebooter-20250828011348686_3.jar /home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 08 - Rest-assured/petstore142/target/surefire 2025-08-28T01-13-48_475-jvmRun1 surefire-20250828011348686_1tmp surefire_0-20250828011348686_2tmp"/>
+    <property name="sun.java.command" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 08 - Rest-assured/petstore142/target/surefire/surefirebooter-20250829004906922_3.jar /home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 08 - Rest-assured/petstore142/target/surefire 2025-08-29T00-49-06_752-jvmRun1 surefire-20250829004906922_1tmp surefire_0-20250829004906922_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="TestPet"/>
     <property name="surefire.test.class.path" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 08 - Rest-assured/petstore142/target/test-classes:/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 08 - Rest-assured/petstore142/target/classes:/home/danillo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.13.0-M3/junit-jupiter-api-5.13.0-M3.jar:/home/danillo/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/danillo/.m2/repository/org/junit/platform/junit-platform-commons/1.13.0-M3/junit-platform-commons-1.13.0-M3.jar:/home/danillo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/danillo/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/danillo/.m2/repository/io/rest-assured/rest-assured/5.5.0/rest-assured-5.5.0.jar:/home/danillo/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/home/danillo/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/home/danillo/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/danillo/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/danillo/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/danillo/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/danillo/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/danillo/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/danillo/.m2/repository/io/rest-assured/json-path/5.5.0/json-path-5.5.0.jar:/home/danillo/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/home/danillo/.m2/repository/io/rest-assured/rest-assured-common/5.5.0/rest-assured-common-5.5.0.jar:/home/danillo/.m2/repository/io/rest-assured/xml-path/5.5.0/xml-path-5.5.0.jar:/home/danillo/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/danillo/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.13.1/junit-jupiter-params-5.13.1.jar:/home/danillo/.m2/repository/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar:/home/danillo/.m2/repository/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/danillo"/>
@@ -27,19 +26,18 @@
     <property name="basedir" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 08 - Rest-assured/petstore142"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 08 - Rest-assured/petstore142/target/surefire/surefirebooter-20250828011348686_3.jar"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Lista de Exercícios/Lista 08 - Rest-assured/petstore142/target/surefire/surefirebooter-20250829004906922_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.9+9"/>
     <property name="user.name" value="danillo"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="6.14.0-28-generic"/>
+    <property name="os.version" value="6.14.0-29-generic"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="java.vendor.version" value="Temurin-17.0.9+9"/>
-    <property name="maven.ext.class.path" value="/home/danillo/.vscode/extensions/oracle.oracle-java-24.0.0/nbcode/java/maven-nblib/netbeans-eventspy.jar"/>
     <property name="localRepository" value="/home/danillo/.m2/repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="/tmp"/>
@@ -55,7 +53,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testPostPetDDT(int, String, int, String, String, String)[1]" classname="TestPet" time="5.152">
+  <testcase name="testPostPetDDT(int, String, int, String, String, String)[1]" classname="TestPet" time="3.963">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
@@ -87,7 +85,7 @@ Body:
     "status": "available"
 }
 HTTP/1.1 200 OK
-Date: Thu, 28 Aug 2025 04:13:53 GMT
+Date: Fri, 29 Aug 2025 03:49:10 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -119,7 +117,7 @@ Server: Jetty(9.2.9.v20150224)
 }
 ]]></system-out>
   </testcase>
-  <testcase name="testPostPetDDT(int, String, int, String, String, String)[2]" classname="TestPet" time="1.89">
+  <testcase name="testPostPetDDT(int, String, int, String, String, String)[2]" classname="TestPet" time="1.944">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
@@ -151,7 +149,7 @@ Body:
     "status": "available"
 }
 HTTP/1.1 200 OK
-Date: Thu, 28 Aug 2025 04:13:56 GMT
+Date: Fri, 29 Aug 2025 03:49:13 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -183,7 +181,7 @@ Server: Jetty(9.2.9.v20150224)
 }
 ]]></system-out>
   </testcase>
-  <testcase name="testPostPetDDT(int, String, int, String, String, String)[3]" classname="TestPet" time="1.869">
+  <testcase name="testPostPetDDT(int, String, int, String, String, String)[3]" classname="TestPet" time="1.823">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
@@ -215,7 +213,7 @@ Body:
     "status": "available"
 }
 HTTP/1.1 200 OK
-Date: Thu, 28 Aug 2025 04:13:58 GMT
+Date: Fri, 29 Aug 2025 03:49:15 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -247,7 +245,7 @@ Server: Jetty(9.2.9.v20150224)
 }
 ]]></system-out>
   </testcase>
-  <testcase name="testPostPet" classname="TestPet" time="1.709">
+  <testcase name="testPostPet" classname="TestPet" time="1.567">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
@@ -279,7 +277,7 @@ Body:
     "status": "available"
 }
 HTTP/1.1 200 OK
-Date: Thu, 28 Aug 2025 04:13:59 GMT
+Date: Fri, 29 Aug 2025 03:49:16 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -308,7 +306,7 @@ Server: Jetty(9.2.9.v20150224)
 }
 ]]></system-out>
   </testcase>
-  <testcase name="testGetPet" classname="TestPet" time="0.891">
+  <testcase name="testGetPet" classname="TestPet" time="1.813">
     <system-out><![CDATA[Request method:	GET
 Request URI:	https://petstore.swagger.io/v2/pet/95
 Proxy:			<none>
@@ -322,7 +320,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Thu, 28 Aug 2025 04:14:00 GMT
+Date: Fri, 29 Aug 2025 03:49:18 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
