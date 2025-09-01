@@ -18,20 +18,19 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage {
+public class CartPage {
     WebDriver driver;
 
-    public HomePage(WebDriver driver) {
+    public CartPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void login(String usuario, String senha) {
-        driver.findElement(By.id("user-name")).sendKeys(usuario);
-        driver.findElement(By.id("password")).sendKeys(senha);
-        driver.findElement(By.id("login-button")).click();
+    public boolean isProductInCart(String productName) {
+        String xpath = String.format("//div[@class='cart_item']//div[text()='%s']", productName);
+        return driver.findElements(By.xpath(xpath)).size() > 0;
     }
 
-    public boolean isLoggedIn() {
-        return driver.getCurrentUrl().contains("inventory.html");
+    public void checkout() {
+        driver.findElement(By.id("checkout")).click();
     }
 }

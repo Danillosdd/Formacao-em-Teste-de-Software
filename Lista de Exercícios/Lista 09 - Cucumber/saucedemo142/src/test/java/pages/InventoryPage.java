@@ -18,20 +18,26 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage {
+public class InventoryPage {
+
     WebDriver driver;
 
-    public HomePage(WebDriver driver) {
+    public InventoryPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void login(String usuario, String senha) {
-        driver.findElement(By.id("user-name")).sendKeys(usuario);
-        driver.findElement(By.id("password")).sendKeys(senha);
-        driver.findElement(By.id("login-button")).click();
+    public void addProductToCart(String productName) {
+        String xpath = String.format("//div[text()='%s']/ancestor::div[@class='inventory_item']//button", productName);
+        driver.findElement(By.xpath(xpath)).click();
     }
 
-    public boolean isLoggedIn() {
-        return driver.getCurrentUrl().contains("inventory.html");
+    public boolean isProductAdded(String productName) {
+        // Verifica se o botão mudou para "Remove"
+        String xpath = String.format("//div[text()='%s']/ancestor::div[@class='inventory_item']//button[text()='Remove']", productName);
+        return driver.findElements(By.xpath(xpath)).size() > 0;
+    }
+
+    public void goToCart() {
+        driver.findElement(By.className("shopping_cart_link")).click();
     }
 }
