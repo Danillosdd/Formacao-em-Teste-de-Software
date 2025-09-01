@@ -20,7 +20,7 @@ Funcionalidade: Compra de produtos no SauceDemo
     Então devo ver a mensagem de confirmação "<mensagem>"
 
     Exemplos:
-      | usuario      | senha     | produto                  | nome    | sobrenome | cep     | mensagem                  |
+      | usuario      | senha        | produto                  | nome    | sobrenome | cep     | mensagem                  |
       | standard_user| secret_sauce | Sauce Labs Backpack      | João    | Silva     | 12345   | Thank you for your order! |
       | standard_user| secret_sauce | Sauce Labs Bike Light    | Maria   | Souza     | 54321   | Thank you for your order! |
       | standard_user| secret_sauce | Sauce Labs Bolt T-Shirt  | Pedro   | Lima      | 67890   | Thank you for your order! |
