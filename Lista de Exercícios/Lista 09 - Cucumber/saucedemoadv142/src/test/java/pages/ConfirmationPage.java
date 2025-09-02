@@ -1,31 +1,17 @@
-/*
- No Selenium, você pode encontrar elementos usando vários tipos de localizadores. Os principais são:
+package pages; // Define o pacote do arquivo
 
-By.id: Localiza pelo atributo id.
-By.name: Localiza pelo atributo name.
-By.className: Localiza pela classe CSS.
-By.tagName: Localiza pela tag HTML (ex: input, div).
-By.linkText: Localiza pelo texto exato de um link (<a>).
-By.partialLinkText: Localiza por parte do texto de um link.
-By.cssSelector: Localiza usando seletores CSS.
-By.xpath: Localiza usando expressões XPath.
-Exemplo:
+import org.openqa.selenium.By; // Importa classe para localizar elementos
+import org.openqa.selenium.WebDriver; // Importa o WebDriver para controlar o navegador
 
-Esses são os principais métodos para localizar elementos no Selenium!
- */
-package pages;
+public class ConfirmationPage { // Classe que representa a página de confirmação
+    WebDriver driver; // Instância do WebDriver para manipular a página
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
-public class ConfirmationPage {
-    WebDriver driver;
-
-    public ConfirmationPage(WebDriver driver) {
+    public ConfirmationPage(WebDriver driver) { // Construtor recebe o driver
         this.driver = driver;
     }
 
+    // Retorna a mensagem de confirmação exibida após finalizar a compra
     public String getConfirmationMessage() {
-        return driver.findElement(By.className("complete-header")).getText();
+        return driver.findElement(By.className("complete-header")).getText(); // Busca o texto da
     }
 }

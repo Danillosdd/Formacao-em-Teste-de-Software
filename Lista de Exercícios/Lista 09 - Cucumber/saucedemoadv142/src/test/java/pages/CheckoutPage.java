@@ -1,42 +1,30 @@
-/*
- No Selenium, você pode encontrar elementos usando vários tipos de localizadores. Os principais são:
+package pages; // Define o pacote do arquivo
 
-By.id: Localiza pelo atributo id.
-By.name: Localiza pelo atributo name.
-By.className: Localiza pela classe CSS.
-By.tagName: Localiza pela tag HTML (ex: input, div).
-By.linkText: Localiza pelo texto exato de um link (<a>).
-By.partialLinkText: Localiza por parte do texto de um link.
-By.cssSelector: Localiza usando seletores CSS.
-By.xpath: Localiza usando expressões XPath.
-Exemplo:
+import org.openqa.selenium.By; // Importa classe para localizar elementos
+import org.openqa.selenium.WebDriver; // Importa o WebDriver para controlar o navegador
 
-Esses são os principais métodos para localizar elementos no Selenium!
- */
-package pages;
+public class CheckoutPage { // Classe que representa a página de checkout
+    WebDriver driver; // Instância do WebDriver para manipular a página
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
-public class CheckoutPage {
-    WebDriver driver;
-
-    public CheckoutPage(WebDriver driver) {
+    public CheckoutPage(WebDriver driver) { // Construtor recebe o driver
         this.driver = driver;
     }
 
+    // Preenche os dados do comprador e clica em "Continuar"
     public void fillInformation(String nome, String sobrenome, String cep) {
-        driver.findElement(By.id("first-name")).sendKeys(nome);
-        driver.findElement(By.id("last-name")).sendKeys(sobrenome);
-        driver.findElement(By.id("postal-code")).sendKeys(cep);
-        driver.findElement(By.id("continue")).click();
+        driver.findElement(By.id("first-name")).sendKeys(nome); // Preenche o campo nome
+        driver.findElement(By.id("last-name")).sendKeys(sobrenome); // Preenche o campo sobrenome
+        driver.findElement(By.id("postal-code")).sendKeys(cep); // Preenche o campo CEP
+        driver.findElement(By.id("continue")).click(); // Clica no botão continuar
     }
 
+    // Verifica se está na página de resumo do checkout
     public boolean isOnOverviewPage() {
-        return driver.getCurrentUrl().contains("checkout-step-two.html");
+        return driver.getCurrentUrl().contains("checkout-step-two.html"); // Retorna true se está na página de overview
     }
 
+    // Finaliza a compra clicando no botão "Finish"
     public void finish() {
-        driver.findElement(By.id("finish")).click();
+        driver.findElement(By.id("finish")).click(); // Clica no botão finalizar
     }
 }

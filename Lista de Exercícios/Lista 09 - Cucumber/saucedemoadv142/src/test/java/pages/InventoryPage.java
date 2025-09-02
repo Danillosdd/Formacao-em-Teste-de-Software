@@ -1,43 +1,33 @@
-/*
- No Selenium, você pode encontrar elementos usando vários tipos de localizadores. Os principais são:
+package pages; // Define o pacote do arquivo
 
-By.id: Localiza pelo atributo id.
-By.name: Localiza pelo atributo name.
-By.className: Localiza pela classe CSS.
-By.tagName: Localiza pela tag HTML (ex: input, div).
-By.linkText: Localiza pelo texto exato de um link (<a>).
-By.partialLinkText: Localiza por parte do texto de um link.
-By.cssSelector: Localiza usando seletores CSS.
-By.xpath: Localiza usando expressões XPath.
-Exemplo:
+import org.openqa.selenium.By; // Importa classe para localizar elementos
+import org.openqa.selenium.WebDriver; // Importa o WebDriver para controlar o navegador
 
-Esses são os principais métodos para localizar elementos no Selenium!
- */
-package pages;
+public class InventoryPage { // Classe que representa a página de produtos
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+    WebDriver driver; // Instância do WebDriver para manipular a página
 
-public class InventoryPage {
-
-    WebDriver driver;
-
-    public InventoryPage(WebDriver driver) {
+    public InventoryPage(WebDriver driver) { // Construtor recebe o driver
         this.driver = driver;
     }
 
+    // Adiciona um produto ao carrinho pelo nome
     public void addProductToCart(String productName) {
+        // Monta o XPath para localizar o botão "Add to cart" do produto
         String xpath = String.format("//div[text()='%s']/ancestor::div[@class='inventory_item']//button", productName);
-        driver.findElement(By.xpath(xpath)).click();
+        driver.findElement(By.xpath(xpath)).click(); // Clica no botão
+        try { Thread.sleep(500); } catch (InterruptedException e) { e.printStackTrace(); } // Aguarda meio segundo
     }
 
+    // Verifica se o produto foi adicionado ao carrinho (botão mudou para "Remove")
     public boolean isProductAdded(String productName) {
-        // Verifica se o botão mudou para "Remove"
+        // Monta o XPath para localizar o botão "Remove" do produto
         String xpath = String.format("//div[text()='%s']/ancestor::div[@class='inventory_item']//button[text()='Remove']", productName);
-        return driver.findElements(By.xpath(xpath)).size() > 0;
+        return driver.findElements(By.xpath(xpath)).size() > 0; // Retorna true se encontrou o botão "Remove"
     }
 
+    // Acessa o carrinho de compras
     public void goToCart() {
-        driver.findElement(By.className("shopping_cart_link")).click();
+        driver.findElement(By.className("shopping_cart_link")).click(); // Clica no ícone do carrinho
     }
 }

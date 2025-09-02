@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Define o modelo do projeto Maven -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.saucedemo</groupId>
-    <artifactId>saucedemoadv142</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <!-- Informações básicas do projeto -->
+    <groupId>com.saucedemo</groupId> <!-- Grupo do projeto -->
+    <artifactId>saucedemoadv142</artifactId> <!-- Nome do artefato -->
+    <version>1.0-SNAPSHOT</version> <!-- Versão do projeto -->
 
+    <!-- Propriedades globais do projeto -->
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source> <!-- Versão do Java para compilar -->
+        <maven.compiler.target>17</maven.compiler.target> <!-- Versão do Java para gerar bytecode -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- Codificação dos arquivos -->
     </properties>
 
+    <!-- Dependências do projeto -->
     <dependencies>
         <!-- JUnit Platform: Suporte à execução de testes na plataforma JUnit 5 -->
         <dependency>
@@ -74,6 +78,7 @@
             <artifactId>webdrivermanager</artifactId>
             <version>5.7.0</version>
         </dependency>
+
         <!-- JUnit 4: Suporte a testes escritos na versão antiga do JUnit -->
         <dependency>
             <groupId>junit</groupId>
@@ -91,19 +96,22 @@
         </dependency>
     </dependencies>
 
+    <!-- Configuração do build do Maven -->
     <build>
         <plugins>
+            <!-- Plugin para compilar o código Java -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
 
+            <!-- Plugin para executar os testes -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -111,7 +119,7 @@
                 <configuration>
                     <properties>
                         <configurationParameters>
-                            cucumber.junit-platform.naming-strategy=long
+                            cucumber.junit-platform.naming-strategy=long <!-- Estratégia de nomes para relatórios do Cucumber -->
                         </configurationParameters>
                     </properties>
                 </configuration>
