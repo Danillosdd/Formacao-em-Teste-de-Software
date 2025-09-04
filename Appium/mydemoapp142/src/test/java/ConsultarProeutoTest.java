@@ -1,6 +1,9 @@
 // This sample code supports Appium Java client >= 9
 // https://github.com/appium/java-client
 
+// - appPackage: com.saucelabs.mydemoapp.android
+// - appActivity: com.saucelabs.mydemoapp.android.MainActivity
+
 import io.appium.java_client.remote.options.BaseOptions;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
