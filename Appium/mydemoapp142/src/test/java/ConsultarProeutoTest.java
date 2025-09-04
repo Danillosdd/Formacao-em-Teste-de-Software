@@ -23,13 +23,12 @@ public class ConsultarProeutoTest {
 
     private URL pegarUrl() {
         try {
-            return new URL("https://InstrutorIterasys27:");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
         return null;
     }
-
+u
     @BeforeEach
     public void setUp() {
         var options = new BaseOptions();
@@ -37,5 +36,16 @@ public class ConsultarProeutoTest {
         .amend("appim:platformVersion", "9.0");
         .amend("appium:deviceName", "Samsung Galaxy S9 FHD GoogleAPI Emulator");
         .amend("appium:deviceOrientation", "portrait");
+        .amend("appim:app", "storage:filename=mda-2.2.0-25.apk");
+        .amend("appium:appPackage", "com.saucelabs.mydemoapp.android");
+        .amend("appium:appActivity", "com.saucelabs.mydemoapp.android.MainActivity");
+        .amend("appium:automationName", "UiAutomator2");
+        .amend("browserName", "");
+        .amend("appim:ensureWebviewsHavePages", true);
+        .amend("appium:nativeWebScreenshot", true);
+        .amend("appium:newCommandTimeout", 3600);
+        .amend("appium:connectHardwareKeyboard", true)
+
+
 
     }
