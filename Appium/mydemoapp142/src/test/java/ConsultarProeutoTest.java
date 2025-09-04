@@ -2,7 +2,8 @@
 // https://github.com/appium/java-client
 
 // - appPackage: com.saucelabs.mydemoapp.android
-// - appActivity: com.saucelabs.mydemoapp.android.MainActivity
+// - appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity
+             
 
 import io.appium.java_client.remote.options.BaseOptions;
 import io.appium.java_client.AppiumBy;

@@ -34,6 +34,5 @@ Roteiro de Inspeção
 - E o Apk Info(Baixar no Apkpure)
 - Usar o Apk Info para descobrir:
     - appPackage: com.saucelabs.mydemoapp.android
-    - appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity
-    ou com.saucelabs.mydemoapp.android.view.activities.MainActivity
+    - appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity ou com.saucelabs.mydemoapp.android.view.activities.MainActivity
 
