@@ -31,8 +31,12 @@ Ambiente de Teste em Nuvem = Device Farms
 Roteiro de Inspeção
 
 - Instalar na plataforma saucelabs,  o app alvo(Que neste caso será o My Demo App - Da SauceLabs - Baixar no Github)
-- E o Apk Info(Baixar no Apkpure)
+- Instlalar no saucelabs o Apk Info(Baixar no Apkpure)
 - Usar o Apk Info para descobrir:
     - appPackage: com.saucelabs.mydemoapp.android
     - appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity ou com.saucelabs.mydemoapp.android.view.activities.MainActivity
-
+- Baixe e instale o Appium Inspector
+- Abra e configure:
+    - Seu servidor/serviço
+    - Suas credenciais
+    - Suas configurações (Desired Capabilities)

@@ -3,8 +3,6 @@
 
 // - appPackage: com.saucelabs.mydemoapp.android
 // - appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity
-             
-
 import io.appium.java_client.remote.options.BaseOptions;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
@@ -32,8 +30,9 @@ public class ConsultarProeutoTest {
         }
         return null;
     }
-u
+    
     @BeforeEach
+
     public void setUp() {
         var options = new BaseOptions();
         .amend("platformName", "Android");
