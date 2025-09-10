@@ -1,18 +1,18 @@
-// This sample code supports Appium Java client >=9
-// https://github.com/appium/java-client
-import io.appium.java_client.remote.options.BaseOptions;
-import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
-import java.net.URL;
 import java.net.MalformedURLException;
-import java.time.Duration;
-import java.util.Arrays;
-import java.util.Base64;
+import java.net.URL;
 import java.util.Map;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.WebElement;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.options.BaseOptions;
+
+
 
 public class SampleTest {
 
