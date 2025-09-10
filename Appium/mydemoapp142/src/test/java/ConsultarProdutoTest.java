@@ -3,6 +3,7 @@ import java.net.URL;
 import java.util.Map;
 
 import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -51,9 +52,9 @@ public class ConsultarProdutoTest {
         var imgMochila = driver.findElement(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[1]"));
         imgMochila.click();
         var lblTituloProduto = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
-        lblTituloProduto.click();
+        assertEquals("Sauce Labs Backpack", lblTituloProduto.getText());
         var lblPrecoProduto = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"));
-        lblPrecoProduto.click();
+        assertEquals("$29.99", lblPrecoProduto.getText());
     }
 
     @AfterEach
