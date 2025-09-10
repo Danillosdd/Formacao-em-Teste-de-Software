@@ -54,7 +54,7 @@ public class ConsultarProdutoTest {
         var lblTituloProduto = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
         assertEquals("Sauce Labs Backpack", lblTituloProduto.getText());
         var lblPrecoProduto = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"));
-        assertEquals("$29.99", lblPrecoProduto.getText());
+            assertEquals("$ 29.99", lblPrecoProduto.getText());
     }
 
     @AfterEach
