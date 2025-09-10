@@ -2,8 +2,9 @@
 Funcionalidade: Comprar Produto
 
   Esquema do Cenario: Compra com Sucesso
-    Dado que estou na tela de produtos
-    Quando eu selecionar o produto "Sauce Labs Backpack"
-    Entao o produto "Sauce Labs Backpack" deve ser exibido com o preco "$ 29.99"
-    E o botao "ADD TO CART" deve estar visivel
+    Dado que acesso o My Demo App
+    E verifico o logo e nome da secao
+    E localizo o <produto> que esta por <preco>
+    Quando clico na imagem do <num_produto>
+    Entao verifico o <produto> e o <preco> na tela do produto
     
