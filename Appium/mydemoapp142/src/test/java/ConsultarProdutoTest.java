@@ -50,10 +50,10 @@ public class ConsultarProdutoTest {
     public void sampleTest() {
         var imgMochila = driver.findElement(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[1]"));
         imgMochila.click();
-        var txtProduto = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
-        txtProduto.click();
-        var txtPreco = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"));
-        txtPreco.click();
+        var lblTituloProduto = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
+        lblTituloProduto.click();
+        var lblPrecoProduto = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"));
+        lblPrecoProduto.click();
     }
 
     @AfterEach
