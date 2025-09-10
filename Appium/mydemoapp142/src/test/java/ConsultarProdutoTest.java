@@ -18,7 +18,7 @@ public class ConsultarProdutoTest {
 
     private URL getUrl() {
         try {
-            return new URL("https://danillo.sdd:d16f7bb2-9729-4aa5-ae9a-4bc95891689f@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
+            return new URL("https://danillo.sdd:d16f7bb2-9729-4aa5-ae9a-4bc95891689f@ondemand.us-west-1.saucelabs.com:443/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
             return null;
