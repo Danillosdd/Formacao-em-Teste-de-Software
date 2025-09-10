@@ -49,7 +49,8 @@ public class ConsultarProdutoTest {
 
     @Test
     public void sampleTest() {
-        var el1 = driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.saucelabs.mydemoapp.android:id/productIV\").instance(0)"));
+        var el1 = driver.findElement(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[1]\n" + //
+                    ""));
         el1.click();
         var el2 = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
         el2.click();
