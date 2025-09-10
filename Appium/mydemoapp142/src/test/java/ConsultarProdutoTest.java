@@ -48,12 +48,12 @@ public class ConsultarProdutoTest {
 
     @Test
     public void sampleTest() {
-        var el1 = driver.findElement(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[1]"));
-        el1.click();
-        var el2 = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
-        el2.click();
-        var el3 = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"));
-        el3.click();
+        var imgMochila = driver.findElement(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[1]"));
+        imgMochila.click();
+        var txtProduto = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
+        txtProduto.click();
+        var txtPreco = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"));
+        txtPreco.click();
     }
 
     @AfterEach
