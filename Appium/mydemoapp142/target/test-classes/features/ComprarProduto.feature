@@ -1,3 +1,5 @@
+#mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
+
 # language: pt
 Funcionalidade: Comprar Produto
 
@@ -9,3 +11,5 @@ Funcionalidade: Comprar Produto
     Entao na telao do produto verifico o <produto> e o <preco> na tela do produto
     Quando arrasto para cima e clico no botao Add Cart
     Entao na tela do carrinho verifico o <produto> <preco> e <quantidade>
+
+
