@@ -1,0 +1,65 @@
+// This sample code supports Appium Java client >=9
+// https://github.com/appium/java-client
+import io.appium.java_client.remote.options.BaseOptions;
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+import java.net.URL;
+import java.net.MalformedURLException;
+import java.time.Duration;
+import java.util.Arrays;
+import java.util.Base64;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.*;
+
+public class SampleTest {
+
+  private AndroidDriver driver;
+
+  @BeforeEach
+  public void setUp() {
+    Capabilities options = new BaseOptions()
+      .amend("platformName", "Android")
+      .amend("appium:platformVersion", "9.0")
+      .amend("appium:deviceName", "Samsung Galaxy S9 FHD GoogleAPI Emulator")
+      .amend("appium:deviceOrientation", "portrait")
+      .amend("appium:app", "storage:filename=mda-2.2.0-25.apk")
+      .amend("appium:appPackage", "com.saucelabs.mydemoapp.android")
+      .amend("appium:appActivity", "com.saucelabs.mydemoapp.android.view.activities.SplashActivity")
+      .amend("appium:automationName", "UiAutomator2")
+      .amend("browserName", "")
+      .amend("appium:ensureWebviewsHavePages", true)
+      .amend("appium:nativeWebScreenshot", true)
+      .amend("sauce:options", Map.ofEntries(Map.entry("name", "Appium Desktop Session -- Sep 9, 2025 9:55 PM")))
+      .amend("appium:newCommandTimeout", 3600)
+      .amend("appium:connectHardwareKeyboard", true)
+      .amend("webSocketUrl", true)
+      .amend("unhandledPromptBehavior", "ignore");    
+
+    driver = new AndroidDriver(this.getUrl(), options);
+  }
+
+  @Test
+  public void sampleTest() {
+    WebElement el1 = driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.saucelabs.mydemoapp.android:id/productIV\").instance(0)"));
+    el1.click();
+    WebElement el2 = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
+    el2.click();
+    WebElement el3 = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"));
+    el3.click();
+  }
+
+  @AfterEach
+  public void tearDown() {
+    driver.quit();
+  }
+    
+  private URL getUrl() {
+      try {
+        return new URL("http://ondemand.us-west-1.saucelabs.com:80/wd/hub");
+      } catch (MalformedURLException e) {
+        e.printStackTrace();
+      }
+    }
+}
