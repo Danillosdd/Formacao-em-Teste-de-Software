@@ -1,4 +1,3 @@
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
@@ -59,7 +58,9 @@ public class ConsultarProdutoTest {
 
     @AfterEach
     public void tearDown() {
-        driver.quit();
+        if (driver != null) {
+            driver.quit();
+        }
     }
 
 }

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: ConsultarProdutoTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.980 s <<< FAILURE! -- in ConsultarProdutoTest
-ConsultarProdutoTest.sampleTest -- Time elapsed: 1.959 s <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.794 s <<< FAILURE! -- in ConsultarProdutoTest
+ConsultarProdutoTest.sampleTest -- Time elapsed: 2.773 s <<< ERROR!
 org.openqa.selenium.SessionNotCreatedException: 
 Could not start a new session. Response code 400. Message: CCYAbuse - Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
 Host info: host: 'danillo', ip: '192.168.15.23'
@@ -26,11 +26,8 @@ Capabilities {appium:app: storage:filename=mda-2.2.0-..., appium:appActivity: co
 	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:89)
 	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:101)
 	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:113)
-	at ConsultarProdutoTest.setUp(ConsultarProdutoTest.java:47)
+	at ConsultarProdutoTest.setUp(ConsultarProdutoTest.java:46)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	Suppressed: java.lang.NullPointerException: Cannot invoke "io.appium.java_client.android.AndroidDriver.quit()" because "this.driver" is null
-		at ConsultarProdutoTest.tearDown(ConsultarProdutoTest.java:62)
-		... 3 more
 
