@@ -14,7 +14,7 @@ import io.appium.java_client.remote.options.BaseOptions;
 
 
 
-public class SampleTest {
+public class ConsultarProdutoTest {
 
   private AndroidDriver driver;
 
