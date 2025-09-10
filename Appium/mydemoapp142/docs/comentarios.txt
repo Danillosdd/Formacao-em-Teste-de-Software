@@ -35,8 +35,11 @@ Roteiro de Inspeção
 - Usar o Apk Info para descobrir:
     - appPackage: com.saucelabs.mydemoapp.android
     - appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity ou com.saucelabs.mydemoapp.android.view.activities.MainActivity
-- Baixe e instale o Appium Inspector
-- Abra e configure:
+- Baixe e instale o Appium Inspecto, abra e configure:
     - Seu servidor/serviço
     - Suas credenciais
     - Suas configurações (Desired Capabilities)
+- Saucelabs
+    - Crie sua conta (de preferência com e-mail, mas funciona com os demais)
+    - Copie as suas credenciais para usar no Appium Inspector
+    
