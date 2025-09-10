@@ -6,7 +6,6 @@ import java.util.Map;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
@@ -50,11 +49,11 @@ public class ConsultarProdutoTest {
 
     @Test
     public void sampleTest() {
-        WebElement el1 = driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.saucelabs.mydemoapp.android:id/productIV\").instance(0)"));
+        var el1 = driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.saucelabs.mydemoapp.android:id/productIV\").instance(0)"));
         el1.click();
-        WebElement el2 = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
+        var el2 = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
         el2.click();
-        WebElement el3 = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"));
+        var el3 = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"));
         el3.click();
     }
 
