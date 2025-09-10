@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: ConsultarProdutoTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.064 s <<< FAILURE! -- in ConsultarProdutoTest
-ConsultarProdutoTest.sampleTest -- Time elapsed: 2.046 s <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.980 s <<< FAILURE! -- in ConsultarProdutoTest
+ConsultarProdutoTest.sampleTest -- Time elapsed: 1.959 s <<< ERROR!
 org.openqa.selenium.SessionNotCreatedException: 
 Could not start a new session. Response code 400. Message: CCYAbuse - Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
 Host info: host: 'danillo', ip: '192.168.15.23'
