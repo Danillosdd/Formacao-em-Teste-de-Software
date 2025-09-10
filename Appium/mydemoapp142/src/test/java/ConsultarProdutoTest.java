@@ -49,9 +49,7 @@ public class ConsultarProdutoTest {
 
     @Test
     public void sampleTest() {
-        var el1 = driver.findElement(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[1]\n"
-                + //
-                ""));
+        var el1 = driver.findElement(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[1]"));
         el1.click();
         var el2 = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
         el2.click();
