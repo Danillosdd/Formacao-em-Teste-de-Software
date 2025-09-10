@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.Map;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -60,6 +61,7 @@ public class SampleTest {
         return new URL("http://ondemand.us-west-1.saucelabs.com:80/wd/hub");
       } catch (MalformedURLException e) {
         e.printStackTrace();
+        return null;
       }
-    }
+  }
 }
