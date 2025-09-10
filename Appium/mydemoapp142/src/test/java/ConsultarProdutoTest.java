@@ -16,7 +16,7 @@ public class ConsultarProdutoTest {
 
     private AndroidDriver driver;
 
-    private URL pegarUrl() {
+    private URL getUrl() {
         try {
             return new URL("https://ondemand.eu-central-1.saucelabs.com/wd/hub");
         } catch (MalformedURLException e) {
@@ -45,7 +45,7 @@ public class ConsultarProdutoTest {
                 .amend("webSocketUrl", true)
                 .amend("unhandledPromptBehavior", "ignore");
 
-        driver = new AndroidDriver(this.pegarUrl(), options);
+        driver = new AndroidDriver(this.getUrl(), options);
     }
 
     @Test
