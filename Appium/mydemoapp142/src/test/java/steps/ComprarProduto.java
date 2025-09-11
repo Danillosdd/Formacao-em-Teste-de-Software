@@ -115,6 +115,12 @@ public class ComprarProduto {
                 PointerInput.Origin.viewport(), end.getX(), end.getY()));
         swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         driver.perform(Arrays.asList(swipe));
+
+        // Clicar no botão Add to Cart
+        driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/cartBt")).click();
+
+        // Verificar se o número de produtos no carrinho mudou para 1
+        assertEquals("1", driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/cartTV")).getText());
     }
 
     @Entao("na tela do carrinho verifico o {string} {string} e {int}")
