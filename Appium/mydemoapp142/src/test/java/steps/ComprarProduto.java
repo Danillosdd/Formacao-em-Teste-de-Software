@@ -76,7 +76,7 @@ public class ComprarProduto {
         // produto :
         // preco   :
         assertEquals(produto, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product title\" and @text=" + produto + "]")).getText());
-        assertEquals(preco, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product price\" and @text=" + preco + "]")).getText());
+        assertEquals(preco, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product Price\"])[1]")).getText());
     }
 
     @Quando("clico na imagem do {int}")
