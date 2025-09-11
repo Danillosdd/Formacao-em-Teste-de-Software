@@ -5,7 +5,7 @@ import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 
-public class ComprarProdutoSteps {
+public class ComprarProduto {
 
     @Dado("que acesso o My Demo App")
     public void que_acesso_o_my_demo_app() {
