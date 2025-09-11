@@ -15,15 +15,15 @@ public class ComprarProduto {
     public void verifico_o_logo_e_nome_da_secao() {
     }
 
-    @E("localizo o {string} que esta por {string}")
+    @E("localizo o <produto> que esta por <preco>")
     public void localizo_o_produto_que_esta_por_preco(String produto, String preco) {
     }
 
-    @Quando("clico na imagem do {int}")
+    @Quando("clico na imagem do <numProduto>")
     public void clico_na_imagem_do_num_produto(int numProduto) {
     }
 
-    @Entao("na telao do produto verifico o {string} e o {string} na tela do produto")
+    @Entao("na telao do produto verifico o <produto> e o <preco> na tela do produto")
     public void verifico_produto_preco_na_tela(String produto, String preco) {
     }
 
