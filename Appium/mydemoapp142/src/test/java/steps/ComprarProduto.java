@@ -23,15 +23,15 @@ public class ComprarProduto {
     public void clico_na_imagem_do_num_produto(int numProduto) {
     }
 
-    @Entao("na telao do produto verifico o <produto> e o <preco> na tela do produto")
-    public void verifico_produto_preco_na_tela(String produto, String preco) {
+    @Entao("na tela do produto verifico o <produto> e o <preco>")
+    public void verifico_produto_preco_na_tela_do_produto(String produto, String preco) {
     }
 
     @Quando("arrasto para cima e clico no botao Add Cart")
     public void arrasto_para_cima_e_clico_no_botao_add_cart() {
     }
 
-    @Entao("na tela do carrinho verifico o {string} {string} e {string}")
-    public void verifico_no_carrinho(String produto, String preco, String quantidade) {
+    @Entao("na tela do carrinho verifico o <produto> <preco> e <quantidade>")
+    public void na_tela_do_carrinho_verifico_o_produto_preco_e_quantidade(String produto, String preco, String quantidade) {
     }
 }
