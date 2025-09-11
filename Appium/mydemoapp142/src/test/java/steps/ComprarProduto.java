@@ -45,7 +45,7 @@ public class ComprarProduto {
                 .amend("appium:connectHardwareKeyboard", true)
                 .amend("webSocketUrl", true)
                 .amend("unhandledPromptBehavior", "ignore");
-
+        // Esta linha instancia o Appium e abre o aplicativo
         driver = new AndroidDriver(this.getUrl(), options);
     }
 
