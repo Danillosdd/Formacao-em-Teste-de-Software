@@ -95,6 +95,19 @@ public class ComprarProduto {
     public void arrasto_para_cima_e_clico_no_botao_add_cart() {
         // Tela do Produto
         // botao adicionar no carrinho :
+
+    final var finger = new PointerInput(PointerInput.Kind.TOUCH, name:"finger");
+    var start = new Point(x:525, y:1698);
+    var end = new Point(x:530, y:563);
+    var swipe = new Sequence(finger, 1);
+    
+    swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
+                    PointerInput.Origin.viewport(), start.getX(), start.getY()));
+    swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+    swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000),
+                    PointerInput.Origin.viewport(), end.getX(), end.getY()));
+    
+    swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()))
     }
 
     @Entao("na tela do carrinho verifico o {string} {string} e {int}")
