@@ -71,19 +71,19 @@ public class ComprarProduto {
     }
 
     @E("localizo o {string} que esta por {string}")
-    public void localizo_o_produto_que_esta_por_preco(String produto, String preco) {
+    public void localizo_o_que_esta_por(String produto, String preco) {
         // Home
         // produto :
         // preco   :
     }
 
     @Quando("clico na imagem do {int}")
-    public void clico_na_imagem_do_num_produto(int numProduto) {
+    public void clico_na_imagem_do(Integer num_produto) {
 
     }
 
     @Entao("na tela do produto verifico o {string} e o {string}")
-    public void na_tela_do_produto_verifico_o_produto_e_o_preco(String produto, String preco) {
+    public void na_tela_do_produto_verifico_o_e_o(String produto, String preco) {
 
     }
 
