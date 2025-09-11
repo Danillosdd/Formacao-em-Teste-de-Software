@@ -93,8 +93,8 @@ public class ComprarProduto {
         // botao adicionar no carrinho :
     }
 
-    @Entao("na tela do carrinho verifico o {string} {string} e {string}")
-    public void na_tela_do_carrinho_verifico_o_produto_preco_e_quantidade(String produto, String preco, String quantidade) {
+    @Entao("na tela do carrinho verifico o {string} {string} e {int}")
+    public void na_tela_do_carrinho_verifico_o_e(String produto, String preco, Integer quantidade) {
         // Carrinho
         // produto    :
         // preco      :
