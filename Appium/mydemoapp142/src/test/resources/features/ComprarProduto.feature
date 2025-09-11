@@ -12,5 +12,6 @@ Funcionalidade: Comprar Produto
     Entao na tela do carrinho verifico o <produto> <preco> e <quantidade>
 
     Exemplos:
-      | produto             | preco   | num_produto | quantidade |
-      | Sauce Labs Backpack | $ 29.99 |           1 |          1 |
+      | produto                 | preco     | num_produto | quantidade |
+      | "Sauce Labs Backpack"   | "$ 29.99" |           1 |          1 |
+      | "Sauce Labs Bike Light" | "$ 9.99"  |           6 |          1 |
