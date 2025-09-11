@@ -12,4 +12,8 @@ Funcionalidade: Comprar Produto
     Quando arrasto para cima e clico no botao Add Cart
     Entao na tela do carrinho verifico o <produto> <preco> e <quantidade>
 
+    Exemplos:
+      | produto                | preco   | num_produto | quantidade |
+      | Sauce Labs Backpack    | $ 29.99 | 1           | 1          |
+
 
