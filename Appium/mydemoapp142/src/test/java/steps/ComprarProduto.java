@@ -87,7 +87,8 @@ public class ComprarProduto {
 
     @Entao("na tela do produto verifico o {string} e o {string}")
     public void na_tela_do_produto_verifico_o_e_o(String produto, String preco) {
-
+        assertEquals(produto, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/productTV")).getText());
+        assertEquals(preco, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/priceTV")).getText());
     }
 
     @Quando("arrasto para cima e clico no botao Add Cart")
