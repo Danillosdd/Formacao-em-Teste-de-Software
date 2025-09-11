@@ -81,6 +81,7 @@ public class ComprarProduto {
 
     @Quando("clico na imagem do {int}")
     public void clico_na_imagem_do(Integer num_produto) {
+        driver.findElement(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"Product image\"])[" + num_produto + "]")).click();
 
     }
 
