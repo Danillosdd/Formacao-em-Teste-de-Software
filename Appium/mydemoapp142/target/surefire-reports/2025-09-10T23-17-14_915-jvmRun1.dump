@@ -1,4 +1,4 @@
-# Created at 2025-09-10T22:58:30.233
+# Created at 2025-09-10T23:17:15.317
 org.junit.platform.commons.JUnitException: TestEngine with ID 'cucumber' failed to discover tests
 	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverEngineRoot(EngineDiscoveryOrchestrator.java:160)
 	at org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverSafely(EngineDiscoveryOrchestrator.java:132)
