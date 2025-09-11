@@ -48,7 +48,6 @@ public class ComprarProduto {
                 .amend("appium:connectHardwareKeyboard", true)
                 .amend("webSocketUrl", true)
                 .amend("unhandledPromptBehavior", "ignore");
-        // Esta linha instancia o Appium e abre o aplicativo
         driver = new AndroidDriver(this.getUrl(), options);
     }
 
@@ -71,20 +70,20 @@ public class ComprarProduto {
         assertEquals("Products", lblTituloSecao.getText());
     }
 
-    @E("localizo o <produto> que esta por <preco>")
-    public void localizo_o_produto_que_esta_por_preco() {
+    @E("localizo o {string} que esta por {string}")
+    public void localizo_o_produto_que_esta_por_preco(String produto, String preco) {
         // Home
         // produto :
         // preco   :
     }
 
-    @Quando("clico na imagem do <numProduto>")
-    public void clico_na_imagem_do_num_produto() {
+    @Quando("clico na imagem do {int}")
+    public void clico_na_imagem_do_num_produto(int numProduto) {
 
     }
 
-    @Entao("na tela do produto verifico o <produto> e o <preco>")
-    public void na_tela_do_produto_verifico_o_produto_e_o_preco() {
+    @Entao("na tela do produto verifico o {string} e o {string}")
+    public void na_tela_do_produto_verifico_o_produto_e_o_preco(String produto, String preco) {
 
     }
 
@@ -94,8 +93,8 @@ public class ComprarProduto {
         // botao adicionar no carrinho :
     }
 
-    @Entao("na tela do carrinho verifico o <produto> <preco> e <quantidade>")
-    public void na_tela_do_carrinho_verifico_o_produto_preco_e_quantidade() {
+    @Entao("na tela do carrinho verifico o {string} {string} e {string}")
+    public void na_tela_do_carrinho_verifico_o_produto_preco_e_quantidade(String produto, String preco, String quantidade) {
         // Carrinho
         // produto    :
         // preco      :
