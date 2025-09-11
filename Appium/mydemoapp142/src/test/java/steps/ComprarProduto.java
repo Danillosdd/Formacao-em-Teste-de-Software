@@ -70,7 +70,7 @@ public class ComprarProduto {
         assertEquals("Products", lblTituloSecao.getText());
     }
 
-    @E("localizo o {string} que esta por {string}")
+    @E("localizo o {string} que esta na posicao {int} por {string}")
     public void localizo_o_que_esta_por(String produto, String preco) {
         // Home
         // produto :
