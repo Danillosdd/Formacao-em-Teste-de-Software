@@ -56,7 +56,8 @@ public class ComprarProduto {
 
     @Dado("que acesso o My Demo App")
     public void que_acesso_o_my_demo_app() {
-        
+        // O app foi aberto no final do método iniciar (Before)
+
     }
 
     @E("verifico o logo e nome da secao")
