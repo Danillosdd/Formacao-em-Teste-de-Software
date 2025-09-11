@@ -4,6 +4,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.options.BaseOptions;
 import io.cucumber.java.After;
@@ -61,8 +64,11 @@ public class ComprarProduto {
 
     @E("verifico o logo e nome da secao")
     public void verifico_o_logo_e_nome_da_secao() {
-        //logo  :
-        //secao : 
+        var imgLogo = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/mTvTitle"));
+        assertEquals(imgLogo.isDisplayed(), true);
+
+        var lblTituloSecao = driver.findElement(AppiumBy.id(""));
+        assertEquals("Products", lblTituloSecao.getText());
     }
 
     @E("localizo o <produto> que esta por <preco>")
