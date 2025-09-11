@@ -2,7 +2,11 @@ package steps;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.Map;
+
+import org.openqa.selenium.Point;
+import org.openqa.selenium.interactions.PointerInput;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -15,6 +19,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
+import java.time.Duration;
 
 public class ComprarProduto {
 
@@ -95,19 +100,21 @@ public class ComprarProduto {
     public void arrasto_para_cima_e_clico_no_botao_add_cart() {
         // Tela do Produto
         // botao adicionar no carrinho :
+        driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/addToCartButton")).click();
 
-    final var finger = new PointerInput(PointerInput.Kind.TOUCH, name:"finger");
-    var start = new Point(x:525, y:1698);
-    var end = new Point(x:530, y:563);
-    var swipe = new Sequence(finger, 1);
+        // Arrastar para cima
+        final var finger = new PointerInput(PointerInput.Kind.TOUCH, name:"finger");
+        var start = new Point(x:525, y:1698);
+        var end = new Point(x:530, y:563);
+        var swipe = new Sequence(finger, 1);
     
-    swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
-                    PointerInput.Origin.viewport(), start.getX(), start.getY()));
-    swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-    swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000),
-                    PointerInput.Origin.viewport(), end.getX(), end.getY()));
-    
-    swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()))
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0), 
+            PointerInput.Origin.viewport(), start.getX(), start.getY()));
+        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000), 
+            PointerInput.Origin.viewport(), end.getX(), end.getY()));
+        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        driver.perform(Arrays.asList(swipe));
     }
 
     @Entao("na tela do carrinho verifico o {string} {string} e {int}")
