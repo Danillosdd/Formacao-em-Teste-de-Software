@@ -6,6 +6,7 @@ import java.util.Map;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.options.BaseOptions;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
@@ -48,8 +49,14 @@ public class ComprarProduto {
         driver = new AndroidDriver(this.getUrl(), options);
     }
 
+    @After
+    public void finalizar() {
+        driver.quit();
+    }
+
     @Dado("que acesso o My Demo App")
     public void que_acesso_o_my_demo_app() {
+        
     }
 
     @E("verifico o logo e nome da secao")
