@@ -71,7 +71,7 @@ public class ComprarProduto {
     }
 
     @E("localizo o {string} que esta na posicao {int} por {string}")
-    public void localizo_o_que_esta_por(String produto, String preco) {
+    public void localizo_o_que_esta_por(String produto, Integer num_posicao, String preco) {
         // Home
         // produto :
         // preco   :
