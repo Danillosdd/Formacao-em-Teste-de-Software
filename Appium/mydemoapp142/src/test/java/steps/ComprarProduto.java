@@ -71,12 +71,12 @@ public class ComprarProduto {
     }
 
     @E("localizo o {string} que esta na posicao {int} por {string}")
-    public void localizo_o_que_esta_por(String produto, Integer num_posicao, String preco) {
+    public void localizo_o_que_esta_por(String produto, Integer num_produto, String preco) {
         // Home
         // produto :
         // preco   :
         assertEquals(produto, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product title\" and @text=" + produto + "]")).getText());
-        assertEquals(preco, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product Price\"])[1]")).getText());
+        assertEquals(preco, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product Price\"])[" + num_produto + "]")).getText());
     }
 
     @Quando("clico na imagem do {int}")
