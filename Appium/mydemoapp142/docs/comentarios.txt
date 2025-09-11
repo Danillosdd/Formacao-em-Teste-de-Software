@@ -2,7 +2,7 @@ Teste Mobile
 
 Terminal
 - mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
-
+- mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features" -Dcucumber.glue="steps"
 
 --> Testes de aplicativos para celulares e tablets
 --> Também de app para relógio, central de mídia, smartv

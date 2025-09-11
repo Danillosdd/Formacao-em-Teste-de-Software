@@ -1,4 +1,5 @@
 #mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
+#mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features" -Dcucumber.glue="steps"
 # language: pt
 Funcionalidade: Comprar Produto
 
