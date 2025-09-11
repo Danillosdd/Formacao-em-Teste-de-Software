@@ -121,6 +121,9 @@ public class ComprarProduto {
 
         // Verificar se o número de produtos no carrinho mudou para 1
         assertEquals("1", driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/cartTV")).getText());
+
+        // Clicar no ícone do carrinho de compras para ir para a sua tela
+        driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/cartIV")).click();
     }
 
     @Entao("na tela do carrinho verifico o {string} {string} e {int}")
