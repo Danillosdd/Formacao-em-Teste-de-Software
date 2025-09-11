@@ -75,8 +75,8 @@ public class ComprarProduto {
         // Home
         // produto :
         // preco   :
-        assertEquals("Sauce Labs Backpack", driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product title\" and @text=" + produto + "]")).getText());
-        assertEquals("$ 29.99", driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product price\" and @text=" + preco + "]")).getText());
+        assertEquals(produto, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product title\" and @text=" + produto + "]")).getText());
+        assertEquals(preco, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product price\" and @text=" + preco + "]")).getText());
     }
 
     @Quando("clico na imagem do {int}")
