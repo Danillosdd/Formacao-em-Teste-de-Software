@@ -144,5 +144,8 @@ public class ComprarProduto {
 
         // Verificar a quantidade do produto
         assertEquals(quantidade.toString(), driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/itemsTV")).getText());
+
+        // Verificar o preço total
+        assertEquals(preco, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/totalPriceTV")).getText());
     }
 }
