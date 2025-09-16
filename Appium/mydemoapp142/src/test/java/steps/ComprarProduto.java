@@ -132,5 +132,8 @@ public class ComprarProduto {
         // produto    :
         // preco      :
         // quantidade :
+
+        // Verificar o título da seção
+        assertEquals("Cart", driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/productTV")).getText());
     }
 }
