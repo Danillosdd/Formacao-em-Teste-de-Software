@@ -134,10 +134,15 @@ public class ComprarProduto {
         // quantidade :
 
         // Verificar o título da seção
-        assertEquals("Cart", driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/productTV")).getText());
+        assertEquals("Cart", driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/titleTV")).getText());
 
         // Verificar o título do produto
-        assertEquals(produto, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/titleTV")).getText());
+        assertEquals(produto, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/productTV")).getText());
 
+        // Verificar o preço do produto
+        assertEquals(preco, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/priceTV")).getText());
+
+        // Verificar a quantidade do produto
+        assertEquals(quantidade.toString(), driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/quantityTV")).getText());
     }
 }
