@@ -135,5 +135,9 @@ public class ComprarProduto {
 
         // Verificar o título da seção
         assertEquals("Cart", driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/productTV")).getText());
+
+        // Verificar o título do produto
+        assertEquals(produto, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/titleTV")).getText());
+
     }
 }
