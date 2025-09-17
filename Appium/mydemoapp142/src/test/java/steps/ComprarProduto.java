@@ -1,6 +1,5 @@
 // mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
 // mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features" -Dcucumber.glue="steps"
-
 package steps;
 
 import java.net.MalformedURLException;
@@ -30,7 +29,7 @@ public class ComprarProduto {
 
     private URL getUrl() {
         try {
-            return new URL("https://danillo.sdd:d16f7bb2-9729-4aa5-ae9a-4bc95891689f@ondemand.us-west-1.saucelabs.com:443/wd/hub");
+            return new URL("https://oauth-danillo.sdd-1bce0:d8f4796c-46db-49a1-937f-d3547dab1442@ondemand.us-west-1.saucelabs.com:443/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
             return null;
