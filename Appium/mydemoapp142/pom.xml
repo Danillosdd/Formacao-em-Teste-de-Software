@@ -77,8 +77,11 @@
                 <version>3.0.0-M9</version>
                 <configuration>
                     <includeJUnit5Engines>
-                        cucumber,jupiter
+                        jupiter
                     </includeJUnit5Engines>
+                    <excludeJUnit5Engines>
+                        cucumber
+                    </excludeJUnit5Engines>
                 </configuration>
             </plugin>
         </plugins>
