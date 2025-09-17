@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ConsultarProdutoTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 63.202 s - in ConsultarProdutoTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 63.079 s - in ConsultarProdutoTest
