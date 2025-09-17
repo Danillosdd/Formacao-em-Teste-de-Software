@@ -1,4 +1,3 @@
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
@@ -42,7 +41,6 @@ public class ConsultarProdutoTest {
                 .amend("sauce:options", Map.ofEntries(Map.entry("name", "Appium Desktop Session -- Sep 9, 2025 9:55 PM")))
                 .amend("appium:newCommandTimeout", 3600)
                 .amend("appium:connectHardwareKeyboard", true)
-                .amend("webSocketUrl", true)
                 .amend("unhandledPromptBehavior", "ignore");
 
         driver = new AndroidDriver(this.getUrl(), options);
