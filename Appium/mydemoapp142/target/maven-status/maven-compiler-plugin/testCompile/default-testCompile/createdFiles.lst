@@ -1,1 +1,2 @@
-ConsultarProdutoTest.class
+runner/RunCucumberTest.class
+steps/ComprarProduto.class
