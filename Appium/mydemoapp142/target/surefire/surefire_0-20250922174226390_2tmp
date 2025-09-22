@@ -1,0 +1,6 @@
+#surefire_0
+#Mon Sep 22 17:42:26 BRT 2025
+cucumber.features=src/test/resources/features
+basedir=/home/danillo/Dropbox/Estudos/Teste de Software/Iterasys/Formacao em Teste de Software/Appium/mydemoapp142
+surefire.includeJUnit5Engines=cucumber
+localRepository=/home/danillo/.m2/repository
