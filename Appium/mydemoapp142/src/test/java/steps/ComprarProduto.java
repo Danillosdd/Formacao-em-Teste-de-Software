@@ -87,7 +87,7 @@ public class ComprarProduto {
         // Home
         // produto :
         // preco   :
-        assertEquals(produto, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc='Product title' and @text='" + produto + "']")).getText());
+        assertEquals(produto, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc='Product Title' and @text='" + produto + "']")).getText());
         assertEquals(preco, driver.findElement(AppiumBy.xpath("(//android.widget.TextView[@content-desc='Product Price'])[" + num_produto + "]")).getText());
     }
 
