@@ -1,3 +1,12 @@
+// Comando simples (recomendado)
+// mvn clean test
+
+// Ou específico para a classe runner
+// mvn clean test -Dtest=RunCucumberTest
+
+// Para debug (se necessário)
+// mvn clean test -X
+
 // mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
 // mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features" -Dcucumber.glue="steps"
 package steps;
@@ -50,10 +59,9 @@ public class ComprarProduto {
                 .amend("browserName", "")
                 .amend("appium:ensureWebviewsHavePages", true)
                 .amend("appium:nativeWebScreenshot", true)
-                .amend("sauce:options", Map.ofEntries(Map.entry("name", "Appium Desktop Session -- Sep 9, 2025 9:55 PM")))
+                .amend("sauce:options", Map.ofEntries(Map.entry("name", "Appium Desktop Session")))
                 .amend("appium:newCommandTimeout", 3600)
                 .amend("appium:connectHardwareKeyboard", true)
-                .amend("webSocketUrl", true)
                 .amend("unhandledPromptBehavior", "ignore");
         driver = new AndroidDriver(this.getUrl(), options);
     }
@@ -94,8 +102,8 @@ public class ComprarProduto {
 
     @Entao("na tela do produto verifico o {string} e o {string}")
     public void na_tela_do_produto_verifico_o_e_o(String produto, String preco) {
-        assertEquals(produto, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/productTV")).getText());
-        assertEquals(preco, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/priceTV")).getText());
+        assertEquals(produto, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV")).getText());
+        assertEquals(preco, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV")).getText());
     }
 
     @Quando("arrasto para cima e clico no botao Add Cart")
@@ -119,7 +127,7 @@ public class ComprarProduto {
         driver.perform(Arrays.asList(swipe));
 
         // Clicar no botão Add to Cart
-        driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/cartBt")).click();
+        driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/cartBt")).click();
 
         // Verificar se o número de produtos no carrinho mudou para 1
         assertEquals("1", driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/cartTV")).getText());
@@ -139,7 +147,7 @@ public class ComprarProduto {
         assertEquals("Cart", driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/titleTV")).getText());
 
         // Verificar o título do produto
-        assertEquals(produto, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/productTV")).getText());
+        assertEquals(produto, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV")).getText());
 
         // Verificar o preço do produto
         assertEquals(preco, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/priceTV")).getText());

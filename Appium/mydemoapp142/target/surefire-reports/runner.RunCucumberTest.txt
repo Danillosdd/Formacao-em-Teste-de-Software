@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: runner.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 113.794 s <<< FAILURE! - in runner.RunCucumberTest
+Comprar Produto - Compra com Sucesso - Exemplos.Comprar Produto - Compra com Sucesso - Exemplos - Example #1.1  Time elapsed: 60.509 s  <<< ERROR!
+java.lang.IllegalArgumentException: Must supply a not empty locator value.
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:141)
+	at io.appium.java_client.AppiumBy.<init>(AppiumBy.java:40)
+	at io.appium.java_client.AppiumBy$ById.<init>(AppiumBy.java:285)
+	at io.appium.java_client.AppiumBy.id(AppiumBy.java:138)
+	at steps.ComprarProduto.verifico_o_logo_e_nome_da_secao(ComprarProduto.java:84)
+	at ✽.verifico o logo e nome da secao(classpath:features/ComprarProduto.feature:8)
+
+Comprar Produto - Compra com Sucesso - Exemplos.Comprar Produto - Compra com Sucesso - Exemplos - Example #1.2  Time elapsed: 53.032 s  <<< ERROR!
+java.lang.IllegalArgumentException: Must supply a not empty locator value.
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:141)
+	at io.appium.java_client.AppiumBy.<init>(AppiumBy.java:40)
+	at io.appium.java_client.AppiumBy$ById.<init>(AppiumBy.java:285)
+	at io.appium.java_client.AppiumBy.id(AppiumBy.java:138)
+	at steps.ComprarProduto.verifico_o_logo_e_nome_da_secao(ComprarProduto.java:84)
+	at ✽.verifico o logo e nome da secao(classpath:features/ComprarProduto.feature:8)
+
