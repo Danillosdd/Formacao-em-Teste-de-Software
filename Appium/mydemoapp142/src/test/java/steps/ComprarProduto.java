@@ -78,7 +78,6 @@ public class ComprarProduto {
         var imgLogo = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/mTvTitle"));
         assertEquals(imgLogo.isDisplayed(), true);
 
-        // Corrija o ID vazio para o ID correto
         var lblTituloSecao = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
         assertEquals("Products", lblTituloSecao.getText());
     }
