@@ -1,0 +1,54 @@
+-------------------------------------------------------------------------------
+Test set: runner.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 147.7 s <<< FAILURE! - in runner.RunCucumberTest
+Comprar Produto - Compra com Sucesso - Exemplos.Comprar Produto - Compra com Sucesso - Exemplos - Example #1.1  Time elapsed: 90.673 s  <<< ERROR!
+org.openqa.selenium.InvalidSelectorException: 
+org.eclipse.wst.xml.xpath2.processor.XPathParserException: CUP parser error: Parser error: line 1 col 73: Labs
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.14.0-29-generic', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [ea52514a74214c2cbb623d1d1a004e31, findElement {using=xpath, value=//android.widget.TextView[@content-desc="Product title" and @text=Sauce Labs Backpack]}]
+Capabilities {appium:app: /tmp/tmpezhdKC/mda-2.2.0-25..., appium:appActivity: com.saucelabs.mydemoapp.and..., appium:appPackage: com.saucelabs.mydemoapp.and..., appium:automationName: UiAutomator2, appium:chromeOptions: {args: [--disable-fre, --disable-popup-blocking, --enable-automation, --enable-remote-debugging, --ignore-certificate-errors, --metrics-recording-only, --no-first-run, --disable-search-geolocatio..., --disable-gpu-rasterization, --ignore-certificate-errors...], w3c: false}, appium:connectHardwareKeyboard: true, appium:databaseEnabled: false, appium:desired: {app: /tmp/tmpezhdKC/mda-2.2.0-25..., appActivity: com.saucelabs.mydemoapp.and..., appPackage: com.saucelabs.mydemoapp.and..., automationName: UiAutomator2, browserName: , chromeOptions: {args: [--disable-fre, --disable-popup-blocking, --enable-automation, --enable-remote-debugging, --ignore-certificate-errors, --metrics-recording-only, --no-first-run, --disable-search-geolocatio..., --disable-gpu-rasterization, --ignore-certificate-errors...], w3c: false}, connectHardwareKeyboard: true, deviceName: Samsung Galaxy S9 FHD Googl..., deviceOrientation: portrait, ensureWebviewsHavePages: true, eventTimings: true, maxTypingFrequency: 8, nativeWebScreenshot: true, newCommandTimeout: 3600, noReset: true, noSign:noSign: true, orientation: PORTRAIT, platformName: ANDROID, platformVersion: 9.0, proxy: {proxyAutoconfigUrl: http://127.0.0.1:19876/pac.js, proxyType: pac}, sauce:options: {}, selenium:webdriver.remote.quietExceptions: false, udid: emulator-5554, unhandledPromptBehavior: ignore}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: Android SDK built for x86_64, appium:deviceName: emulator-5554, appium:deviceOrientation: portrait, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:ensureWebviewsHavePages: true, appium:eventTimings: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:maxTypingFrequency: 8, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 3600, appium:noReset: true, appium:orientation: PORTRAIT, appium:pixelRatio: 3, appium:platformVersion: 9, appium:statBarHeight: 72, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 2004, left: 0, top: 72, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, noSign:noSign: true, platformName: ANDROID, proxy: Proxy(pac: http://127.0.0.1..., sauce:options: {}, selenium:webdriver.remote.quietExceptions: false, unhandledPromptBehavior: ignore}
+Session ID: ea52514a74214c2cbb623d1d1a004e31
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at steps.ComprarProduto.localizo_o_que_esta_por(ComprarProduto.java:94)
+	at ✽.localizo o "Sauce Labs Backpack" que esta na posicao 1 por "$ 29.99"(classpath:features/ComprarProduto.feature:9)
+
+Comprar Produto - Compra com Sucesso - Exemplos.Comprar Produto - Compra com Sucesso - Exemplos - Example #1.2  Time elapsed: 56.757 s  <<< ERROR!
+org.openqa.selenium.InvalidSelectorException: 
+org.eclipse.wst.xml.xpath2.processor.XPathParserException: CUP parser error: Parser error: line 1 col 73: Labs
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.14.0-29-generic', java.version: '17.0.9'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [4f7dba54502a402aaaa50a8ce88bcfbd, findElement {using=xpath, value=//android.widget.TextView[@content-desc="Product title" and @text=Sauce Labs Bike Light]}]
+Capabilities {appium:app: /tmp/tmp51vDnF/mda-2.2.0-25..., appium:appActivity: com.saucelabs.mydemoapp.and..., appium:appPackage: com.saucelabs.mydemoapp.and..., appium:automationName: UiAutomator2, appium:chromeOptions: {args: [--disable-fre, --disable-popup-blocking, --enable-automation, --enable-remote-debugging, --ignore-certificate-errors, --metrics-recording-only, --no-first-run, --disable-search-geolocatio..., --disable-gpu-rasterization, --ignore-certificate-errors...], w3c: false}, appium:connectHardwareKeyboard: true, appium:databaseEnabled: false, appium:desired: {app: /tmp/tmp51vDnF/mda-2.2.0-25..., appActivity: com.saucelabs.mydemoapp.and..., appPackage: com.saucelabs.mydemoapp.and..., automationName: UiAutomator2, browserName: , chromeOptions: {args: [--disable-fre, --disable-popup-blocking, --enable-automation, --enable-remote-debugging, --ignore-certificate-errors, --metrics-recording-only, --no-first-run, --disable-search-geolocatio..., --disable-gpu-rasterization, --ignore-certificate-errors...], w3c: false}, connectHardwareKeyboard: true, deviceName: Samsung Galaxy S9 FHD Googl..., deviceOrientation: portrait, ensureWebviewsHavePages: true, eventTimings: true, maxTypingFrequency: 8, nativeWebScreenshot: true, newCommandTimeout: 3600, noReset: true, noSign:noSign: true, orientation: PORTRAIT, platformName: ANDROID, platformVersion: 9.0, proxy: {proxyAutoconfigUrl: http://127.0.0.1:19876/pac.js, proxyType: pac}, sauce:options: {}, selenium:webdriver.remote.quietExceptions: false, udid: emulator-5554, unhandledPromptBehavior: ignore}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: Android SDK built for x86_64, appium:deviceName: emulator-5554, appium:deviceOrientation: portrait, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:ensureWebviewsHavePages: true, appium:eventTimings: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:maxTypingFrequency: 8, appium:nativeWebScreenshot: true, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 3600, appium:noReset: true, appium:orientation: PORTRAIT, appium:pixelRatio: 3, appium:platformVersion: 9, appium:statBarHeight: 72, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 2004, left: 0, top: 72, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, noSign:noSign: true, platformName: ANDROID, proxy: Proxy(pac: http://127.0.0.1..., sauce:options: {}, selenium:webdriver.remote.quietExceptions: false, unhandledPromptBehavior: ignore}
+Session ID: 4f7dba54502a402aaaa50a8ce88bcfbd
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at steps.ComprarProduto.localizo_o_que_esta_por(ComprarProduto.java:94)
+	at ✽.localizo o "Sauce Labs Bike Light" que esta na posicao 6 por "$ 9.99"(classpath:features/ComprarProduto.feature:9)
+
