@@ -1,12 +1,9 @@
 // Comando simples (recomendado)
 // mvn clean test
-
 // Ou específico para a classe runner
 // mvn clean test -Dtest=RunCucumberTest
-
 // Para debug (se necessário)
 // mvn clean test -X
-
 // mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
 // mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features" -Dcucumber.glue="steps"
 package steps;
@@ -91,8 +88,8 @@ public class ComprarProduto {
         // Home
         // produto :
         // preco   :
-        assertEquals(produto, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product title\" and @text=" + produto + "]")).getText());
-        assertEquals(preco, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Product Price\"])[" + num_produto + "]")).getText());
+        assertEquals(produto, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc='Product title' and @text='" + produto + "']")).getText());
+        assertEquals(preco, driver.findElement(AppiumBy.xpath("(//android.widget.TextView[@content-desc='Product Price'])[" + num_produto + "]")).getText());
     }
 
     @Quando("clico na imagem do {int}")
@@ -111,7 +108,7 @@ public class ComprarProduto {
     public void arrasto_para_cima_e_clico_no_botao_add_cart() {
         // Tela do Produto
         // botao adicionar no carrinho :
-        driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/addToCartButton")).click();
+        driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/addToCartButton")).click();
 
         // Arrastar para cima
         final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
@@ -131,10 +128,10 @@ public class ComprarProduto {
         driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/cartBt")).click();
 
         // Verificar se o número de produtos no carrinho mudou para 1
-        assertEquals("1", driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/cartTV")).getText());
+        assertEquals("1", driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/cartTV")).getText());
 
         // Clicar no ícone do carrinho de compras para ir para a sua tela
-        driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/cartIV")).click();
+        driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/cartIV")).click();
     }
 
     @Entao("na tela do carrinho verifico o {string} {string} e {int}")
@@ -145,18 +142,18 @@ public class ComprarProduto {
         // quantidade :
 
         // Verificar o título da seção
-        assertEquals("Cart", driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/titleTV")).getText());
+        assertEquals("Cart", driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/titleTV")).getText());
 
         // Verificar o título do produto
         assertEquals(produto, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV")).getText());
 
         // Verificar o preço do produto
-        assertEquals(preco, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/priceTV")).getText());
+        assertEquals(preco, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV")).getText());
 
         // Verificar a quantidade do produto
-        assertEquals(quantidade.toString(), driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/itemsTV")).getText());
+        assertEquals(quantidade.toString(), driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/itemsTV")).getText());
 
         // Verificar o preço total
-        assertEquals(preco, driver.findElement(AppiumBy.id("com.soucelabs.mydemoapp.android:id/totalPriceTV")).getText());
+        assertEquals(preco, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/totalPriceTV")).getText());
     }
 }
