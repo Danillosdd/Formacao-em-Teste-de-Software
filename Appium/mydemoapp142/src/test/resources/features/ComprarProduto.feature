@@ -15,4 +15,9 @@ Funcionalidade: Comprar Produto
     Exemplos:
       | produto               | preco   | num_produto | quantidade |
       | Sauce Labs Backpack   | $ 29.99 |           1 |          1 |
-      | Sauce Labs Bike Light | $ 9.99  |           6 |          1 |
+#      | Sauce Labs Bike Light | $ 9.99  |           6 |          1 |
+
+#//android.widget.TextView[@content-desc="Product Title" and @text="Sauce Labs Bike Light"]
+#//android.widget.TextView[@content-desc="Product Price" and @text="$ 9.99"]
+
+#(//android.widget.ImageView[@content-desc="Product Image"])[1]
