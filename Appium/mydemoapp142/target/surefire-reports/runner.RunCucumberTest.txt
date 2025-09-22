@@ -1,14 +1,74 @@
 -------------------------------------------------------------------------------
 Test set: runner.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 101.688 s <<< FAILURE! - in runner.RunCucumberTest
-Comprar Produto - Compra com Sucesso - Exemplos.Comprar Produto - Compra com Sucesso - Exemplos - Example #1.1  Time elapsed: 47.933 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <Products> but was: <Sauce Labs Backpack>
-	at steps.ComprarProduto.verifico_o_logo_e_nome_da_secao(ComprarProduto.java:86)
-	at ✽.verifico o logo e nome da secao(classpath:features/ComprarProduto.feature:8)
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 105.484 s <<< FAILURE! - in runner.RunCucumberTest
+Comprar Produto - Compra com Sucesso - Exemplos.Comprar Produto - Compra com Sucesso - Exemplos - Example #1.1  Time elapsed: 54.96 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'localizo o Sauce Labs Backpack que esta na posicao 1 por $ 29.99' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
 
-Comprar Produto - Compra com Sucesso - Exemplos.Comprar Produto - Compra com Sucesso - Exemplos - Example #1.2  Time elapsed: 53.562 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <Products> but was: <Sauce Labs Backpack>
-	at steps.ComprarProduto.verifico_o_logo_e_nome_da_secao(ComprarProduto.java:86)
-	at ✽.verifico o logo e nome da secao(classpath:features/ComprarProduto.feature:8)
+@Dado("localizo o Sauce Labs Backpack que esta na posicao {int} por $ {double}")
+public void localizo_o_sauce_labs_backpack_que_esta_na_posicao_por_$(Integer int1, Double double1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entao("na tela do produto verifico o Sauce Labs Backpack e o $ {double}")
+public void na_tela_do_produto_verifico_o_sauce_labs_backpack_e_o_$(Double double1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entao("na tela do carrinho verifico o Sauce Labs Backpack $ {double} e {int}")
+public void na_tela_do_carrinho_verifico_o_sauce_labs_backpack_$_e(Double double1, Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.junit.platform.engine.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:22)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:114)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+Comprar Produto - Compra com Sucesso - Exemplos.Comprar Produto - Compra com Sucesso - Exemplos - Example #1.2  Time elapsed: 50.095 s  <<< ERROR!
+io.cucumber.junit.platform.engine.UndefinedStepException: 
+The step 'localizo o Sauce Labs Bike Light que esta na posicao 6 por $ 9.99' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Dado("localizo o Sauce Labs Bike Light que esta na posicao {int} por $ {double}")
+public void localizo_o_sauce_labs_bike_light_que_esta_na_posicao_por_$(Integer int1, Double double1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entao("na tela do produto verifico o Sauce Labs Bike Light e o $ {double}")
+public void na_tela_do_produto_verifico_o_sauce_labs_bike_light_e_o_$(Double double1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entao("na tela do carrinho verifico o Sauce Labs Bike Light $ {double} e {int}")
+public void na_tela_do_carrinho_verifico_o_sauce_labs_bike_light_$_e(Double double1, Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.junit.platform.engine.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:22)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:114)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
