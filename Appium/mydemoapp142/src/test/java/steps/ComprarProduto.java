@@ -84,6 +84,23 @@ public class ComprarProduto {
 
     @E("localizo o {string} que esta na posicao {int} por {string}")
     public void localizo_o_que_esta_por(String produto, Integer num_produto, String preco) {
+        // Se o produto está na posição 6 ou maior, fazer scroll para baixo
+        if (num_produto >= 3) {
+          // Arrastar para cima
+        final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        var start = new Point(384, 1159);
+        var end = new Point(372, 174);
+        var swipe = new Sequence(finger, 1);
+
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
+                PointerInput.Origin.viewport(), start.getX(), start.getY()));
+        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000),
+                PointerInput.Origin.viewport(), end.getX(), end.getY()));
+        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        driver.perform(Arrays.asList(swipe));
+        }
+
         // Home
         // produto :
         // preco   :
