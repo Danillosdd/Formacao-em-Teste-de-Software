@@ -83,11 +83,16 @@ public class ComprarProduto {
         assertEquals("Products", lblTituloSecao.getText());
     }
 
-    @E("localizo o {string} que esta na posicao {int} por {string}")
-    public void localizo_o_que_esta_por(String produto, Integer num_produto, String preco) {
+    @E("localizo o {string} que na {int} esta na posicao {int} por {string}")
+    public void localizo_o_que_esta_por(String produto, Integer rolagem, Integer num_produto, String preco) {
         // Home
         // produto :
         // preco :
+        
+        for (int i = 0; i < array.length; i++) {
+            
+        }
+        
         assertEquals(produto,
                 driver.findElement(AppiumBy
                         .xpath("//android.widget.TextView[@content-desc='Product Title' and @text='" + produto + "']"))
