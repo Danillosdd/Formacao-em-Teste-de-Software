@@ -35,7 +35,8 @@ public class ComprarProduto {
 
     private URL getUrl() {
         try {
-            return new URL("https://oauth-danillo.sdd-1bce0:d8f4796c-46db-49a1-937f-d3547dab1442@ondemand.us-west-1.saucelabs.com:443/wd/hub");
+            return new URL(
+                    "https://oauth-danillo.sdd-1bce0:d8f4796c-46db-49a1-937f-d3547dab1442@ondemand.us-west-1.saucelabs.com:443/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
             return null;
@@ -84,39 +85,31 @@ public class ComprarProduto {
 
     @E("localizo o {string} que esta na posicao {int} por {string}")
     public void localizo_o_que_esta_por(String produto, Integer num_produto, String preco) {
-        // Se o produto está na posição 6 ou maior, fazer scroll para baixo
-        if (num_produto >= 3) {
-          // Arrastar para cima
-        final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-        var start = new Point(384, 1159);
-        var end = new Point(372, 174);
-        var swipe = new Sequence(finger, 1);
-
-        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
-                PointerInput.Origin.viewport(), start.getX(), start.getY()));
-        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-        swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000),
-                PointerInput.Origin.viewport(), end.getX(), end.getY()));
-        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        driver.perform(Arrays.asList(swipe));
-        }
-
         // Home
         // produto :
-        // preco   :
-        assertEquals(produto, driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc='Product Title' and @text='" + produto + "']")).getText());
-        assertEquals(preco, driver.findElement(AppiumBy.xpath("(//android.widget.TextView[@content-desc='Product Price'])[" + num_produto + "]")).getText());
+        // preco :
+        assertEquals(produto,
+                driver.findElement(AppiumBy
+                        .xpath("//android.widget.TextView[@content-desc='Product Title' and @text='" + produto + "']"))
+                        .getText());
+        assertEquals(preco,
+                driver.findElement(AppiumBy
+                        .xpath("(//android.widget.TextView[@content-desc='Product Price'])[" + num_produto + "]"))
+                        .getText());
     }
 
     @Quando("clico na imagem do {int}")
     public void clico_na_imagem_do(Integer num_produto) {
-        driver.findElement(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[" + num_produto + "]")).click();
+        driver.findElement(
+                AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[" + num_produto + "]"))
+                .click();
 
     }
 
     @Entao("na tela do produto verifico o {string} e o {string}")
     public void na_tela_do_produto_verifico_o_e_o(String produto, String preco) {
-        assertEquals(produto, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV")).getText());
+        assertEquals(produto,
+                driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV")).getText());
         assertEquals(preco, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV")).getText());
     }
 
@@ -152,12 +145,13 @@ public class ComprarProduto {
     @Entao("na tela do carrinho verifico o {string} {string} e {int}")
     public void na_tela_do_carrinho_verifico_o_e(String produto, String preco, Integer quantidade) {
         // Carrinho
-        // produto    :
-        // preco      :
+        // produto :
+        // preco :
         // quantidade :
 
         // Verificar o título da seção
-        assertEquals("My Cart", driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV")).getText());
+        assertEquals("My Cart",
+                driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV")).getText());
 
         // Verificar o título do produto
         assertEquals(produto, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/titleTV")).getText());
@@ -166,9 +160,11 @@ public class ComprarProduto {
         assertEquals(preco, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV")).getText());
 
         // Verificar a quantidade do produto
-        assertEquals(quantidade.toString() + " Items", driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/itemsTV")).getText());
+        assertEquals(quantidade.toString() + " Items",
+                driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/itemsTV")).getText());
 
         // Verificar o preço total
-        assertEquals(preco, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/totalPriceTV")).getText());
+        assertEquals(preco,
+                driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/totalPriceTV")).getText());
     }
 }
