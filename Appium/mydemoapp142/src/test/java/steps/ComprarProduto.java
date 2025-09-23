@@ -107,7 +107,6 @@ public class ComprarProduto {
     public void arrasto_para_cima_e_clico_no_botao_add_cart() {
         // Tela do Produto
         // botao adicionar no carrinho :
-        driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/addToCartButton")).click();
 
         // Arrastar para cima
         final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
@@ -141,10 +140,10 @@ public class ComprarProduto {
         // quantidade :
 
         // Verificar o título da seção
-        assertEquals("Cart", driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/titleTV")).getText());
+        assertEquals("My Cart", driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV")).getText());
 
         // Verificar o título do produto
-        assertEquals(produto, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV")).getText());
+        assertEquals(produto, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/titleTV")).getText());
 
         // Verificar o preço do produto
         assertEquals(preco, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV")).getText());
