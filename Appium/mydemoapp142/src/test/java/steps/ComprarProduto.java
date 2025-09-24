@@ -89,7 +89,7 @@ public class ComprarProduto {
         // produto :
         // preco :
         
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < rolagem; i++) {
             
         }
         
