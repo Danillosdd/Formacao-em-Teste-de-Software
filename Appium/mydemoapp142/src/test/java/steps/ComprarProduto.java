@@ -43,6 +43,22 @@ public class ComprarProduto {
         }
     }
 
+    public void arrastaParaCima(Integer x, Integer y) {
+        // Arrastar para cima
+        final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        var start = new Point(525, 1698);
+        var end = new Point(530, 563);
+        var swipe = new Sequence(finger, 1);
+
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
+                PointerInput.Origin.viewport(), start.getX(), start.getY()));
+        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000),
+                PointerInput.Origin.viewport(), end.getX(), end.getY()));
+        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        driver.perform(Arrays.asList(swipe));
+    }
+
     @Before
     public void iniciar() {
         var options = new BaseOptions()
@@ -88,11 +104,11 @@ public class ComprarProduto {
         // Home
         // produto :
         // preco :
-        
+
         for (int i = 0; i < rolagem; i++) {
-            
+
         }
-        
+
         assertEquals(produto,
                 driver.findElement(AppiumBy
                         .xpath("//android.widget.TextView[@content-desc='Product Title' and @text='" + produto + "']"))
