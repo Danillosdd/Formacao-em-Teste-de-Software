@@ -84,7 +84,7 @@ public class ComprarProduto {
     @After
     public void finalizar() throws InterruptedException {
         driver.quit();
-        Thread.sleep(20000);
+        Thread.sleep(30000);
     }
 
     @Dado("que acesso o My Demo App")
