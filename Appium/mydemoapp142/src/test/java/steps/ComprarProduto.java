@@ -4,6 +4,7 @@
 // mvn clean test -Dtest=RunCucumberTest
 // Para debug (se necessário)
 // mvn clean test -X
+// mvn clean test -Dcucumber.options="src/test/resources/features/"
 // mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
 // mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features" -Dcucumber.glue="steps"
 package steps;
