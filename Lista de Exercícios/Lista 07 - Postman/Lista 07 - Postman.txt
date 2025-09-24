@@ -1,0 +1,15 @@
+1. Crie testes para o método Post, Get, Put e Delete da entidade User
+
+Vídeo: https://www.loom.com/share/afc8574e758b440a851e9e24c429423e
+
+2. Crie um teste Data Driven para o Post da User. Grave um vídeo da execução
+
+Vídeo: https://www.loom.com/share/c5983fc9a9db4a09a242f86803ca8f7f
+
+3. Crie testes para o método Post, Get e Delete da entidade Store
+
+Vídeo: https://www.loom.com/share/b69162c2736547b49ad1c57271c11362
+
+4. Crie um teste Data Driven para o Post da Store. Grave um vídeo da execução
+
+Vídeo: https://www.loom.com/share/29d4035fc2834157a4b9ece69dc41751

@@ -5,7 +5,7 @@
 		"description": "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.\n\nContact Support:\n Email: apiteam@swagger.io",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "16818960",
-		"_collection_link": "https://www.postman.com/danillosdd/fts142/collection/4g6j0ou/swagger-petstore?action=share&source=collection_link&creator=16818960"
+		"_collection_link": "https://www.postman.com/danillosdd/workspace/fts142/collection/16818960-8916b74a-5e01-485d-aa3f-5c45ef0b1709?action=share&source=collection_link&creator=16818960"
 	},
 	"item": [
 		{
@@ -2193,6 +2193,73 @@
 									"body": null
 								}
 							]
+						},
+						{
+							"name": "Adicionar store DDT",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"//criar as variáveis do ambiente para poder receber os dados do CSV",
+											"pm.environment.set('storeId', pm.iterationData.get('storeId'));",
+											"pm.environment.set('storePetId', pm.iterationData.get('storePetId'));",
+											"pm.environment.set('storeQuantity', pm.iterationData.get('storeQuantity'));",
+											"pm.environment.set('storeShipDate', pm.iterationData.get('storeShipDate'));",
+											"pm.environment.set('storeStatus', pm.iterationData.get('storeStatus'));",
+											"pm.environment.set('storeComplete', pm.iterationData.get('storeComplete'));"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Status code é 200', function () {",
+											"    pm.response.to.have.status(200);",
+											"})"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"id\": {{storeId}},\n  \"petId\": {{storePetId}},\n  \"quantity\": {{storeQuantity}},\n  \"shipDate\": \"{{storeShipDate}}\",\n  \"status\": \"{{storeStatus}}\",\n  \"complete\": {{storeComplete}}\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/store/order",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"store",
+										"order"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				}
@@ -2415,13 +2482,13 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/user/danillo.sdd",
+											"raw": "{{baseUrl}}/user/danillosdd",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"user",
-												"danillo.sdd"
+												"danillosdd"
 											]
 										}
 									},
@@ -3044,7 +3111,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"1\",\n  \"username\": \"danillo.sdd\",\n  \"firstName\": \"danillo\",\n  \"lastName\": \"araujo\",\n  \"email\": \"danillo.sdd@hotmail.com\",\n  \"password\": \"123456\",\n  \"phone\": \"(62) 9 9999-9999\",\n  \"userStatus\": \"0\"\n}",
+									"raw": "{\n  \"id\": \"1\",\n  \"username\": \"danillosdd\",\n  \"firstName\": \"danillo\",\n  \"lastName\": \"araujo\",\n  \"email\": \"danillo.sdd@hotmail.com\",\n  \"password\": \"123456\",\n  \"phone\": \"(62) 9 9999-9999\",\n  \"userStatus\": \"0\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -3068,6 +3135,72 @@
 							"body": null
 						}
 					]
+				},
+				{
+					"name": "Create user DDT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code é 200', function () {",
+									"    pm.response.to.have.status(200);",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//criar as variáveis do ambiente para poder receber os dados do CSV",
+									"pm.environment.set('userId', pm.iterationData.get('userId'));",
+									"pm.environment.set('userName', pm.iterationData.get('userName'));",
+									"pm.environment.set('userFirstName', pm.iterationData.get('userFirstName'));",
+									"pm.environment.set('userLastName', pm.iterationData.get('userLastName'));",
+									"pm.environment.set('userEmail', pm.iterationData.get('userEmail'));",
+									"pm.environment.set('userPassword', pm.iterationData.get('userPassword'));",
+									"pm.environment.set('userPhone', pm.iterationData.get('userPhone'));",
+									"pm.environment.set('userStatus1', pm.iterationData.get('userStatus1'));",
+									"pm.environment.set('userStatus2', pm.iterationData.get('userStatus2'));"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": {{userId}},\n  \"username\": \"{{userName}}\",\n  \"firstName\": \"{{userFirstName}}\",\n  \"lastName\": \"{{userLastName}}\",\n  \"email\": \"{{userEmail}}\",\n  \"password\": \"{{userPassword}}\",\n  \"phone\": \"{{userPhone}}\",\n  \"userStatus\": {{userStatus1}}\n}\n",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							]
+						},
+						"description": "This can only be done by the logged in user."
+					},
+					"response": []
 				}
 			]
 		}
