@@ -106,6 +106,7 @@ public class ComprarProduto {
         // preco :
 
         for (int i = 0; i < rolagem; i++) {
+            arrastaParaCima(525, 1698, 530, 563);
 
         }
 
@@ -140,18 +141,7 @@ public class ComprarProduto {
         // botao adicionar no carrinho :
 
         // Arrastar para cima
-        final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-        var start = new Point(525, 1698);
-        var end = new Point(530, 563);
-        var swipe = new Sequence(finger, 1);
-
-        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
-                PointerInput.Origin.viewport(), start.getX(), start.getY()));
-        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-        swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000),
-                PointerInput.Origin.viewport(), end.getX(), end.getY()));
-        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        driver.perform(Arrays.asList(swipe));
+        arrastaParaCima(525, 1698, 530, 563);
 
         // Clicar no botão Add to Cart
         driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/cartBt")).click();
