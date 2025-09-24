@@ -43,11 +43,11 @@ public class ComprarProduto {
         }
     }
 
-    public void arrastaParaCima(Integer x, Integer y) {
+    public void arrastaParaCima(Integer xInicio, Integer yInicio, Integer xFim, Integer yFim) {
         // Arrastar para cima
         final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-        var start = new Point(525, 1698);
-        var end = new Point(530, 563);
+        var start = new Point(xInicio, yInicio);
+        var end = new Point(xFim, yFim);
         var swipe = new Sequence(finger, 1);
 
         swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
