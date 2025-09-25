@@ -50,21 +50,6 @@ public class CalculadoraTest {
         driver = new AndroidDriver(this.getUrl(), options);
     }
 
-    /*
-     * @Test
-     * public void sampleTest() {
-     * var imgMochila = driver.findElement(AppiumBy.
-     * xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[1]"));
-     * imgMochila.click();
-     * var lblTituloProduto =
-     * driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"
-     * ));
-     * assertEquals("Sauce Labs Backpack", lblTituloProduto.getText());
-     * var lblPrecoProduto =
-     * driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"))
-     * ;
-     * assertEquals("$ 29.99", lblPrecoProduto.getText());
-     */
     @Test
     public void testeCalculadoraSoma() throws InterruptedException {
         // Aguarda a calculadora carregar
