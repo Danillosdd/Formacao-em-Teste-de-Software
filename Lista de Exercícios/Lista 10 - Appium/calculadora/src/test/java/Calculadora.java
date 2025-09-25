@@ -1,4 +1,5 @@
 //mvn clean test
+//mvn test -Dtest=Calculadora
 
 import java.net.MalformedURLException;
 import java.net.URL;
