@@ -55,13 +55,63 @@ public class CalculadoraTest {
         // Aguarda a calculadora carregar
         Thread.sleep(3000);
 
-        // Realiza a operação 2 + 3 = 5
-        driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_2")).click();
+        // Realiza a operação 5 + 3 = 8
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_5")).click();
         driver.findElement(AppiumBy.id("com.google.android.calculator:id/op_add")).click();
         driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_3")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/eq")).click();
 
         // Verifica o resultado
-        var resultado = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_preview"));
+        var resultado = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
+        assertEquals("8", resultado.getText());
+    }
+
+    @Test
+    public void testeCalculadoraSubtracao() throws InterruptedException {
+        // Aguarda a calculadora carregar
+        Thread.sleep(3000);
+
+        // Realiza a operação 9 - 4 = 5
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_9")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/op_sub")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_4")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/eq")).click();
+
+        // Verifica o resultado
+        var resultado = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
+        assertEquals("5", resultado.getText());
+    }
+
+    @Test
+    public void testeCalculadoraMultiplicacao() throws InterruptedException {
+        // Aguarda a calculadora carregar
+        Thread.sleep(3000);
+
+        // Realiza a operação 6 × 7 = 42
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_6")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/op_mul")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_7")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/eq")).click();
+
+        // Verifica o resultado
+        var resultado = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
+        assertEquals("42", resultado.getText());
+    }
+
+    @Test
+    public void testeCalculadoraDivisao() throws InterruptedException {
+        // Aguarda a calculadora carregar
+        Thread.sleep(3000);
+
+        // Realiza a operação 15 ÷ 3 = 5
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_1")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_5")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/op_div")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_3")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/eq")).click();
+
+        // Verifica o resultado
+        var resultado = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
         assertEquals("5", resultado.getText());
     }
 
