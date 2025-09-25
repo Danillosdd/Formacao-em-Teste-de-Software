@@ -14,5 +14,5 @@ Funcionalidade: Comprar Produto
 
     Exemplos:
       | produto                   | preco   | rolagem | num_produto | quantidade |
+      | Sauce Labs Backpack       | $ 29.99 |       0 |           1 |          1 |
       | Sauce Labs Backpack (red) | $ 29.99 |       1 |           2 |          1 |
-#     | Sauce Labs Backpack       | $ 29.99 |       0 |           1 |          1 |
