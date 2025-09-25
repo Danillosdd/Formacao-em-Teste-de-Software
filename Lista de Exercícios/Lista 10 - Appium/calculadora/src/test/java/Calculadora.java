@@ -34,7 +34,7 @@ public class Calculadora {
                 .amend("appium:platformVersion", "9.0")
                 .amend("appium:deviceName", "Samsung Galaxy S9 FHD GoogleAPI Emulator")
                 .amend("appium:deviceOrientation", "portrait")
-                .amend("appium:app", "storage:filename=Calculator_8.6.1 (625857114)_APKPure.apk")
+                .amend("appium:app", "storage:filename=Calculator_8.6.1.apk")
                 .amend("appium:appPackage", "com.google.android.calculator")
                 .amend("appium:appActivity", "com.google.android.gms.common.api.GoogleApiActivity")
                 .amend("appium:automationName", "UiAutomator2")
