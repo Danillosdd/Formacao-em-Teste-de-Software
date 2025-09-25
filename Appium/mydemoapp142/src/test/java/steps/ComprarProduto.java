@@ -108,7 +108,7 @@ public class ComprarProduto {
         // preco :
 
         for (int i = 0; i < rolagem; i++) {
-            arrastaParaCima(525, 1698, 530, 498);
+            arrastaParaCima(535, 1900, 535, 800);
 
         }
 
