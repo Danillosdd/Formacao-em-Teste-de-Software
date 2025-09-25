@@ -1,0 +1,50 @@
+Teste Mobile
+
+Terminal
+- mvn clean test
+- mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features"
+- mvn clean test -Dsurefire.includeJUnit5Engines=cucumber -Dcucumber.features="src/test/resources/features" -Dcucumber.glue="steps"
+
+--> Testes de aplicativos para celulares e tablets
+--> Também de app para relógio, central de mídia, smartv
+
+Vamos usar o framework Appium
+- Trabalha tanto Android como IOS
+- É uma vertente do Selenium WebDriver voltado para teste de app
+- Múltiplos Sistemas Operacionais
+- Múltiplas Linguagens de Programação: C#, Java, JavaScript, Python
+
+Tipos de aplicativos
+- WebApp (Site disfarçados de aplicativos)
+- Nativo - um projeto separado para Android e outro para IOS
+- Híbrido - um projeto gera apps para Android e IOS
+
+Requisitos de Hardware
+- Processador Intel i5 ou i7 (poderia ser i9)
+- Família de Processador 12 --> 2022, 13 -->2023, 14 -->2024
+- Memória RAM: 8 Gb --> 16 Gb (quanto mais melhor: 32 Gb)
+- Placa de Vídeo Offboard
+- Disco Rígido: SSD (Pelo menos o boot)
+
+
+Ambiente de Teste em Nuvem = Device Farms
+- Saucelabs
+- BrowserStack
+- Perfecto
+
+
+Roteiro de Inspeção
+
+- Instalar na plataforma saucelabs,  o app alvo(Que neste caso será o My Demo App - Da SauceLabs - Baixar no Github)
+- Instlalar no saucelabs o Apk Info(Baixar no Apkpure)
+- Usar o Apk Info para descobrir:
+    - appPackage: com.saucelabs.mydemoapp.android
+    - appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity ou com.saucelabs.mydemoapp.android.view.activities.MainActivity
+- Baixe e instale o Appium Inspector, abra e configure:
+    - Seu servidor/serviço
+    - Suas credenciais
+    - Suas configurações (Desired Capabilities)
+- Saucelabs
+    - Crie sua conta (de preferência com e-mail, mas funciona com os demais)
+    - Copie as suas credenciais para usar no Appium Inspector
+    
