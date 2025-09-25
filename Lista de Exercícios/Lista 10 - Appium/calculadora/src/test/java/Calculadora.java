@@ -36,7 +36,7 @@ public class Calculadora {
                 .amend("appium:deviceOrientation", "portrait")
                 .amend("appium:app", "storage:filename=Calculator_8.6.1.apk")
                 .amend("appium:appPackage", "com.google.android.calculator")
-                .amend("appium:appActivity", "com.google.android.gms.common.api.GoogleApiActivity")
+                .amend("appium:appActivity", "com.android.calculator2.Calculator")
                 .amend("appium:automationName", "UiAutomator2")
                 .amend("browserName", "")
                 .amend("appium:ensureWebviewsHavePages", true)
