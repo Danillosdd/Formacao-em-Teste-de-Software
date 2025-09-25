@@ -13,7 +13,7 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.options.BaseOptions;
 
-public class ConsultarProdutoTest {
+public class Calculadora {
 
     private AndroidDriver driver;
 
