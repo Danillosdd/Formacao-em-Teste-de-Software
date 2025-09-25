@@ -19,7 +19,8 @@ public class Calculadora {
 
     private URL getUrl() {
         try {
-            return new URL("https://oauth-danillo.sdd-1bce0:d8f4796c-46db-49a1-937f-d3547dab1442@ondemand.us-west-1.saucelabs.com:443/wd/hub");
+            return new URL(
+                    "https://oauth-danillo.sdd-1bce0:d8f4796c-46db-49a1-937f-d3547dab1442@ondemand.us-west-1.saucelabs.com:443/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
             return null;
@@ -48,14 +49,35 @@ public class Calculadora {
         driver = new AndroidDriver(this.getUrl(), options);
     }
 
+    /*
+     * @Test
+     * public void sampleTest() {
+     * var imgMochila = driver.findElement(AppiumBy.
+     * xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[1]"));
+     * imgMochila.click();
+     * var lblTituloProduto =
+     * driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"
+     * ));
+     * assertEquals("Sauce Labs Backpack", lblTituloProduto.getText());
+     * var lblPrecoProduto =
+     * driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"))
+     * ;
+     * assertEquals("$ 29.99", lblPrecoProduto.getText());
+     */
     @Test
-    public void sampleTest() {
-        var imgMochila = driver.findElement(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"Product Image\"])[1]"));
-        imgMochila.click();
-        var lblTituloProduto = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV"));
-        assertEquals("Sauce Labs Backpack", lblTituloProduto.getText());
-        var lblPrecoProduto = driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV"));
-            assertEquals("$ 29.99", lblPrecoProduto.getText());
+    public void testeCalculadoraSoma() throws InterruptedException {
+        // Aguarda a calculadora carregar
+        Thread.sleep(3000);
+
+        // Realiza a operação 2 + 3 = 5
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_2")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/op_add")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/digit_3")).click();
+        driver.findElement(AppiumBy.id("com.google.android.calculator:id/eq")).click();
+
+        // Verifica o resultado
+        var resultado = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result"));
+        assertEquals("5", resultado.getText());
     }
 
     @AfterEach
