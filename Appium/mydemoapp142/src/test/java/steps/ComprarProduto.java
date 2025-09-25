@@ -173,7 +173,7 @@ public class ComprarProduto {
         assertEquals(preco, driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/priceTV")).getText());
 
         // Verificar a quantidade do produto
-        assertEquals(quantidade.toString() + " Items",
+        assertEquals(quantidade + " Items",
                 driver.findElement(AppiumBy.id("com.saucelabs.mydemoapp.android:id/itemsTV")).getText());
 
         // Verificar o preço total
