@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: runner.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.169 s <<< FAILURE! - in runner.RunCucumberTest
-Exemplos.Example #1.1  Time elapsed: 0.092 s  <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.097 s <<< FAILURE! - in runner.RunCucumberTest
+Exemplos.Example #1.1  Time elapsed: 0.048 s  <<< ERROR!
 io.cucumber.junit.platform.engine.UndefinedStepException: 
 The step 'que acesso o My Demo App' and 6 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
@@ -57,7 +57,7 @@ public void na_tela_do_carrinho_verifico_o_e(String string, String string2, Inte
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-Exemplos.Example #1.2  Time elapsed: 0.011 s  <<< ERROR!
+Exemplos.Example #1.2  Time elapsed: 0.006 s  <<< ERROR!
 io.cucumber.junit.platform.engine.UndefinedStepException: 
 The step 'que acesso o My Demo App' and 6 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
